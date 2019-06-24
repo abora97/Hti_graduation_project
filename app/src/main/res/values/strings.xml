@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">HTI Student Services</string>
+    <string name="hti_services">HTI Services</string>
+    <string name="this_app_provide_some_services_to_hti_student">This app provide some services to HTI student </string>
+    <string name="student_can_complain">Student can complain about anything they want and also can do the questionnaire to can access their results</string>
+    <string name="login">Login</string>
+    <string name="id">ID</string>
+    <string name="password">Password</string>
+    <string name="required">Required !</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">questionnaires</string>
+    <string name="menu_complaints">Complaints</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="logout">Logout</string>
+    <string name="submit">submit</string>
+    <string name="problem_description">Problem Description</string>
+    <string name="problem_topic">problem Topic</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="feel_free">Feel Free To Contact Us At Any Time</string>
+
+    <string-array name="array_depart">
+        <item>Computer Science</item>
+        <item>Engineering</item>
+        <item> Management (Arabic)</item>
+        <item> Management (English)</item>
+    </string-array>
+
+    <string-array name="array_comp_type">
+        <item>Individual complain</item>
+        <item>Collective complaint</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
