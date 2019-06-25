@@ -1,17 +1,20 @@
 package com.example.graduation_project.ui.subject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.graduation_project.R;
 
 import com.example.graduation_project.model.subject.Subject;
+import com.example.graduation_project.ui.questionnaires.QuestionnairesActivity;
 
 
 import java.util.List;
@@ -41,6 +44,12 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
     @Override
     public void onBindViewHolder(@NonNull SubjectAdapter.viewHolder viewHolder, int i) {
         viewHolder.tnSubjectName.setText(list.get(i).getName());
+        viewHolder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               context.startActivity(new Intent(context, QuestionnairesActivity.class));
+            }
+        });
     }
 
     @Override
@@ -53,6 +62,8 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
         TextView tnSubjectName;
         @BindView(R.id.iv_subject)
         ImageView ivSubject;
+        @BindView(R.id.lay_subject)
+        LinearLayout layout;
 
         viewHolder(View view) {
             super(view);
