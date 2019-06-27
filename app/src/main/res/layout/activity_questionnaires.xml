@@ -20,7 +20,7 @@
         android:text="@string/Title"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:textColor="@color/color" />
+        tools:textColor="#2B4B29" />
 
     <TextView
         android:id="@+id/textView"
@@ -86,7 +86,7 @@
                     <TextView
                         android:id="@+id/txtwritenumgroup"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="25dp"
                         android:ems="10"
                         android:inputType="textPersonName"
                         tools:textColor="@color/color" />
@@ -116,41 +116,48 @@
                     <TextView
                         android:id="@+id/txtnamesubject"
                         android:layout_width="match_parent"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/namesubject"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtname_code"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/name_code"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txt_namesubject"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="@dimen/nav_header_vertical_spacing"
+                        android:maxHeight="@dimen/nav_header_vertical_spacing"
+                        android:maxEms="@android:integer/config_shortAnimTime"
+                        android:maxLength="@android:integer/config_shortAnimTime"
+                        android:maxLines="@android:integer/config_shortAnimTime"
                         android:text="@string/numgroup"
                         android:textSize="18sp"
+                        app:autoSizeMaxTextSize="5dp"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtnamedoctor"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/namedoctor"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtnameengineer"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
                         android:text="@string/nameengineer"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         tools:textColor="@color/color" />
                 </LinearLayout>
             </LinearLayout>
@@ -159,8 +166,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+
                 android:background="@drawable/bord"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
                     android:id="@+id/txtnote"
@@ -182,18 +192,18 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="5"
+                        android:text="@string/Notenum5"
                         android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
+                        android:layout_width="27dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="4"
+                        android:text="@string/Notenum4"
                         android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -204,7 +214,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="3"
+                        android:text="@string/Notenum3"
                         android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -215,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="2"
+                        android:text="@string/Notenum2"
                         android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -226,7 +236,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="1"
+                        android:text="@string/Notenum1"
                         android:textColor="@android:color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -239,7 +249,7 @@
 
                     <TextView
                         android:id="@+id/txtdgree5"
-                        android:layout_width="wrap_content"
+                        android:layout_width="59dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -248,8 +258,8 @@
 
                     <TextView
                         android:id="@+id/txtdegree4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="74dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="@string/degree4"
@@ -258,7 +268,7 @@
                     <TextView
                         android:id="@+id/txtdegree3"
                         android:layout_width="79dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="@string/degree3"
@@ -266,8 +276,8 @@
 
                     <TextView
                         android:id="@+id/txtdegree2"
-                        android:layout_width="69dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="62dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="@string/degree2"
@@ -276,7 +286,7 @@
                     <TextView
                         android:id="@+id/txtdegree1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="@string/degree1"
@@ -294,6 +304,7 @@
                     android:id="@+id/txtQuestion1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/Question1"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -322,9 +333,16 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_width="352dp"
+                                android:layout_height="82dp"
+                                android:layout_marginStart="11dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="1dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_1"
@@ -471,7 +489,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.2.1"
@@ -616,7 +639,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.3.1"
@@ -759,11 +787,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <RadioGroup
-                                xmlns:android="http://schemas.android.com/apk/res/android"
+                            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.4.1"
@@ -908,7 +940,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.5.1"
@@ -1054,7 +1091,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.6.1"
@@ -1200,7 +1242,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.7.1"
@@ -1336,6 +1383,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/Question2"
                     android:textSize="18sp"
+                    android:layout_marginBottom="15dp"
                     android:textStyle="bold"
                     tools:textColor="@color/color" />
 
@@ -1362,7 +1410,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q2.1.1"
@@ -1507,7 +1560,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q2.2.1"
@@ -1653,7 +1711,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q2.3.1"
@@ -1796,10 +1859,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            <RadioGroup
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q2.4.1"
@@ -1935,6 +2003,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Question3"
+                    android:layout_marginBottom="15dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:textColor="@color/color" />
@@ -1963,7 +2032,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.1.1"
@@ -2109,7 +2183,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q.8.1"
@@ -2255,7 +2334,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.3.1"
@@ -2401,7 +2485,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.4.1"
@@ -2547,7 +2636,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.5.1"
@@ -2693,7 +2787,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.6.1"
@@ -2839,7 +2938,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.7.1"
@@ -2985,7 +3089,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q3.8.1"
@@ -3132,6 +3241,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.1"
                         android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
                         android:layout_height="30dp"
                         android:text="@string/Question4.1"
                         tools:textColor="@color/color" />
@@ -3148,7 +3258,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.1.1"
@@ -3294,7 +3409,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.2.1"
@@ -3440,7 +3560,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.3.1"
@@ -3586,7 +3711,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.4.1"
@@ -3732,7 +3862,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.5.1"
@@ -3878,7 +4013,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.6.1"
@@ -4024,7 +4164,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.7.1"
@@ -4170,7 +4315,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.8.1"
@@ -4316,7 +4466,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.9.1"
@@ -4462,7 +4617,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q4.10.1"
@@ -4598,6 +4758,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/Question5"
+                    android:layout_marginBottom="15dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:textColor="@color/color" />
@@ -4626,7 +4787,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q5.1.1"
@@ -4772,7 +4938,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q5.2.1"
@@ -4918,7 +5089,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q5.3.1"
@@ -5064,7 +5240,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q5.4.1"
@@ -5194,7 +5375,7 @@
                     <TextView
                         android:id="@+id/txtQuestion5.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question5.5"
                         android:textColor="@color/color" />
 
@@ -5210,7 +5391,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q5.5.1"
@@ -5343,6 +5529,7 @@
                     android:id="@+id/txtQuestion6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/Question6"
                     android:textColor="@color/color"
                     android:textSize="18sp"
@@ -5372,7 +5559,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.1.1"
@@ -5518,7 +5710,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.2.1"
@@ -5661,10 +5858,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            <RadioGroup
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginEnd="157dp"
+                                android:layout_marginBottom="45dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.3.1"
@@ -5810,7 +6013,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.4.1"
@@ -5956,7 +6164,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.5.1"
@@ -6102,7 +6315,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.6.1"
@@ -6248,7 +6466,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.7.1"
@@ -6394,7 +6617,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.8.1"
@@ -6540,7 +6768,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.9.1"
@@ -6686,7 +6919,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q6.10.1"
@@ -6820,6 +7058,7 @@
                     android:id="@+id/txtQuestion7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/Question7"
                     android:textColor="@color/color"
                     android:textSize="18sp"
@@ -6849,7 +7088,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.1.1"
@@ -6995,7 +7239,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.2.1"
@@ -7141,7 +7390,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.3.1"
@@ -7287,7 +7541,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.4.1"
@@ -7430,10 +7689,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            <RadioGroup
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="45dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.5.1"
@@ -7579,7 +7843,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.6.1"
@@ -7724,7 +7993,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.7.1"
@@ -7870,7 +8144,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q7.8.1"
@@ -8004,6 +8283,7 @@
                     android:id="@+id/txtQuestion8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/Question8"
                     android:textColor="@color/color"
                     android:textSize="18sp"
@@ -8033,7 +8313,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.1.1"
@@ -8179,7 +8464,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.2.1"
@@ -8325,7 +8615,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.3.1"
@@ -8471,7 +8766,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.4.1"
@@ -8617,7 +8917,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.5.1"
@@ -8763,7 +9068,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.6.1"
@@ -8909,7 +9219,12 @@
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_marginBottom="37dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
 
                                 <RadioButton
                                     android:id="@+id/radio_q8.7.1"
@@ -9041,7 +9356,8 @@
                     android:id="@+id/textView_ather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="(10) اخرى          "
+                    android:text="@string/Question9"
+                    android:layout_marginBottom="15dp"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -9050,7 +9366,7 @@
                     android:id="@+id/textView_answer"
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
-                    android:text=" * ما الذى تحبه او لا تحبه في المقرر ؟ "
+                    android:text="@string/Question9.1"
                     android:textColor="@color/color"
                     android:textSize="14sp" />
 
@@ -9059,12 +9375,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:layout_weight="1"
-                    android:text=" -احب في المقرر: "
+                    android:text="@string/Question9.2"
                     android:textColor="@color/color" />
 
                 <EditText
                     android:id="@+id/editTextlike"
                     android:layout_width="match_parent"
+                    android:background="@drawable/shap_lay_full"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
@@ -9074,12 +9391,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:layout_weight="1"
-                    android:text="- لا احب في المقرر : "
+                    android:text="@string/Question9.3"
                     android:textColor="@color/color" />
 
                 <EditText
                     android:id="@+id/editTextdislike"
                     android:layout_width="match_parent"
+                    android:background="@drawable/shap_lay_full"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName" />
@@ -9088,13 +9406,14 @@
                     android:id="@+id/opinion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="* في رائك كيف يمكن تحسين او تطوير هذا المقرر ؟"
+                    android:text="@string/Question9.4"
                     android:textColor="@color/color" />
 
                 <EditText
                     android:id="@+id/editTextopinion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/shap_lay_full"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
@@ -9104,9 +9423,14 @@
             <Button
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ارسال "
-                android:textSize="14sp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bt_rounded_blue"
+                android:text="@string/Button"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

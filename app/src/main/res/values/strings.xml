@@ -128,5 +128,15 @@
         <string name="Question8.5">5.8- الهدوء</string>
         <string name="Question8.6">6.8- الاضاءة</string>
         <string name="Question8.7">7.8- النظافة</string>
-
+        <string name="Question9">(9) اخرى </string>
+        <string name="Question9.1">* ما الذى تحبه او لا تحبه في المقرر ؟ </string>
+        <string name="Question9.2">-احب في المقرر: </string>
+        <string name="Question9.3">- لا احب في المقرر :  </string>
+        <string name="Question9.4">* في رائك كيف يمكن تحسين او تطوير هذا المقرر ؟ </string>
+        <string name="Button">ارسال </string>
+    <string name="Notenum1">1</string>
+    <string name="Notenum2">2</string>
+    <string name="Notenum3">3</string>
+    <string name="Notenum4">4</string>
+    <string name="Notenum5">5</string>
 </resources>
