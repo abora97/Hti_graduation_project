@@ -11,4 +11,6 @@ public interface Constant {
     String USER_PREF = "userSharedPreferences ";
     String TOKEN = "userToken";
     String QUESTIONNAIRES = "http://hti-dev2.azurewebsites.net/public/api/questionnaires";
+    String HTI="hti";
+    String LANGUAGE = "languge";
 }

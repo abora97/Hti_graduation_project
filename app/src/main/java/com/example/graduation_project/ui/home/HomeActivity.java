@@ -1,6 +1,8 @@
 package com.example.graduation_project.ui.home;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
@@ -20,20 +22,24 @@ import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
 import com.example.graduation_project.ui.complain.ComplainFragment;
 import com.example.graduation_project.ui.login.LoginActivity;
+import com.example.graduation_project.ui.splash.SplashActivity;
 import com.example.graduation_project.ui.subject.SubjectFragment;
+import com.example.graduation_project.util.Constant;
 import com.example.graduation_project.util.FragmentUtil;
 
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, HomeContract.viewMain {
 
+    private String lang;
     boolean doubleBackToExitPressedOnce = false;
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
     private HomePresenter homePresenter;
-
+    private MenuItem changeLan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +137,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             dataBaseCartHelper.deleteAll();
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             finish();
+        }else if(id ==R.id.nav_language){
+            SharedPreferences sharedPreferences = getSharedPreferences(Constant.HTI, MODE_PRIVATE);
+            lang = sharedPreferences.getString(Constant.LANGUAGE, "en");
+            changeLanguage(lang.equals("en") ? "ar" : "en");
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -138,5 +148,45 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    public void changeLanguage(String o) {
+        getResources().getConfiguration().locale = (new Locale(o.toString()));
+        SharedPreferences sharedPreferences = getSharedPreferences(Constant.HTI, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constant.LANGUAGE, o.toString());
 
+        editor.commit();
+        if (o.toString().equalsIgnoreCase("ar")) {
+            getResources().getConfiguration().screenLayout = Configuration.SCREENLAYOUT_LAYOUTDIR_RTL;
+
+        } else {
+            getResources().getConfiguration().screenLayout = Configuration.SCREENLAYOUT_LAYOUTDIR_LTR;
+        }
+
+        Intent i = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        SplashActivity.DefaultLang = o.toString();
+        Configuration config = getResources().getConfiguration();
+        getApplicationContext().getResources().updateConfiguration(
+                config,
+                getApplicationContext().getResources().getDisplayMetrics()
+        );
+        // Utils.reset();
+        finish();
+
+    }
+
+//    void changeLangeage() {
+//        language = findViewById(R.id.lang);
+//        changeLan = findViewById(R.id.change_lan);
+//        SharedPreferences sharedPreferences = getSharedPreferences(Constants.ENR, MODE_PRIVATE);
+//        language.setText((lang = sharedPreferences.getString(Constants.LANGUAGE, "en")).equals("en") ? "ع" : "EN");
+//        changeLan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                changeLanguage(lang.equals("en") ? "ar" : "en");
+//            }
+//        });
+//    }
 }

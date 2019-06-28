@@ -6,6 +6,7 @@ public interface SplashContract {
     }
 
     interface launch {
+        void changeLanguage();
 
         void startActivityMethod();
     }

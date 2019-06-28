@@ -18,7 +18,7 @@ import java.util.List;
 
 public class SplashActivity extends BaseActivity implements SplashContract.launch {
     private SplashPresenter splashPresenter;
-
+    public static String DefaultLang;
     DataBaseUserHelper dataBaseCartHelper;
     List<userSql> list;
 
@@ -27,12 +27,18 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashPresenter = new SplashPresenter(this);
+        splashPresenter = new SplashPresenter(this,this);
 
         dataBaseCartHelper = new DataBaseUserHelper(this);
         list = dataBaseCartHelper.getAllRecord();
-
+        splashPresenter.changeLanguage();
         splashPresenter.initialization();
+    }
+
+
+    @Override
+    public void changeLanguage() {
+
     }
 
     @Override
