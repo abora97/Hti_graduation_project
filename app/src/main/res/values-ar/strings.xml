@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
+    <string name="app_name">HTI Student Services</string>
+    <string name="hti_services">المعهد العالي للتكنولوجيا</string>
+    <string name="this_app_provide_some_services_to_hti_student">يوفر هذا التطبيق بعض الخدمات لطالب المعهد العالي للتكنولودجيا</string>
+    <string name="student_can_complain">يمكن للطالب أن يشتكي من أي شيء يريده وأيضًا يمكنه عمل الاستبيان للوصول إلى نتائجهم</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="id">رقم الطالب</string>
+    <string name="password">كلمه المرور</string>
+    <string name="required">مطلوب !</string>
     <string name="arabic">English</string>
 
 </resources>
