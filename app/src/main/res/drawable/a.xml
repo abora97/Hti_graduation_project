@@ -9,12 +9,12 @@
         <solid
             android:color="#fff" />
         <stroke
-            android:width="5dp"
-            android:color="#1219de" />
+            android:width="2dp"
+            android:color="#DE1223" />
     <gradient
-        android:startColor="#1219de"
-        android:centerColor="#1219de"
-        android:endColor="#1219de"
+        android:startColor="#DE1223"
+        android:centerColor="#DE1223"
+        android:endColor="#DE1223"
         />
 
     </shape>

@@ -70,46 +70,61 @@
                     <TextView
                         android:id="@+id/txtwritesubject"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="لارلا يالار ررلرلا ءر"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
                         android:ems="10"
-                        android:inputType="textPersonName"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtwritecode"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:text="لارلا يالار ررلرلا ءر"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:textSize="18sp"
                         android:ems="10"
-                        android:inputType="textPersonName"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtwritenumgroup"
                         android:layout_width="match_parent"
+                        android:text="لارلا يالار ررلرلا ءر"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:textSize="18sp"
                         android:layout_height="25dp"
                         android:ems="10"
-                        android:inputType="textPersonName"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtwritenamedoctor"
                         android:layout_width="match_parent"
+                        android:text="لارلا يالار ررلرلا ءر"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:gravity="center"
                         android:layout_height="26dp"
                         android:ems="10"
-                        android:inputType="textPersonName"
                         tools:textColor="@color/color" />
 
                     <TextView
                         android:id="@+id/txtwritenameengineer"
                         android:layout_width="match_parent"
-                        android:layout_height="27dp"
+                        android:text="لارلا يالار ررلرلا ءر"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName"
                         tools:textColor="@color/color" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -118,38 +133,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/namesubject"
-                        android:textSize="22sp"
-                        android:textColor="@color/color" />
+                        android:textColor="@color/color"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/txtname_code"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/name_code"
-                        android:textSize="22sp"
-                        android:textColor="@color/color" />
+                        android:textColor="@color/color"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/txt_namesubject"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxWidth="@dimen/nav_header_vertical_spacing"
-                        android:maxHeight="@dimen/nav_header_vertical_spacing"
-                        android:maxEms="@android:integer/config_shortAnimTime"
-                        android:maxLength="@android:integer/config_shortAnimTime"
-                        android:maxLines="@android:integer/config_shortAnimTime"
                         android:text="@string/numgroup"
+                        android:textColor="@color/color"
                         android:textSize="18sp"
-                        app:autoSizeMaxTextSize="5dp"
-                        android:textColor="@color/color" />
+                       />
 
                     <TextView
                         android:id="@+id/txtnamedoctor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/namedoctor"
-                        android:textSize="20sp"
-                        android:textColor="@color/color" />
+                        android:textColor="@color/color"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/txtnameengineer"
@@ -157,8 +167,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="30dp"
                         android:text="@string/nameengineer"
-                        android:textSize="20sp"
-                        android:textColor="@color/color" />
+                        android:textColor="@color/color"
+                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
 
