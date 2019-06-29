@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
     private HomePresenter homePresenter;
-    private MenuItem changeLan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

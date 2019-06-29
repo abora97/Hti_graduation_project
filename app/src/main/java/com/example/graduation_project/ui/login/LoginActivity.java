@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void getToken(String token) {
-        Toast.makeText(LoginActivity.this, "R  " + token, Toast.LENGTH_LONG).show();
+       // Toast.makeText(LoginActivity.this, "R  " + token, Toast.LENGTH_LONG).show();
         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
         finish();
     }
