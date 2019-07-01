@@ -66,17 +66,18 @@
                 <TextView
                     android:id="@+id/txtnumgroup"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginEnd="22dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
                     android:text="@string/numgroup"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/txtnamedoctor"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/txtwritenum_Group"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtname_code" />
 
                 <TextView
@@ -84,15 +85,16 @@
                     android:layout_width="246dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="23dp"
                     android:layout_marginBottom="8dp"
+                    android:background="@drawable/shap_lay_full"
                     android:ems="10"
-                    android:text=""
+                    android:gravity="center"
+                    android:text="1"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/txtnameengineer"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintEnd_toStartOf="@+id/txtnumgroup"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.421" />
@@ -100,39 +102,38 @@
                 <TextView
                     android:id="@+id/txtnamesubject"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="22dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
                     android:text="@string/namesubject"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/txtname_code"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtwritenamesubject"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritenamesubject"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txtwritename_engineer"
                     android:layout_width="246dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="43dp"
                     android:layout_marginBottom="8dp"
                     android:ems="10"
-                    android:text=""
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="م/مني"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/txtnameengineer"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtwritenamedoctor"
                     app:layout_constraintVertical_bias="0.0" />
@@ -140,114 +141,110 @@
                 <TextView
                     android:id="@+id/txtname_code"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
                     android:text="@string/name_code"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/txtnumgroup"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtwritenumber_code"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtnamesubject" />
 
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txtwritenumber_code"
                     android:layout_width="246dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="48dp"
+                    android:background="@drawable/shap_lay_full"
                     android:ems="10"
-                    android:text=""
+                    android:gravity="center"
+                    android:text="csc301"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/txtname_code"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtwritenamesubject"
-                    app:layout_constraintVertical_bias="0.0" /><![CDATA[
+                    app:layout_constraintVertical_bias="0.0" />
 
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                ]]>
 
                 <TextView
                     android:id="@+id/txtwritenamedoctor"
                     android:layout_width="246dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="28dp"
                     android:layout_marginBottom="8dp"
                     android:ems="10"
-                    android:text=""
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="د/عيد"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/txtnamedoctor"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtwritenum_Group"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.018" />
 
                 <TextView
                     android:id="@+id/txtnamedoctor"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginEnd="22dp"
-                    android:layout_marginBottom="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
                     android:text="@string/namedoctor"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/txtnameengineer"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtwritenamedoctor"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritenamedoctor"
                     app:layout_constraintTop_toBottomOf="@+id/txtnumgroup" />
-
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txtwritenamesubject"
                     android:layout_width="246dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="31dp"
                     android:layout_marginBottom="8dp"
                     android:ems="10"
-                    android:text=""
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="software"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/txtnamesubject"
-                    app:layout_constraintHorizontal_bias="0.411"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/txtnameengineer"
-                    android:layout_width="93dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginEnd="22dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="29dp"
+                    android:gravity="center_vertical"
                     android:text="@string/nameengineer"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtwritename_engineer"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritename_engineer"
                     app:layout_constraintTop_toBottomOf="@+id/txtnamedoctor" />
 
             </android.support.constraint.ConstraintLayout>
