@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -18,9 +19,9 @@
         android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="@string/Title"
+        android:textColor="@color/color"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/color" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
@@ -57,121 +58,196 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="187dp">
 
-                <LinearLayout
-                    android:layout_width="249dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/txtwritesubject"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="لارلا يالار ررلرلا ءر"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:ems="10"
-                        tools:textColor="@color/color" />
-
-                    <TextView
-                        android:id="@+id/txtwritecode"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="لارلا يالار ررلرلا ءر"
-                        android:textColor="@android:color/black"
-                        android:gravity="center"
-                        android:textSize="18sp"
-                        android:ems="10"
-                        tools:textColor="@color/color" />
-
-                    <TextView
-                        android:id="@+id/txtwritenumgroup"
-                        android:layout_width="match_parent"
-                        android:text="لارلا يالار ررلرلا ءر"
-                        android:textColor="@android:color/black"
-                        android:gravity="center"
-                        android:textSize="18sp"
-                        android:layout_height="25dp"
-                        android:ems="10"
-                        tools:textColor="@color/color" />
-
-                    <TextView
-                        android:id="@+id/txtwritenamedoctor"
-                        android:layout_width="match_parent"
-                        android:text="لارلا يالار ررلرلا ءر"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:gravity="center"
-                        android:layout_height="26dp"
-                        android:ems="10"
-                        tools:textColor="@color/color" />
-
-                    <TextView
-                        android:id="@+id/txtwritenameengineer"
-                        android:layout_width="match_parent"
-                        android:text="لارلا يالار ررلرلا ءر"
-                        android:textColor="@android:color/black"
-                        android:gravity="center"
-                        android:textSize="18sp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        tools:textColor="@color/color" />
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txtnumgroup"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/numgroup"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtnamedoctor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtname_code" />
 
-                    <TextView
-                        android:id="@+id/txtnamesubject"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/namesubject"
-                        android:textColor="@color/color"
-                        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/txtwritenum_Group"
+                    android:layout_width="246dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shap_lay_full"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtnumgroup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
 
-                    <TextView
-                        android:id="@+id/txtname_code"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/name_code"
-                        android:textColor="@color/color"
-                        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/txtnamesubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/namesubject"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtname_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritenamesubject"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
-                    <TextView
-                        android:id="@+id/txt_namesubject"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/numgroup"
-                        android:textColor="@color/color"
-                        android:textSize="18sp"
-                       />
 
-                    <TextView
-                        android:id="@+id/txtnamedoctor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/namedoctor"
-                        android:textColor="@color/color"
-                        android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/txtwritename_engineer"
+                    android:layout_width="246dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="43dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="م/مني"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtnameengineer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtwritenamedoctor"
+                    app:layout_constraintVertical_bias="0.0" />
 
-                    <TextView
-                        android:id="@+id/txtnameengineer"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
-                        android:text="@string/nameengineer"
-                        android:textColor="@color/color"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/txtname_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/name_code"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtnumgroup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnamesubject" />
 
+
+                <TextView
+                    android:id="@+id/txtwritenumber_code"
+                    android:layout_width="246dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="48dp"
+                    android:background="@drawable/shap_lay_full"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="csc301"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtname_code"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtwritenamesubject"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <TextView
+                    android:id="@+id/txtwritenamedoctor"
+                    android:layout_width="246dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="د/عيد"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtnamedoctor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtwritenum_Group"
+                    app:layout_constraintVertical_bias="0.018" />
+
+                <TextView
+                    android:id="@+id/txtnamedoctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/namedoctor"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtnameengineer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritenamedoctor"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnumgroup" />
+
+                <TextView
+                    android:id="@+id/txtwritenamesubject"
+                    android:layout_width="246dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="31dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:background="@drawable/shap_lay_full"
+                    android:text="software"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtnamesubject"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txtnameengineer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="29dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/nameengineer"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtwritename_engineer"
+                    app:layout_constraintTop_toBottomOf="@+id/txtnamedoctor" />
+
+            </android.support.constraint.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -196,111 +272,141 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/Notenum5"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="27dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/Notenum4"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="33dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/Notenum3"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/Notenum2"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView33"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/Notenum1"
-                        android:textColor="@android:color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/txtdgree5"
-                        android:layout_width="59dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/degree5"
-                        android:textColor="@android:color/black" />
-
-                    <TextView
-                        android:id="@+id/txtdegree4"
-                        android:layout_width="74dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/degree4"
-                        android:textColor="@android:color/black" />
-
-                    <TextView
-                        android:id="@+id/txtdegree3"
+                    <LinearLayout
                         android:layout_width="79dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/degree3"
-                        android:textColor="@android:color/black" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/txtdegree2"
-                        android:layout_width="62dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/degree2"
-                        android:textColor="@android:color/black" />
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/Notenum5"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/txtdegree1"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/txtdgree5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/degree5"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="65dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/degree1"
-                        android:textColor="@android:color/black" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/Notenum4"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtdegree4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/degree4"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="81dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/Notenum3"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtdegree3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/degree3"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/Notenum2"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtdegree2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/degree2"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="99dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/Notenum1"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtdegree1"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/degree1"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -316,9 +422,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:text="@string/Question1"
+                    android:textColor="@color/color"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -328,7 +434,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.1"
                         android:textColor="@color/color" />
 
@@ -343,16 +449,16 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                                android:layout_width="352dp"
-                                android:layout_height="82dp"
-                                android:layout_marginStart="11dp"
-                                android:layout_marginEnd="16dp"
+                                android:layout_width="396dp"
+                                android:layout_height="45dp"
                                 android:layout_marginBottom="1dp"
                                 android:orientation="horizontal"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent">
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0">
 
                                 <RadioButton
                                     android:id="@+id/radio_1"
@@ -483,7 +589,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.2"
                         android:textColor="@color/color" />
 
@@ -633,7 +739,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.3"
                         android:textColor="@color/color" />
 
@@ -784,7 +890,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.4"
                         android:textColor="@color/color" />
 
@@ -934,7 +1040,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.5"
                         android:textColor="@color/color" />
 
@@ -1085,7 +1191,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.6"
                         android:textColor="@color/color" />
 
@@ -1236,7 +1342,7 @@
                     <TextView
                         android:id="@+id/txtQuestion1.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question1.7"
                         android:textColor="@color/color" />
 
@@ -1385,6 +1491,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line2"
                     android:layout_width="match_parent"
@@ -1397,11 +1504,11 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Question2"
-                    android:textSize="18sp"
                     android:layout_marginBottom="15dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color" />
+                    android:text="@string/Question2"
+                    android:textColor="@color/color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
 
                 <LinearLayout
@@ -1412,9 +1519,9 @@
                     <TextView
                         android:id="@+id/txtQuestion2.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question2.1"
-                        android:textColor="@color/color"/>
+                        android:textColor="@color/color" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1562,7 +1669,7 @@
                     <TextView
                         android:id="@+id/txtQuestion2.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question2.2"
                         android:textColor="@color/color" />
 
@@ -1713,7 +1820,7 @@
                     <TextView
                         android:id="@+id/txtQuestion2.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question2.3"
                         android:textColor="@color/color" />
 
@@ -1864,7 +1971,7 @@
                     <TextView
                         android:id="@+id/txtQuestion2.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question2.4"
                         android:textColor="@color/color" />
 
@@ -2015,6 +2122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line3"
                     android:layout_width="match_parent"
@@ -2026,11 +2134,11 @@
                     android:id="@+id/txtQuestion3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Question3"
                     android:layout_marginBottom="15dp"
+                    android:text="@string/Question3"
+                    android:textColor="@color/color"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2040,7 +2148,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.1"
                         android:textColor="@color/color" />
 
@@ -2191,7 +2299,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.2"
                         android:textColor="@color/color" />
 
@@ -2342,7 +2450,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.3"
                         android:textColor="@color/color" />
 
@@ -2493,7 +2601,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.4"
                         android:textColor="@color/color" />
 
@@ -2644,7 +2752,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.5"
                         android:textColor="@color/color" />
 
@@ -2795,7 +2903,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.6"
                         android:textColor="@color/color" />
 
@@ -2946,7 +3054,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.7"
                         android:textColor="@color/color" />
 
@@ -3097,7 +3205,7 @@
                     <TextView
                         android:id="@+id/txtQuestion3.8"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question3.8"
                         android:textColor="@color/color" />
 
@@ -3247,6 +3355,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line4"
                     android:layout_width="match_parent"
@@ -3260,9 +3369,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:text="@string/Question4"
+                    android:textColor="@color/color"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3272,8 +3381,8 @@
                     <TextView
                         android:id="@+id/txtQuestion4.1"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="15dp"
-                        android:layout_height="30dp"
                         android:text="@string/Question4.1"
                         android:textColor="@color/color" />
 
@@ -3424,7 +3533,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.2"
                         android:textColor="@color/color" />
 
@@ -3575,7 +3684,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.3"
                         android:textColor="@color/color" />
 
@@ -3726,7 +3835,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.4"
                         android:textColor="@color/color" />
 
@@ -3877,7 +3986,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.5"
                         android:textColor="@color/color" />
 
@@ -4028,7 +4137,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.6"
                         android:textColor="@color/color" />
 
@@ -4179,7 +4288,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.7"
                         android:textColor="@color/color" />
 
@@ -4330,7 +4439,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.8"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.8"
                         android:textColor="@color/color" />
 
@@ -4481,7 +4590,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.9"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.9"
                         android:textColor="@color/color" />
 
@@ -4632,7 +4741,7 @@
                     <TextView
                         android:id="@+id/txtQuestion4.10"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question4.10"
                         android:textColor="@color/color" />
 
@@ -4783,6 +4892,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line5"
                     android:layout_width="match_parent"
@@ -4794,11 +4904,11 @@
                     android:id="@+id/txtQuestion5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Question5"
                     android:layout_marginBottom="15dp"
+                    android:text="@string/Question5"
+                    android:textColor="@color/color"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -4808,7 +4918,7 @@
                     <TextView
                         android:id="@+id/txtQuestion5.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question5.1"
                         android:textColor="@color/color" />
 
@@ -4959,7 +5069,7 @@
                     <TextView
                         android:id="@+id/txtQuestion5.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question5.2"
                         android:textColor="@color/color" />
 
@@ -5110,7 +5220,7 @@
                     <TextView
                         android:id="@+id/txtQuestion5.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question5.3"
                         android:textColor="@color/color" />
 
@@ -5261,7 +5371,7 @@
                     <TextView
                         android:id="@+id/txtQuestion5.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question5.4"
                         android:textColor="@color/color" />
 
@@ -5561,6 +5671,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line6"
                     android:layout_width="match_parent"
@@ -5586,7 +5697,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.1"
                         android:textColor="@color/color" />
 
@@ -5737,7 +5848,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.2"
                         android:textColor="@color/color" />
 
@@ -5888,7 +5999,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.3"
                         android:textColor="@color/color" />
 
@@ -6040,7 +6151,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.4"
                         android:textColor="@color/color" />
 
@@ -6191,7 +6302,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.5"
                         android:textColor="@color/color" />
 
@@ -6342,7 +6453,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.6"
                         android:textColor="@color/color" />
 
@@ -6493,7 +6604,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.7"
                         android:textColor="@color/color" />
 
@@ -6644,7 +6755,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.8"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.8"
                         android:textColor="@color/color" />
 
@@ -6795,7 +6906,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.9"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.9"
                         android:textColor="@color/color" />
 
@@ -6946,7 +7057,7 @@
                     <TextView
                         android:id="@+id/txtQuestion6.10"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question6.10"
                         android:textColor="@color/color" />
 
@@ -7096,6 +7207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line7"
                     android:layout_width="match_parent"
@@ -7121,7 +7233,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.1"
                         android:textColor="@color/color" />
 
@@ -7272,7 +7384,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.2"
                         android:textColor="@color/color" />
 
@@ -7423,7 +7535,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.3"
                         android:textColor="@color/color" />
 
@@ -7574,7 +7686,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.4"
                         android:textColor="@color/color" />
 
@@ -7725,7 +7837,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.5"
                         android:textColor="@color/color" />
 
@@ -7876,7 +7988,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.6"
                         android:textColor="@color/color" />
 
@@ -8026,7 +8138,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.7"
                         android:textColor="@color/color" />
 
@@ -8177,7 +8289,7 @@
                     <TextView
                         android:id="@+id/txtQuestion7.8"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question7.8"
                         android:textColor="@color/color" />
 
@@ -8327,6 +8439,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line8"
                     android:layout_width="match_parent"
@@ -8352,7 +8465,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.1"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.1"
                         android:textColor="@color/color" />
 
@@ -8503,7 +8616,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.2"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.2"
                         android:textColor="@color/color" />
 
@@ -8654,7 +8767,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.3"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.3"
                         android:textColor="@color/color" />
 
@@ -8805,7 +8918,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.4"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.4"
                         android:textColor="@color/color" />
 
@@ -8956,7 +9069,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.5"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.5"
                         android:textColor="@color/color" />
 
@@ -9107,7 +9220,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.6"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.6"
                         android:textColor="@color/color" />
 
@@ -9258,7 +9371,7 @@
                     <TextView
                         android:id="@+id/txtQuestion8.7"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/Question8.7"
                         android:textColor="@color/color" />
 
@@ -9406,6 +9519,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView_line9"
                     android:layout_width="match_parent"
@@ -9417,8 +9531,8 @@
                     android:id="@+id/textView_ather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Question9"
                     android:layout_marginBottom="15dp"
+                    android:text="@string/Question9"
                     android:textColor="@color/color"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -9426,7 +9540,7 @@
                 <TextView
                     android:id="@+id/textView_answer"
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Question9.1"
                     android:textColor="@color/color"
                     android:textSize="14sp" />
@@ -9434,7 +9548,7 @@
                 <TextView
                     android:id="@+id/textViewlike"
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/Question9.2"
                     android:textColor="@color/color" />
@@ -9442,15 +9556,24 @@
                 <EditText
                     android:id="@+id/editTextlike"
                     android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
                     android:background="@drawable/shap_lay_full"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:gravity="top"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp" />
 
                 <TextView
                     android:id="@+id/textViewdislike"
                     android:layout_width="match_parent"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/Question9.3"
                     android:textColor="@color/color" />
@@ -9458,10 +9581,19 @@
                 <EditText
                     android:id="@+id/editTextdislike"
                     android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
                     android:background="@drawable/shap_lay_full"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:gravity="top"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp" />
 
                 <TextView
                     android:id="@+id/opinion"
@@ -9473,10 +9605,19 @@
                 <EditText
                     android:id="@+id/editTextopinion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
                     android:background="@drawable/shap_lay_full"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:gravity="top"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp" />
 
 
             </LinearLayout>
@@ -9489,7 +9630,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/bt_rounded_blue"
-                android:text="@string/Button"
+                android:text="@string/submit"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
