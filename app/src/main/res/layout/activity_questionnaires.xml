@@ -161,7 +161,6 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="149dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/shap_lay_full"
                     android:gravity="center"
                     android:text="software"
                     android:textColor="@color/black"
@@ -178,7 +177,6 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="157dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/shap_lay_full"
                     android:gravity="center"
                     android:text="css110"
                     android:textColor="@color/black"
@@ -195,7 +193,6 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="194dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/shap_lay_full"
                     android:gravity="center"
                     android:text="1"
                     android:textColor="@color/black"
@@ -212,7 +209,6 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="174dp"
                     android:layout_marginBottom="4dp"
-                    android:background="@drawable/shap_lay_full"
                     android:gravity="center"
                     android:text="D:Eid"
                     android:textColor="@color/black"
@@ -229,7 +225,6 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="156dp"
                     android:layout_marginBottom="41dp"
-                    android:background="@drawable/shap_lay_full"
                     android:gravity="center"
                     android:text="M:mona"
                     android:textColor="@color/black"
@@ -257,147 +252,158 @@
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
 
-                <LinearLayout
+                <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent">
 
                     <LinearLayout
-                        android:layout_width="79dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <TextView
-                            android:id="@+id/textView23"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/Notenum5"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="79dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/txtdgree5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/degree5"
-                            android:textColor="@android:color/black"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Notenum5"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="65dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/txtdgree5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/degree5"
+                                android:textColor="@android:color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/textView27"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/Notenum4"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtdegree4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/degree4"
-                            android:textColor="@android:color/black"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView26"
-                            android:layout_width="81dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/Notenum3"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtdegree3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/degree3"
-                            android:textColor="@android:color/black"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="53dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView24"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/Notenum2"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtdegree2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/degree2"
-                            android:textColor="@android:color/black"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="99dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/textView33"
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/Notenum1"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtdegree1"
+                        <LinearLayout
                             android:layout_width="65dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/degree1"
-                            android:textColor="@android:color/black"
-                            android:textSize="10sp" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Notenum4"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtdegree4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/degree4"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Notenum3"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtdegree3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/degree3"
+                                android:textColor="@android:color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="53dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Notenum2"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtdegree2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/degree2"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="99dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/Notenum1"
+                                android:textColor="@android:color/black"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtdegree1"
+                                android:layout_width="65dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/degree1"
+                                android:textColor="@android:color/black"
+                                android:textSize="10sp" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </android.support.constraint.ConstraintLayout>
+
             </LinearLayout>
 
 
@@ -9790,6 +9796,7 @@
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
