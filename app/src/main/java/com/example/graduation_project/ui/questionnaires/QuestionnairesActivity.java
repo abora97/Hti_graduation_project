@@ -4,14 +4,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.graduation_project.R;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class QuestionnairesActivity extends AppCompatActivity {
 
     TextView textView7,textView8,textView9,textView10,textView11 ;
     Button submit ;
+    RadioGroup RadioGroup_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +28,18 @@ public class QuestionnairesActivity extends AppCompatActivity {
         textView9=findViewById(R.id.textView9);
         textView10=findViewById(R.id.textView10);
         textView11=findViewById(R.id.textView11);
+        RadioGroup_1=findViewById(R.id.RadioGroup_1);
         submit=findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              QuestionnairesPresenter q1=new QuestionnairesPresenter ();
 
+               q1.QuestionnairesPresenter(R.id.RadioGroup_1);
+
+             //
             }
         });
     }
+
 }
