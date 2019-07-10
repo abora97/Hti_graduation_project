@@ -33,12 +33,16 @@ public class QuestionnairesActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              QuestionnairesPresenter q1=new QuestionnairesPresenter ();
+                int Selsct_id=RadioGroup_1.getCheckedRadioButtonId();
+                RadioButton radioButton_selected=findViewById(Selsct_id);
+                String sc = String.valueOf(Selsct_id);
+             if (sc== null) {
+                 Toast.makeText(QuestionnairesActivity.this,"Thanks ",Toast.LENGTH_SHORT).show();
 
-               q1.QuestionnairesPresenter(R.id.RadioGroup_1);
 
-             //
-            }
+             }else{
+                Toast.makeText(QuestionnairesActivity.this,"please select all Question ",Toast.LENGTH_SHORT).show();
+            }}
         });
     }
 
