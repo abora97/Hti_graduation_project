@@ -8,6 +8,27 @@
     <string name="id">رقم الطالب</string>
     <string name="password">كلمه المرور</string>
     <string name="required">مطلوب !</string>
+    <string name="menu_home">الاستبيان</string>
+    <string name="menu_complaints">الشكاوى</string>
+    <string name="logout">خروج</string>
+    <string name="submit">ارسال</string>
+    <string name="problem_description">وصف الشكوى</string>
+    <string name="problem_topic">عنوان الشكوى</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="feel_free">لا تخجل من مراسلتنا في اي وقت</string>
+
+
+ <string-array name="array_comp_type">
+  <item>شكوى فردية</item>
+  <item>شكوى جماعية</item>
+ </string-array>
+
+ <string-array name="array_depart">
+  <item>علوم حاسب</item>
+  <item>هندسة</item>
+  <item> ادارة اعمال (عربي)</item>
+  <item> ادارة اعمال (انجليزي)</item>
+ </string-array>
     <string name="arabic">English</string>
    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     <string name="Title">نموذج  تقويم مقرر دراسى</string>

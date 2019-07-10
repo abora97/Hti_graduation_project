@@ -35,8 +35,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int Selsct_id=RadioGroup_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected=findViewById(Selsct_id);
-                String sc = String.valueOf(Selsct_id);
-             if (sc== null) {
+             if (RadioGroup_1.isClickable()) {
                  Toast.makeText(QuestionnairesActivity.this,"Thanks ",Toast.LENGTH_SHORT).show();
 
 
