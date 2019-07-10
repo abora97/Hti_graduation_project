@@ -242,13 +242,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="2dp"
                     android:background="@drawable/bord"
                     android:orientation="vertical"
-                    android:padding="16dp"
+                    android:padding="6dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -264,12 +263,12 @@
                         android:textSize="18sp" />
 
                     <android.support.constraint.ConstraintLayout
-                        android:layout_width="332dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            android:layout_width="329dp"
-                            android:layout_height="74dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_marginStart="3dp"
                             android:layout_marginBottom="8dp"
                             android:orientation="horizontal"
