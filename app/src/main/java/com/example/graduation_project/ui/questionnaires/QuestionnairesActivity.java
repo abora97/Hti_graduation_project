@@ -14,7 +14,7 @@ import com.example.graduation_project.R;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-public class QuestionnairesActivity extends AppCompatActivity {
+public class QuestionnairesActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView textView7, textView8, textView9, textView10, textView11;
     Button submit;
@@ -31,28 +31,29 @@ public class QuestionnairesActivity extends AppCompatActivity {
         textView11 = findViewById(R.id.textView11);
         RadioGroup_1 = findViewById(R.id.RadioGroup_1);
         submit = findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //   QuestionnairesPresenter questionnairesPresenter = new QuestionnairesPresenter();
-
-                //    questionnairesPresenter.QuestionnairesPresenter(R.id.RadioGroup_1);
-
-                int Selsct_id = RadioGroup_1.getCheckedRadioButtonId();
-                RadioButton radioButton_selected = findViewById(Selsct_id);
-                if (radioButton_selected == null) {
-                    Toast.makeText(QuestionnairesActivity.this, "please select all Question ", Toast.LENGTH_SHORT).show();
 
 
-                } else {
-                    Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        submit.setOnClickListener(this);
+
+
 
 
     }
 
 
+    @Override
+    public void onClick(View view) {
+        checkRadioButton();
+    }
+
+    private void checkRadioButton() {
+        int Selsct_id = RadioGroup_1.getCheckedRadioButtonId();
+        RadioButton radioButton_selected = findViewById(Selsct_id);
+        if (radioButton_selected == null) {
+            Toast.makeText(QuestionnairesActivity.this, "please select all Question ", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
