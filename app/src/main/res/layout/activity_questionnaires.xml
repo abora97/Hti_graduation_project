@@ -447,7 +447,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.1"
+                        android:id="@+id/txtQuestion1_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.1"
@@ -464,7 +464,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                                android:id="@+id/RadioGroup_1"
+                                android:id="@+id/RadioGroup_1_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -602,7 +602,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.2"
+                        android:id="@+id/txtQuestion1_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.2"
@@ -618,6 +618,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -755,7 +756,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.3"
+                        android:id="@+id/txtQuestion1_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.3"
@@ -771,6 +772,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -909,7 +911,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.4"
+                        android:id="@+id/txtQuestion1_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.4"
@@ -925,6 +927,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1062,7 +1065,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.5"
+                        android:id="@+id/txtQuestion1_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.5"
@@ -1078,6 +1081,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1216,7 +1220,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.6"
+                        android:id="@+id/txtQuestion1_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.6"
@@ -1232,6 +1236,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1370,7 +1375,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion1.7"
+                        android:id="@+id/txtQuestion1_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question1.7"
@@ -1386,6 +1391,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_1_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1550,7 +1556,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion2.1"
+                        android:id="@+id/txtQuestion2_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question2.1"
@@ -1566,6 +1572,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_2_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1703,7 +1710,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion2.2"
+                        android:id="@+id/txtQuestion2_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question2.2"
@@ -1719,6 +1726,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_2_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -1857,7 +1865,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion2.3"
+                        android:id="@+id/txtQuestion2_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question2.3"
@@ -1873,6 +1881,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_2_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2011,7 +2020,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion2.4"
+                        android:id="@+id/txtQuestion2_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question2.4"
@@ -2027,6 +2036,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_2_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2191,7 +2201,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.1"
+                        android:id="@+id/txtQuestion3_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.1"
@@ -2207,6 +2217,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2345,7 +2356,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.2"
+                        android:id="@+id/txtQuestion3_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.2"
@@ -2361,6 +2372,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2499,7 +2511,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.3"
+                        android:id="@+id/txtQuestion3_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.3"
@@ -2515,6 +2527,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2653,7 +2666,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.4"
+                        android:id="@+id/txtQuestion3_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.4"
@@ -2669,6 +2682,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -2807,7 +2821,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.5"
+                        android:id="@+id/txtQuestion3_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.5"
@@ -2823,6 +2837,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_5"
                                 android:orientation="horizontal"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
@@ -2961,7 +2976,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.6"
+                        android:id="@+id/txtQuestion3_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.6"
@@ -2977,6 +2992,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3115,7 +3131,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.7"
+                        android:id="@+id/txtQuestion3_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.7"
@@ -3131,6 +3147,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3269,7 +3286,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion3.8"
+                        android:id="@+id/txtQuestion3_8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question3.8"
@@ -3285,6 +3302,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_3_8"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3448,7 +3466,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.1"
+                        android:id="@+id/txtQuestion4_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="15dp"
@@ -3465,6 +3483,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3602,7 +3621,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.2"
+                        android:id="@+id/txtQuestion4_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.2"
@@ -3618,6 +3637,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3743,10 +3763,7 @@
                                     app:layout_constraintStart_toEndOf="@+id/radio_4"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintVertical_bias="0.0" />
-                                tation="horizontal"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:</RadioGroup>
+                               </RadioGroup>
                         </android.support.constraint.ConstraintLayout>
 
 
@@ -3759,7 +3776,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.3"
+                        android:id="@+id/txtQuestion4_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.3"
@@ -3775,6 +3792,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -3913,7 +3931,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.4"
+                        android:id="@+id/txtQuestion4_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.4"
@@ -3929,6 +3947,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4067,7 +4086,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.5"
+                        android:id="@+id/txtQuestion4_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.5"
@@ -4083,6 +4102,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4221,7 +4241,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.6"
+                        android:id="@+id/txtQuestion4_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.6"
@@ -4237,6 +4257,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4374,7 +4395,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.7"
+                        android:id="@+id/txtQuestion4_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.7"
@@ -4390,6 +4411,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4528,7 +4550,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.8"
+                        android:id="@+id/txtQuestion4_8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.8"
@@ -4544,6 +4566,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_8"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4682,7 +4705,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.9"
+                        android:id="@+id/txtQuestion4_9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.9"
@@ -4698,6 +4721,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_9"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -4836,7 +4860,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion4.10"
+                        android:id="@+id/txtQuestion4_10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question4.10"
@@ -4852,6 +4876,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_4_10"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5016,7 +5041,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion5.1"
+                        android:id="@+id/txtQuestion5_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question5.1"
@@ -5032,6 +5057,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_5_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5170,7 +5196,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion5.2"
+                        android:id="@+id/txtQuestion5_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question5.2"
@@ -5186,6 +5212,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_5_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5324,7 +5351,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion5.3"
+                        android:id="@+id/txtQuestion5_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question5.3"
@@ -5340,6 +5367,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_5_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5478,7 +5506,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion5.4"
+                        android:id="@+id/txtQuestion5_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question5.4"
@@ -5494,6 +5522,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_5_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5632,7 +5661,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion5.5"
+                        android:id="@+id/txtQuestion5_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question5.5"
@@ -5648,6 +5677,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_5_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5810,7 +5840,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.1"
+                        android:id="@+id/txtQuestion6_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.1"
@@ -5826,6 +5856,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -5964,7 +5995,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.2"
+                        android:id="@+id/txtQuestion6_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.2"
@@ -5980,6 +6011,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6118,7 +6150,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.3"
+                        android:id="@+id/txtQuestion6_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.3"
@@ -6134,6 +6166,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6272,7 +6305,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.4"
+                        android:id="@+id/txtQuestion6_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.4"
@@ -6288,6 +6321,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6426,7 +6460,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.5"
+                        android:id="@+id/txtQuestion6_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.5"
@@ -6442,6 +6476,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6580,7 +6615,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.6"
+                        android:id="@+id/txtQuestion6_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.6"
@@ -6596,6 +6631,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6734,7 +6770,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.7"
+                        android:id="@+id/txtQuestion6_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.7"
@@ -6750,6 +6786,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -6888,7 +6925,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.8"
+                        android:id="@+id/txtQuestion6_8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.8"
@@ -6904,6 +6941,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_8"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7042,7 +7080,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.9"
+                        android:id="@+id/txtQuestion6_9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.9"
@@ -7058,6 +7096,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_9"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7196,7 +7235,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion6.10"
+                        android:id="@+id/txtQuestion6_10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question6.10"
@@ -7212,6 +7251,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_6_10"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7375,7 +7415,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.1"
+                        android:id="@+id/txtQuestion7_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.1"
@@ -7391,6 +7431,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7529,7 +7570,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.2"
+                        android:id="@+id/txtQuestion7_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.2"
@@ -7545,6 +7586,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7683,7 +7725,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.3"
+                        android:id="@+id/txtQuestion7_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.3"
@@ -7699,6 +7741,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7837,7 +7880,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.4"
+                        android:id="@+id/txtQuestion7_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.4"
@@ -7853,6 +7896,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -7991,7 +8035,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.5"
+                        android:id="@+id/txtQuestion7_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.5"
@@ -8007,6 +8051,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8145,7 +8190,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.6"
+                        android:id="@+id/txtQuestion7_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.6"
@@ -8161,6 +8206,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8298,7 +8344,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.7"
+                        android:id="@+id/txtQuestion7_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.7"
@@ -8314,6 +8360,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8452,7 +8499,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion7.8"
+                        android:id="@+id/txtQuestion7_8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question7.8"
@@ -8468,6 +8515,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_7_8"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8631,7 +8679,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.1"
+                        android:id="@+id/txtQuestion8_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.1"
@@ -8647,6 +8695,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_1"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8785,7 +8834,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.2"
+                        android:id="@+id/txtQuestion8_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.2"
@@ -8801,6 +8850,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_2"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -8939,7 +8989,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.3"
+                        android:id="@+id/txtQuestion8_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.3"
@@ -8955,6 +9005,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_3"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -9093,7 +9144,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.4"
+                        android:id="@+id/txtQuestion8_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.4"
@@ -9109,6 +9160,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_4"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -9247,7 +9299,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.5"
+                        android:id="@+id/txtQuestion8_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.5"
@@ -9263,6 +9315,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_5"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -9401,7 +9454,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.6"
+                        android:id="@+id/txtQuestion8_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.6"
@@ -9417,6 +9470,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_6"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"
@@ -9555,7 +9609,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txtQuestion8.7"
+                        android:id="@+id/txtQuestion8_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Question8.7"
@@ -9571,6 +9625,7 @@
                             android:layout_height="match_parent">
 
                             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/RadioGroup_8_7"
                                 android:layout_width="256dp"
                                 android:layout_height="56dp"
                                 android:layout_marginStart="8dp"

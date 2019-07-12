@@ -12,7 +12,7 @@ public class QuestionnairesPresenter extends  QuestionnairesActivity {
         int Selsct_id=radioGroup.getCheckedRadioButtonId();
         RadioButton radioButton_selected=findViewById(Selsct_id);
         if (radioButton_selected==null) {
-            Toast.makeText(this,"please select all Question ",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,radioButton_selected.getText(),Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this," Thanks",Toast.LENGTH_SHORT).show();
         }
