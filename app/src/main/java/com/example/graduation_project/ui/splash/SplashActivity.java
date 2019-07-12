@@ -3,6 +3,7 @@ package com.example.graduation_project.ui.splash;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.example.graduation_project.ui.login.LoginActivity;
 import com.example.graduation_project.util.Constant;
 
 import java.util.List;
+import java.util.Locale;
 
 public class SplashActivity extends BaseActivity implements SplashContract.launch {
     private SplashPresenter splashPresenter;
@@ -33,12 +35,15 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
         list = dataBaseCartHelper.getAllRecord();
         splashPresenter.changeLanguage();
         splashPresenter.initialization();
+
+
+
     }
 
 
     @Override
     public void changeLanguage() {
-
+        Toast.makeText(this, "test splash ", Toast.LENGTH_SHORT).show();
     }
 
     @Override

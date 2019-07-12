@@ -30,7 +30,6 @@
   <item> ادارة اعمال (انجليزي)</item>
  </string-array>
     <string name="arabic">English</string>
-   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     <string name="Title">نموذج  تقويم مقرر دراسى</string>
     <string name="namesubject">مسمى المقرر :</string>
     <string name="name_code">كود المقرر :</string>
@@ -115,13 +114,13 @@
     <string name="Question9.2">-احب في المقرر: </string>
     <string name="Question9.3">- لا احب في المقرر :  </string>
     <string name="Question9.4">* في رائك كيف يمكن تحسين او تطوير هذا المقرر ؟ </string>
-    <string name="Button">ارسال </string>
+
     <string name="Notenum1">1</string>
     <string name="Notenum2">2</string>
     <string name="Notenum3">3</string>
     <string name="Notenum4">4</string>
     <string name="Notenum5">5</string>
-    ///////////////////////////////////////////////Questionner//////////////////////////////////////////////////////////////////////////
+
 
 
 </resources>

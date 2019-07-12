@@ -34,7 +34,7 @@ private Context context;
         else
             context.getResources().getConfiguration().screenLayout = Configuration.SCREENLAYOUT_LAYOUTDIR_LTR;
 
-        //AppController.getInstance().appInit();
+       //AppController.getInstance().appInit();
         SplashActivity.DefaultLang = o.toString();
         Configuration config = context.getResources().getConfiguration();
         context.getResources().updateConfiguration(
