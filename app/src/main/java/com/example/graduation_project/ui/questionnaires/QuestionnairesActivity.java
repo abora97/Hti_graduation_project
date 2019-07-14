@@ -169,122 +169,183 @@ public class QuestionnairesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int Selsct_id_1_1 = RadioGroup_1_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_1 = findViewById(Selsct_id_1_1);
+
                 int Selsct_id_1_2 = RadioGroup_1_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_2 = findViewById(Selsct_id_1_2);
+
                 int Selsct_id_1_3 = RadioGroup_1_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_3 = findViewById(Selsct_id_1_3);
+
                 int Selsct_id_1_4 = RadioGroup_1_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_4 = findViewById(Selsct_id_1_4);
+
                 int Selsct_id_1_5 = RadioGroup_1_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_5 = findViewById(Selsct_id_1_5);
+
                 int Selsct_id_1_6 = RadioGroup_1_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_6 = findViewById(Selsct_id_1_6);
+
                 int Selsct_id_1_7 = RadioGroup_1_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_7 = findViewById(Selsct_id_1_7);
+
                 int Selsct_id_2_1 = RadioGroup_2_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_2_1 = findViewById(Selsct_id_2_1);
+
                 int Selsct_id_2_2 = RadioGroup_2_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_2_2 = findViewById(Selsct_id_2_2);
+
                 int Selsct_id_2_3 = RadioGroup_2_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_2_3 = findViewById(Selsct_id_2_3);
+
                 int Selsct_id_2_4 = RadioGroup_2_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_2_4 = findViewById(Selsct_id_2_4);
+
                 int Selsct_id_3_1 = RadioGroup_3_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_1 = findViewById(Selsct_id_3_1);
+
                 int Selsct_id_3_2 = RadioGroup_3_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_2 = findViewById(Selsct_id_3_2);
+
                 int Selsct_id_3_3 = RadioGroup_3_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_3 = findViewById(Selsct_id_3_3);
+
                 int Selsct_id_3_4 = RadioGroup_3_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_4 = findViewById(Selsct_id_3_4);
+
                 int Selsct_id_3_5 = RadioGroup_3_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_5 = findViewById(Selsct_id_3_5);
+
                 int Selsct_id_3_6 = RadioGroup_3_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_6 = findViewById(Selsct_id_3_6);
+
                 int Selsct_id_3_7 = RadioGroup_3_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_7 = findViewById(Selsct_id_3_7);
+
                 int Selsct_id_3_8 = RadioGroup_3_8.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_3_8 = findViewById(Selsct_id_3_8);
+
                 int Selsct_id_4_1 = RadioGroup_4_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_1 = findViewById(Selsct_id_4_1);
+
+
                 int Selsct_id_4_2 = RadioGroup_4_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_2 = findViewById(Selsct_id_4_2);
+
+
                 int Selsct_id_4_3 = RadioGroup_4_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_3 = findViewById(Selsct_id_4_3);
+
                 int Selsct_id_4_4 = RadioGroup_4_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_4 = findViewById(Selsct_id_4_4);
+
                 int Selsct_id_4_5 = RadioGroup_4_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_5 = findViewById(Selsct_id_4_5);
+
                 int Selsct_id_4_6 = RadioGroup_4_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_6 = findViewById(Selsct_id_4_6);
+
                 int Selsct_id_4_7 = RadioGroup_4_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_7 = findViewById(Selsct_id_4_7);
+
                 int Selsct_id_4_8 = RadioGroup_4_8.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_8 = findViewById(Selsct_id_4_8);
+
                 int Selsct_id_4_9 = RadioGroup_4_9.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_9 = findViewById(Selsct_id_4_9);
+
                 int Selsct_id_4_10 = RadioGroup_4_10.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_4_10 = findViewById(Selsct_id_4_10);
+
                 int Selsct_id_5_1 = RadioGroup_5_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_5_1 = findViewById(Selsct_id_5_1);
+
                 int Selsct_id_5_2 = RadioGroup_5_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_5_2 = findViewById(Selsct_id_5_2);
+
                 int Selsct_id_5_3 = RadioGroup_5_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_5_3 = findViewById(Selsct_id_5_3);
+
                 int Selsct_id_5_4 = RadioGroup_5_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_5_4 = findViewById(Selsct_id_5_4);
+
                 int Selsct_id_5_5 = RadioGroup_5_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_5_5 = findViewById(Selsct_id_5_5);
+
                 int Selsct_id_6_1 = RadioGroup_6_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_1 = findViewById(Selsct_id_6_1);
+
                 int Selsct_id_6_2 = RadioGroup_6_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_2 = findViewById(Selsct_id_6_2);
+
                 int Selsct_id_6_3 = RadioGroup_6_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_3 = findViewById(Selsct_id_6_3);
+
                 int Selsct_id_6_4 = RadioGroup_6_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_4 = findViewById(Selsct_id_6_4);
+
                 int Selsct_id_6_5 = RadioGroup_6_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_5 = findViewById(Selsct_id_6_5);
+
                 int Selsct_id_6_6 = RadioGroup_6_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_6 = findViewById(Selsct_id_6_6);
+
                 int Selsct_id_6_7 = RadioGroup_6_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_7 = findViewById(Selsct_id_6_7);
+
                 int Selsct_id_6_8 = RadioGroup_6_8.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_8 = findViewById(Selsct_id_6_8);
+
                 int Selsct_id_6_9 = RadioGroup_6_9.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_9 = findViewById(Selsct_id_6_9);
+
                 int Selsct_id_6_10 = RadioGroup_6_10.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_6_10 = findViewById(Selsct_id_6_10);
+
                 int Selsct_id_7_1 = RadioGroup_7_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_1 = findViewById(Selsct_id_7_1);
+
                 int Selsct_id_7_2 = RadioGroup_7_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_2 = findViewById(Selsct_id_7_2);
+
                 int Selsct_id_7_3 = RadioGroup_7_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_3 = findViewById(Selsct_id_7_3);
+
                 int Selsct_id_7_4 = RadioGroup_7_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_4 = findViewById(Selsct_id_7_4);
+
                 int Selsct_id_7_5 = RadioGroup_7_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_5 = findViewById(Selsct_id_7_5);
+
                 int Selsct_id_7_6 = RadioGroup_7_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_6 = findViewById(Selsct_id_7_6);
+
                 int Selsct_id_7_7 = RadioGroup_7_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_7 = findViewById(Selsct_id_7_7);
+
                 int Selsct_id_7_8 = RadioGroup_7_8.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_7_8 = findViewById(Selsct_id_7_8);
+
                 int Selsct_id_8_1 = RadioGroup_8_1.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_1 = findViewById(Selsct_id_8_1);
+
                 int Selsct_id_8_2 = RadioGroup_8_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_2 = findViewById(Selsct_id_8_2);
+
                 int Selsct_id_8_3 = RadioGroup_8_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_3 = findViewById(Selsct_id_8_3);
+
                 int Selsct_id_8_4 = RadioGroup_8_4.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_4 = findViewById(Selsct_id_8_4);
+
                 int Selsct_id_8_5 = RadioGroup_8_5.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_5 = findViewById(Selsct_id_8_5);
+
                 int Selsct_id_8_6 = RadioGroup_8_6.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_6 = findViewById(Selsct_id_8_6);
+
                 int Selsct_id_8_7 = RadioGroup_8_7.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_8_7 = findViewById(Selsct_id_8_7);
+
 
                 if (radioButton_selected_1_1 == null || radioButton_selected_1_2 == null || radioButton_selected_1_3 == null ||
                         radioButton_selected_1_4 == null || radioButton_selected_1_5 == null || radioButton_selected_1_6 == null
@@ -303,8 +364,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
                         || radioButton_selected_7_1 == null || radioButton_selected_7_2 == null || radioButton_selected_7_3 == null || radioButton_selected_7_4 == null
                         || radioButton_selected_7_5 == null || radioButton_selected_7_6 == null || radioButton_selected_7_7 == null || radioButton_selected_7_8 == null
                         || radioButton_selected_8_1 == null || radioButton_selected_8_2 == null || radioButton_selected_8_3 == null || radioButton_selected_8_4 == null
-                        || radioButton_selected_8_5 == null || radioButton_selected_8_6 == null || radioButton_selected_8_7 == null)
-                {
+                        || radioButton_selected_8_5 == null || radioButton_selected_8_6 == null || radioButton_selected_8_7 == null) {
                     Toast.makeText(QuestionnairesActivity.this, " Please Select All Questionnaires", Toast.LENGTH_SHORT).show();
                 }
 
@@ -426,6 +486,68 @@ public class QuestionnairesActivity extends AppCompatActivity {
 //                    txtQuestion8_7.setText(txtQuestion8_7.getText() + "*");
 //                }
                 else {
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_7.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_7.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_8.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_7.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_8.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_9.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_10.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_7.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_8.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_9.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_10.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_7.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_8.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_1.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_2.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_3.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_4.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_5.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_6.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_7.getText(), Toast.LENGTH_SHORT).show();
+
                     Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
                 }
 
