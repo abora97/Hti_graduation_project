@@ -28,6 +28,11 @@
     <string name="contact_us">Contact Us</string>
     <string name="feel_free">Feel Free To Contact Us At Any Time</string>
 
+    <string name="cs"> Computer Science</string>
+    <string name="eng">Engineering</string>
+    <string name="man_ar"> Management (Arabic)</string>
+    <string name="man_en"> Management (English)</string>
+
     <string-array name="array_depart">
         <item>Computer Science</item>
         <item>Engineering</item>
@@ -136,4 +141,6 @@
     <string name="Notenum3">3</string>
     <string name="Notenum4">4</string>
     <string name="Notenum5">5</string>
+    <string name="title_activity_department_activty">DepartmentActivty</string>
+    <string name="menu_gallery">Gallery</string>
 </resources>

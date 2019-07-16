@@ -29,6 +29,12 @@
   <item> ادارة اعمال (عربي)</item>
   <item> ادارة اعمال (انجليزي)</item>
  </string-array>
+
+    <string name="cs">علوم حاسب</string>
+    <string name="eng">هندسة</string>
+    <string name="man_ar"> ادارة اعمال (عربي)</string>
+    <string name="man_en"> ادارة اعمال (انجليزي)</string>
+
     <string name="arabic">English</string>
     <string name="Title">نموذج  تقويم مقرر دراسى</string>
     <string name="namesubject">مسمى المقرر :</string>
