@@ -143,4 +143,5 @@
     <string name="Notenum5">5</string>
     <string name="title_activity_department_activty">DepartmentActivty</string>
     <string name="menu_gallery">Gallery</string>
+    <string name="average">Average</string>
 </resources>

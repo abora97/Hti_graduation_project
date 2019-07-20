@@ -4,13 +4,23 @@ package com.example.graduation_project.ui.department;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,8 +28,15 @@ import com.example.graduation_project.R;
 public class TabFragment extends Fragment {
 
     int position;
-    private TextView textView;
+    @BindView(R.id.rec_tab)
+    RecyclerView recTab;
+    Unbinder unbinder;
+    // private TextView textView;
 
+    private MyAdapterTabs myAdapterTabs;
+    private RecyclerView.LayoutManager mLayoutManager;
+
+    List<String> list=new ArrayList<String>();
 
     public TabFragment() {
         // Required empty public constructor
@@ -30,7 +47,14 @@ public class TabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab, container, false);
+        unbinder = ButterKnife.bind(this, view);
+
+
+
+        mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
+        return view;
     }
 
     public static Fragment getInstance(int position) {
@@ -50,20 +74,45 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        textView = (TextView) view.findViewById(R.id.textView);
+//        textView = (TextView) view.findViewById(R.id.textView);
 
         if (position == 0) {
-            textView.setText(getString(R.string.eng));
+            // textView.setText(getString(R.string.eng));
+            list.clear();
+            list.add("fff");
+            list.add("dd");
+            list.add("dd");
+            list.add("dd");
+            list.add("dd");
+            setAdapter(list);
+
         } else if (position == 1) {
-            textView.setText(getString(R.string.cs));
+            list.clear();
+            list.add("dr 1");
+            list.add("dr 2");
+            list.add("dr 3");
+            list.add("dr 5");
+            setAdapter(list);
+
         } else if (position == 2) {
-            textView.setText(getString(R.string.man_en));
+
         } else if (position == 3) {
-            textView.setText(getString(R.string.man_ar));
+
         } else {
             Toast.makeText(getContext(), "no department", Toast.LENGTH_SHORT).show();
         }
 
 
+    }
+
+    void setAdapter(List<String> list){
+        myAdapterTabs = new MyAdapterTabs(getActivity(), list);
+        recTab.setLayoutManager(mLayoutManager);
+        recTab.setAdapter(myAdapterTabs);
+    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }

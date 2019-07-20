@@ -44,15 +44,15 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
 
     @Override
     public void startActivityMethod() {
-        if (list.size() < 1) {
-            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-            finish();
-        }  else {
-            startActivity(new Intent(SplashActivity.this, HomeActivity.class));
-            finish();
-        }
-//        startActivity(new Intent(SplashActivity.this, DepartmentActivity.class));
-//        finish();
+//        if (list.size() < 1) {
+//            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+//            finish();
+//        }  else {
+//            startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+//            finish();
+//        }
+        startActivity(new Intent(SplashActivity.this, DepartmentActivity.class));
+        finish();
     }
 
 
