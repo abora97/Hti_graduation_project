@@ -1,7 +1,11 @@
 package com.example.graduation_project.ui.department;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.ui.statistics.StatisticsActivity;
+import com.example.graduation_project.ui.subject.SubjectFragment;
+import com.example.graduation_project.util.FragmentUtil;
 
 import java.util.List;
 
@@ -61,6 +68,12 @@ public class MyAdapterTabs extends RecyclerView.Adapter<MyAdapterTabs.MyHolder> 
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context, " >_< " + list.get(getLayoutPosition()) + "  " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+                    //FragmentUtil.swithchFragment(R.id.content_frame, new SubjectFragment(), DepartmentActivity.class);
+//                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+//                    SubjectFragment myFragment = new SubjectFragment();
+//                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.lay_depart, myFragment).addToBackStack(null).commit();
+
+                    context.startActivity(new Intent(context, StatisticsActivity.class));
                 }
             });
         }

@@ -12,10 +12,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.docSubject.DoctorActivity"></activity>
+        <activity android:name=".ui.statistics.StatisticsActivity" />
         <activity
             android:name=".ui.department.DepartmentActivity"
             android:label="@string/title_activity_department_activty"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.complain.ComplainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
