@@ -41,5 +41,4 @@ dependencies {
     implementation "com.android.support:support-compat:$Support_Version"
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
-    implementation 'com.github.felixsoares:HorizontalBarGraph:1.1'
 }

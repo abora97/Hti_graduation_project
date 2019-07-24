@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.data.remote.ApiCall;
 import com.example.graduation_project.ui.home.HomeActivity;
 
 import static android.widget.Toast.LENGTH_SHORT;
@@ -488,67 +489,79 @@ public class QuestionnairesActivity extends AppCompatActivity {
 //                    txtQuestion8_7.setText(txtQuestion8_7.getText() + "*");
 //                }
                 else {
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_1_7.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_2_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_7.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_3_8.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_7.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_8.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_9.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_4_10.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_5_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_7.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_8.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_9.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_6_10.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_7.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_7_8.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_1.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_2.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_3.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_4.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_5.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_6.getText(), Toast.LENGTH_SHORT).show();
-                    Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_7.getText(), Toast.LENGTH_SHORT).show();
+                   String RadioButton_selected_1_1= (String) radioButton_selected_1_1.getText();
+                    String RadioButton_selected_1_2= (String) radioButton_selected_1_2.getText();
+                    String RadioButton_selected_1_3= (String) radioButton_selected_1_3.getText();
+                    String RadioButton_selected_1_4= (String) radioButton_selected_1_4.getText();
+                    String RadioButton_selected_1_5= (String) radioButton_selected_1_5.getText();
+                    String RadioButton_selected_1_6= (String) radioButton_selected_1_6.getText();
+                    String RadioButton_selected_1_7= (String) radioButton_selected_1_7.getText();
+                    String RadioButton_selected_2_1= (String) radioButton_selected_2_1.getText();
+                    String RadioButton_selected_2_2= (String) radioButton_selected_2_2.getText();
+                    String RadioButton_selected_2_3= (String) radioButton_selected_2_3.getText();
+                    String RadioButton_selected_2_4= (String) radioButton_selected_2_4.getText();
+                    String RadioButton_selected_3_1= (String) radioButton_selected_3_1.getText();
+                    String RadioButton_selected_3_2= (String) radioButton_selected_3_2.getText();
+                    String RadioButton_selected_3_3= (String) radioButton_selected_3_3.getText();
+                    String RadioButton_selected_3_4= (String) radioButton_selected_3_4.getText();
+                    String RadioButton_selected_3_5= (String) radioButton_selected_3_5.getText();
+                    String RadioButton_selected_3_6= (String) radioButton_selected_3_6.getText();
+                    String RadioButton_selected_3_7= (String) radioButton_selected_3_7.getText();
+                    String RadioButton_selected_3_8= (String) radioButton_selected_3_8.getText();
+                    String RadioButton_selected_4_1= (String) radioButton_selected_4_1.getText();
+                    String RadioButton_selected_4_2= (String) radioButton_selected_4_2.getText();
+                    String RadioButton_selected_4_3= (String) radioButton_selected_4_3.getText();
+                    String RadioButton_selected_4_4= (String) radioButton_selected_4_4.getText();
+                    String RadioButton_selected_4_5= (String) radioButton_selected_4_5.getText();
+                    String RadioButton_selected_4_6= (String) radioButton_selected_4_6.getText();
+                    String RadioButton_selected_4_7= (String) radioButton_selected_4_7.getText();
+                    String RadioButton_selected_4_8= (String) radioButton_selected_4_8.getText();
+                    String RadioButton_selected_4_9= (String) radioButton_selected_4_9.getText();
+                    String RadioButton_selected_4_10= (String) radioButton_selected_4_10.getText();
+                    String RadioButton_selected_5_1= (String) radioButton_selected_5_1.getText();
+                    String RadioButton_selected_5_2= (String) radioButton_selected_5_2.getText();
+                    String RadioButton_selected_5_3= (String) radioButton_selected_5_3.getText();
+                    String RadioButton_selected_5_4= (String) radioButton_selected_5_4.getText();
+                    String RadioButton_selected_5_5= (String) radioButton_selected_5_5.getText();
+                    String RadioButton_selected_6_1= (String) radioButton_selected_6_1.getText();
+                    String RadioButton_selected_6_2= (String) radioButton_selected_6_2.getText();
+                    String RadioButton_selected_6_3= (String) radioButton_selected_6_3.getText();
+                    String RadioButton_selected_6_4= (String) radioButton_selected_6_4.getText();
+                    String RadioButton_selected_6_5= (String) radioButton_selected_6_5.getText();
+                    String RadioButton_selected_6_6= (String) radioButton_selected_6_6.getText();
+                    String RadioButton_selected_6_7= (String) radioButton_selected_6_7.getText();
+                    String RadioButton_selected_6_8= (String) radioButton_selected_6_8.getText();
+                    String RadioButton_selected_6_9= (String) radioButton_selected_6_9.getText();
+                    String RadioButton_selected_6_10= (String) radioButton_selected_6_10.getText();
+                    String RadioButton_selected_7_1= (String) radioButton_selected_7_1.getText();
+                    String RadioButton_selected_7_2= (String) radioButton_selected_7_2.getText();
+                    String RadioButton_selected_7_3= (String) radioButton_selected_7_3.getText();
+                    String RadioButton_selected_7_4= (String) radioButton_selected_7_4.getText();
+                    String RadioButton_selected_7_5= (String) radioButton_selected_7_5.getText();
+                    String RadioButton_selected_7_6= (String) radioButton_selected_7_6.getText();
+                    String RadioButton_selected_7_7= (String) radioButton_selected_7_7.getText();
+                    String RadioButton_selected_7_8= (String) radioButton_selected_7_8.getText();
+                    String RadioButton_selected_8_1= (String) radioButton_selected_8_1.getText();
+                    String RadioButton_selected_8_2= (String) radioButton_selected_8_2.getText();
+                    String RadioButton_selected_8_3= (String) radioButton_selected_8_3.getText();
+                    String RadioButton_selected_8_4= (String) radioButton_selected_8_4.getText();
+                    String RadioButton_selected_8_5= (String) radioButton_selected_8_5.getText();
+                    String RadioButton_selected_8_6= (String) radioButton_selected_8_6.getText();
+                    String RadioButton_selected_8_7= (String) radioButton_selected_8_7.getText();
+                    ApiCall apiCall = new ApiCall();
+                    apiCall.getQuestionnaires(RadioButton_selected_1_1,RadioButton_selected_1_2,RadioButton_selected_1_3,RadioButton_selected_1_4,RadioButton_selected_1_5,RadioButton_selected_1_6,RadioButton_selected_1_7,
+                            RadioButton_selected_2_1,RadioButton_selected_2_2,RadioButton_selected_2_3,RadioButton_selected_2_4
+                            ,RadioButton_selected_3_1,RadioButton_selected_3_2,RadioButton_selected_3_3,RadioButton_selected_3_4,RadioButton_selected_3_5,RadioButton_selected_3_6,RadioButton_selected_3_7,RadioButton_selected_3_8
+                            ,RadioButton_selected_4_1,RadioButton_selected_4_2,RadioButton_selected_4_3,RadioButton_selected_4_4,RadioButton_selected_4_5,RadioButton_selected_4_6,RadioButton_selected_4_7,RadioButton_selected_4_8,RadioButton_selected_4_9,RadioButton_selected_4_10,
+                            RadioButton_selected_5_1,RadioButton_selected_5_2,RadioButton_selected_5_3,RadioButton_selected_5_4,RadioButton_selected_5_5,
+                            RadioButton_selected_6_1,RadioButton_selected_6_2,RadioButton_selected_6_3,RadioButton_selected_6_4,RadioButton_selected_6_5,RadioButton_selected_6_6,RadioButton_selected_6_7,RadioButton_selected_6_8,RadioButton_selected_6_9,RadioButton_selected_6_10,
+                            RadioButton_selected_7_1,RadioButton_selected_7_2,RadioButton_selected_7_3,RadioButton_selected_7_4,RadioButton_selected_7_5,RadioButton_selected_7_6,RadioButton_selected_7_7,RadioButton_selected_7_8,
+                            RadioButton_selected_8_1,RadioButton_selected_8_2,RadioButton_selected_8_3,RadioButton_selected_8_4,RadioButton_selected_8_5,RadioButton_selected_8_6,RadioButton_selected_8_7 );
+
+
+
+
+
 
                     Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
