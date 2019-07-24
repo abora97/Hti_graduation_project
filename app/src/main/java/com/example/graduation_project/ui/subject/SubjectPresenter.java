@@ -2,7 +2,9 @@ package com.example.graduation_project.ui.subject;
 
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.data.remote.ApiCall;
-import com.example.graduation_project.model.subject.SubjectModel;
+import com.example.graduation_project.model.subject.Data;
+import com.example.graduation_project.model.subject.Subject;
+
 
 public class SubjectPresenter {
     SubjectContract.viewMain viewMain;
@@ -20,7 +22,7 @@ public class SubjectPresenter {
             }
 
             @Override
-            public void onSecuess(SubjectModel subjects) {
+            public void onSecuess(Subject subjects) {
                 viewMain.showData(subjects);
             }
 

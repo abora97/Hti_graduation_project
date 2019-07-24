@@ -10,8 +10,9 @@ import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.login.LoginModel;
 
-import com.example.graduation_project.model.subject.DataSubject;
-import com.example.graduation_project.model.subject.SubjectModel;
+import com.example.graduation_project.model.subject.Data;
+
+import com.example.graduation_project.model.subject.Subject;
 import com.example.graduation_project.util.Constant;
 
 import java.util.List;
@@ -43,9 +44,9 @@ public class ApiCall {
                 //.addQueryParameter(Constant.AUTHORIZATION,Authorization)
                 .addHeaders(Constant.AUTHORIZATION, Authorization)
                 .setPriority(Priority.HIGH)
-                .build().getAsObject(SubjectModel.class, new ParsedRequestListener<SubjectModel>() {
+                .build().getAsObject(Subject.class, new ParsedRequestListener<Subject>() {
             @Override
-            public void onResponse(SubjectModel response) {
+            public void onResponse(Subject response) {
                 subjectCallBack.onSecuess(response);
             }
 

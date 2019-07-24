@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,9 @@ import android.widget.Toast;
 import com.example.graduation_project.R;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
-import com.example.graduation_project.model.subject.SubjectModel;
+import com.example.graduation_project.model.subject.Data;
+import com.example.graduation_project.model.subject.Subject;
+
 
 import java.util.List;
 
@@ -72,9 +75,9 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
 
 
     @Override
-    public void showData(SubjectModel subjects) {
+    public void showData(Subject subjects) {
         swipeSubject.setRefreshing(false);
-        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
         subjectAdapter =new SubjectAdapter(getActivity(),subjects.getData().getData().getSubjects());
         recSubject.setLayoutManager(mLayoutManager);
         recSubject.setAdapter(subjectAdapter);

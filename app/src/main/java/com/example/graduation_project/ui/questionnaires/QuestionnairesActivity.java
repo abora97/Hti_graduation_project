@@ -1,5 +1,6 @@
 package com.example.graduation_project.ui.questionnaires;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.ui.home.HomeActivity;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -549,6 +551,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
                     Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_7.getText(), Toast.LENGTH_SHORT).show();
 
                     Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
                 }
 
 
