@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
     tools:context=".ui.subject.SubjectFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:text="num" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:text="subject" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="Group" />
+
+    </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_subject"
@@ -16,4 +62,4 @@
             android:layout_height="match_parent" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
-</FrameLayout>
+</LinearLayout>
