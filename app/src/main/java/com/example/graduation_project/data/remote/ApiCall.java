@@ -8,7 +8,7 @@ import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
-import com.example.graduation_project.model.login.LoginModel;
+import com.example.graduation_project.model.login.Login;
 
 import com.example.graduation_project.model.subject.Data;
 
@@ -23,9 +23,9 @@ public class ApiCall {
                 .addBodyParameter(Constant.ID, id)
                 .addBodyParameter(Constant.PASSWORD, password)
                 .build()
-                .getAsObject(LoginModel.class, new ParsedRequestListener<LoginModel>() {
+                .getAsObject(Login.class, new ParsedRequestListener<Login>() {
                     @Override
-                    public void onResponse(LoginModel response) {
+                    public void onResponse(Login response) {
                         loginCallBack.onSecuess(response.getData());
                     }
 
