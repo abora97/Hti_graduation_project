@@ -14,7 +14,7 @@ public class DataToken implements Serializable
     @SerializedName("user")
     @Expose
     private User user;
-    private final static long serialVersionUID = -6293937295949676901L;
+    private final static long serialVersionUID = -6450137066578747975L;
 
     public String getToken() {
         return token;
