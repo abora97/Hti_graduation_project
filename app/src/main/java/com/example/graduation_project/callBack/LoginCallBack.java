@@ -1,9 +1,9 @@
 package com.example.graduation_project.callBack;
 
-import com.example.graduation_project.model.login.LoginData;
+import com.example.graduation_project.model.login.Data;
 
 public interface LoginCallBack {
-    void onSecuess(LoginData response);
+    void onSecuess(Data response);
 
     void onError(String msg);
 }

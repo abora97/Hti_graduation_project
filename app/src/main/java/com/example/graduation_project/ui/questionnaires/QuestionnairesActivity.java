@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.graduation_project.R;
 import com.example.graduation_project.ui.home.HomeActivity;
+import com.example.graduation_project.util.Constant;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -166,6 +167,10 @@ public class QuestionnairesActivity extends AppCompatActivity {
         RadioGroup_8_7 = findViewById(R.id.RadioGroup_8_7);
 
         submit = findViewById(R.id.submit);
+
+        init();
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -551,6 +556,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
                     Toast.makeText(QuestionnairesActivity.this, radioButton_selected_8_7.getText(), Toast.LENGTH_SHORT).show();
 
                     Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
+
                     startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
                 }
 
@@ -559,6 +565,21 @@ public class QuestionnairesActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void init() {
+        Intent intent = getIntent();
+        String subName = intent.getStringExtra(Constant.SUB_NAME_COURSE);
+        String subCode = intent.getStringExtra(Constant.SUB_CODE_COURSE);
+        String subGroup = intent.getStringExtra(Constant.SUB_GROUP_NUM);
+        String subInst = intent.getStringExtra(Constant.SUB_INSTRUC);
+        String subAss = intent.getStringExtra(Constant.SUB_ASSISTANT);
+
+        textView7.setText(subName);
+        textView8.setText(subCode);
+        textView9.setText(subGroup);
+        textView10.setText(subInst);
+        textView11.setText(subAss);
     }
 }
 

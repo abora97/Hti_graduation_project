@@ -6,11 +6,12 @@ import android.widget.Toast;
 
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.data.remote.ApiCall;
-import com.example.graduation_project.model.login.LoginData;
+import com.example.graduation_project.model.login.Data;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
 import com.example.graduation_project.ui.base.BasePresenter;
 import com.example.graduation_project.util.Constant;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -19,7 +20,6 @@ public class LoginPresenter extends BasePresenter implements LoginContract.prese
     //private LoginContract.GetNoticeIntractor getNoticeIntractor;
     private Context context;
     DataBaseUserHelper dataBaseCartHelper;
-
 
 
     public LoginPresenter(LoginContract.MainView mainView) {
@@ -45,9 +45,16 @@ public class LoginPresenter extends BasePresenter implements LoginContract.prese
 
         ApiCall.LoginApi(id, password, new LoginCallBack() {
             @Override
-            public void onSecuess(LoginData response) {
+            public void onSecuess(Data response) {
+                String userToken = response.getData().getToken();
+                int userID = Integer.parseInt(response.getData().getUser().getCId());
+                String userName = response.getData().getUser().getName();
+                String userGpa = response.getData().getUser().getGpa();
+                String userDeptID = response.getData().getUser().getDepartmentId();
 
-                dataBaseCartHelper.insertDataUser(response.getData().getToken(),response.getData().getUser().getCId());
+                Gson gson = new Gson();
+
+                dataBaseCartHelper.insertDataUser(userToken, userID,userName,userGpa,userDeptID);
                 mainView.getToken(response.getData().getToken());
             }
 

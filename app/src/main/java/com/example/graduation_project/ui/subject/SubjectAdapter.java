@@ -14,6 +14,7 @@ import com.example.graduation_project.R;
 import com.example.graduation_project.model.subject.Subject;
 import com.example.graduation_project.model.subject.Subject_;
 import com.example.graduation_project.ui.questionnaires.QuestionnairesActivity;
+import com.example.graduation_project.util.Constant;
 
 import java.util.List;
 
@@ -40,7 +41,13 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull viewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull viewHolder viewHolder, final int i) {
+        final String courseName = list.get(i).getName();
+        final String courseCode = list.get(i).getCode();
+        final String courseGroup = String.valueOf(list.get(i).getId());
+        final String courseInst = list.get(i).getDoctorName();
+        final String courseAss = list.get(i).getAssistantName();
+
         viewHolder.tvSubjectName.setText(list.get(i).getName());
         viewHolder.tvSubjectCode.setText(list.get(i).getCode());
         viewHolder.tvSubjectGroup.setText(String.valueOf(list.get(i).getId()));
@@ -49,7 +56,14 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
         viewHolder.laySubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, QuestionnairesActivity.class));
+                Intent intent = new Intent(context, QuestionnairesActivity.class);
+                intent.putExtra(Constant.SUB_NAME_COURSE, courseName);
+                intent.putExtra(Constant.SUB_ASSISTANT, courseAss);
+                intent.putExtra(Constant.SUB_CODE_COURSE, courseCode);
+                intent.putExtra(Constant.SUB_GROUP_NUM, courseGroup);
+                intent.putExtra(Constant.SUB_INSTRUC, courseInst);
+
+                context.startActivity(intent);
             }
         });
     }

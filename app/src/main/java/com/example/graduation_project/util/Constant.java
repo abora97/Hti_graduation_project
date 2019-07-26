@@ -15,6 +15,12 @@ public interface Constant {
     String COMPLAIN_TOPIC="topic";
     String COMPLAIN_DESCRIPTION="description";
 
+    String SUB_NAME_COURSE="course_name";
+    String SUB_CODE_COURSE="course_code";
+    String SUB_GROUP_NUM="group_num";
+    String SUB_INSTRUC="instructo";
+    String SUB_ASSISTANT="assist";
+
     String USER_PREF = "userSharedPreferences ";
     String TOKEN = "userToken";
     String QUESTIONNAIRES = "http://hti-dev2.azurewebsites.net/public/api/questionnaires";

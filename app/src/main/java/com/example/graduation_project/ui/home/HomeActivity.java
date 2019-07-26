@@ -172,21 +172,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 config,
                 getApplicationContext().getResources().getDisplayMetrics()
         );
-        // Utils.reset();
         finish();
 
     }
 
-//    void changeLangeage() {
-//        language = findViewById(R.id.lang);
-//        changeLan = findViewById(R.id.change_lan);
-//        SharedPreferences sharedPreferences = getSharedPreferences(Constants.ENR, MODE_PRIVATE);
-//        language.setText((lang = sharedPreferences.getString(Constants.LANGUAGE, "en")).equals("en") ? "ع" : "EN");
-//        changeLan.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                changeLanguage(lang.equals("en") ? "ar" : "en");
-//            }
-//        });
-//    }
+
 }

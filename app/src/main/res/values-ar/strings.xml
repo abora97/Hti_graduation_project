@@ -127,6 +127,8 @@
     <string name="Notenum4">4</string>
     <string name="Notenum5">5</string>
 
-
+    <string name="group">المجموعه</string>
+    <string name="subject">الماده</string>
+    <string name="num">رقم</string>
 
 </resources>

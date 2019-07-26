@@ -4,20 +4,18 @@ package com.example.graduation_project.ui.subject;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
-import com.example.graduation_project.model.subject.Data;
 import com.example.graduation_project.model.subject.Subject;
-
 
 import java.util.List;
 
@@ -36,6 +34,14 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
     @BindView(R.id.swipe_subject)
     SwipeRefreshLayout swipeSubject;
     Unbinder unbinder;
+    @BindView(R.id.tv_student_name)
+    TextView tvStudentName;
+    @BindView(R.id.tv_student_id)
+    TextView tvStudentId;
+    @BindView(R.id.tv_student_gpa)
+    TextView tvStudentGpa;
+    @BindView(R.id.tv_student_depart)
+    TextView tvStudentDepart;
 
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
@@ -56,7 +62,7 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
         View view = inflater.inflate(R.layout.fragment_subject, container, false);
         unbinder = ButterKnife.bind(this, view);
 
-        subjectPresenter=new SubjectPresenter(this);
+        subjectPresenter = new SubjectPresenter(this);
 
         swipeSubject.setOnRefreshListener(this);
         //DataBase
@@ -68,17 +74,33 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
     }
 
 
-    private void loadSubject(){
+    private void loadSubject() {
         swipeSubject.setRefreshing(true);
         subjectPresenter.getSubject(list.get(0).getToken());
+
+        tvStudentName.setText(list.get(0).getUserName());
+        tvStudentGpa.setText(list.get(0).getUserGPA());
+        tvStudentId.setText(String.valueOf(list.get(0).getUserId()));
+        String deptID = list.get(0).getUserDeptID();
+
+        if (deptID.equals("1")) {
+            tvStudentDepart.setText(getString(R.string.cs));
+        } else if (deptID.equals("2")) {
+            tvStudentDepart.setText(getString(R.string.eng));
+        } else if (deptID.equals("3")) {
+            tvStudentDepart.setText(getString(R.string.man_en));
+        } else {
+            tvStudentDepart.setText(getString(R.string.man_ar));
+        }
+
     }
 
 
     @Override
     public void showData(Subject subjects) {
         swipeSubject.setRefreshing(false);
-        mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
-        subjectAdapter =new SubjectAdapter(getActivity(),subjects.getData().getData().getSubjects());
+        mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        subjectAdapter = new SubjectAdapter(getActivity(), subjects.getData().getData().getSubjects());
         recSubject.setLayoutManager(mLayoutManager);
         recSubject.setAdapter(subjectAdapter);
     }
