@@ -12,7 +12,7 @@ import java.util.List;
 public class DataBaseUserHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     // Database Name
     private static final String DATABASE_NAME = "user.db";
@@ -37,7 +37,7 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public Boolean insertDataUser(String token, int userId) {
+    public Boolean insertDataUser(String token, int userId, String userName, String userGpa, String userDeptID) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -46,7 +46,9 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
         // no need to add them
         values.put(userSql.COLUMN_Token, token);
         values.put(userSql.COLUM_USER_ID, userId);
-
+        values.put(userSql.COLUMN_USER_NAME,userName);
+        values.put(userSql.COLUMN_GPA,userGpa);
+        values.put(userSql.COLUMN_DEPT_ID,userDeptID);
         // insert row
         long res = db.insert(userSql.TABLE_NAME, null, values);
         if (res == -1) {
@@ -69,6 +71,9 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
                 data.setId(Integer.parseInt(cursor.getString(0)));
                 data.setToken(cursor.getString(1));
                 data.setUserId(Integer.parseInt(cursor.getString(2)));
+                data.setUserName(cursor.getString(3));
+                data.setUserGPA(cursor.getString(4));
+                data.setUserDeptID(cursor.getString(5));
                 // Adding note to list
                 list.add(data);
             } while (cursor.moveToNext());

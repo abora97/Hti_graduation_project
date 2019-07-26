@@ -5,19 +5,51 @@ public class userSql {
 
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_Token = "token";
-    public static final String COLUM_USER_ID="userid";
-
+    public static final String COLUM_USER_ID = "userid";
+    public static final String COLUMN_USER_NAME = "username";
+    public static final String COLUMN_GPA = "gpa";
+    public static final String COLUMN_DEPT_ID = "deptid";
 
     private int id;
     private String token;
     private int userId;
+    private String userName;
+    private String userGPA;
+    private String userDeptID;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserGPA() {
+        return userGPA;
+    }
+
+    public void setUserGPA(String userGPA) {
+        this.userGPA = userGPA;
+    }
+
+    public String getUserDeptID() {
+        return userDeptID;
+    }
+
+    public void setUserDeptID(String userDeptID) {
+        this.userDeptID = userDeptID;
+    }
 
     // Create table SQL query
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_Token + " TEXT, "
-                    + COLUM_USER_ID+" TEXT "
+                    + COLUM_USER_ID + " TEXT, "
+                    + COLUMN_USER_NAME + " TEXT, "
+                    + COLUMN_GPA + " TEXT, "
+                    + COLUMN_DEPT_ID + " TEXT "
                     + ")";
 
     public String getToken() {
