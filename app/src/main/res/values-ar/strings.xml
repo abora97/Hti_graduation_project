@@ -138,4 +138,5 @@
     <string name="student_id">الرقم التسلسلي :</string>
     <string name="gpa">المعدل التراكمي :</string>
     <string name="department">القسم :</string>
+    <string name="hti">المعهد التكنولوجي العالي</string>
 </resources>

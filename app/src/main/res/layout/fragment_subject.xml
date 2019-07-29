@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".ui.subject.SubjectFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hti"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,15 +134,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="3dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text="@string/num"
                 android:textColor="@color/black"
-                android:text="@string/num" />
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="2dp"
@@ -140,15 +150,15 @@
                 android:background="@color/colorAccent" />
 
             <TextView
-                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="3dp"
                 android:layout_weight="3"
                 android:gravity="center"
+                android:text="@string/subject"
                 android:textColor="@color/black"
-                android:text="@string/subject" />
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="2dp"
@@ -156,15 +166,15 @@
                 android:background="@color/colorAccent" />
 
             <TextView
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
                 android:layout_marginEnd="1dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/group" />
+                android:text="@string/group"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
