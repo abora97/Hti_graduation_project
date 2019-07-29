@@ -76,7 +76,7 @@ public class ComplainFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        dep = spinnerDepart.getSelectedItem().toString();
+        dep= list.get(0).getUserDeptID();
         type = spinnerType.getSelectedItem().toString();
         topic = edProblemTopic.getText().toString();
         desc = edProblemDec.getText().toString();
