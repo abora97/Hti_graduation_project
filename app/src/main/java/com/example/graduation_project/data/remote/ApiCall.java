@@ -6,6 +6,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
+import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.login.Login;
@@ -80,14 +81,21 @@ public class ApiCall {
 
     }
 
-    public static void getQuestionnaires(String q1_1, String q1_2, String q1_3, String q1_4, String q1_5, String q1_6, String q1_7,
+    public static void getQuestionnaires(String token, String subjectID, String doctorID, String assID, String q1_1, String q1_2, String q1_3, String q1_4, String q1_5, String q1_6, String q1_7,
                                          String q2_1, String q2_2, String q2_3, String q2_4,
                                          String q3_1, String q3_2, String q3_3, String q3_4, String q3_5, String q3_6, String q3_7, String q3_8
-                                         , String q4_1, String q4_2, String q4_3, String q4_4, String q4_5, String q4_6, String q4_7, String q4_8, String q4_9, String q4_10
-                                         , String q5_1, String q5_2, String q5_3, String q5_4, String q5_5
-                                         , String q6_1, String q6_2, String q6_3, String q6_4, String q6_5, String q6_6, String q6_7, String q6_8, String q6_9, String q6_10,
-                                         String q7_1, String q7_2, String q7_3, String q7_4, String q7_5, String q7_6, String q7_7, String q7_8,
-                                         String q8_1, String q8_2, String q8_3, String q8_4, String q8_5, String q8_6, String q8_7) {
+            , String q4_1, String q4_2, String q4_3, String q4_4, String q4_5, String q4_6, String q4_7, String q4_8, String q4_9, String q4_10
+            , String q5_1, String q5_2, String q5_3, String q5_4, String q5_5, String q6_1, String q6_2, String q6_3, String q6_4, String q6_5, String q6_6, String q6_7, String q6_8, String q6_9, String q6_10, String q7_1, String q7_2, String q7_3, String q7_4, String q7_5, String q7_6, String q7_7, String q7_8,
+                                         String q8_1, String q8_2, String q8_3, String q8_4, String q8_5, String q8_6, String q8_7, final QuestionnairesCallBack questionnairesCallBack) {
+        String authorization = "Bearer " + token;
+        AndroidNetworking.post(Constant.QUESTIONNAIRES_URL)
+                .addHeaders(Constant.AUTHORIZATION,authorization)
+                .addBodyParameter(Constant.SUB_ID,subjectID)
+                .addBodyParameter(Constant.DOC_ID,doctorID)
+                .addBodyParameter(Constant.ASS_ID,assID)
+                .addBodyParameter(Constant.Q1,q1_1);
+
+
 
     }
 }

@@ -6,8 +6,10 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.POST;
 
-public interface GetLoginService {
+public interface retroApiCall {
 //    @POST("posts")
 //    Call<ResponseBody> createNewPost(@Par)
 
+    @POST("questionnaires")
+    Call<ResponseBody> getResponse();
 }
