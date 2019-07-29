@@ -12,9 +12,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.data.remote.ApiCall;
+import com.example.graduation_project.model.Questionnaires.Questionnaires;
+import com.example.graduation_project.model.sql.DataBaseUserHelper;
+import com.example.graduation_project.model.sql.userSql;
 import com.example.graduation_project.ui.home.HomeActivity;
 import com.example.graduation_project.util.Constant;
+
+import java.util.List;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -38,8 +44,9 @@ public class QuestionnairesActivity extends AppCompatActivity {
             RadioGroup_7_6, RadioGroup_7_7, RadioGroup_7_8, RadioGroup_8_1, RadioGroup_8_2, RadioGroup_8_3, RadioGroup_8_4, RadioGroup_8_5, RadioGroup_8_6, RadioGroup_8_7;
 
 
-    String subjectID, doctorID,assID;
-
+    String subjectID, doctorID, assID, token;
+    private DataBaseUserHelper dataBaseCartHelper;
+    private List<userSql> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -558,22 +565,27 @@ public class QuestionnairesActivity extends AppCompatActivity {
                     String RadioButton_selected_8_6 = (String) radioButton_selected_8_6.getText();
                     String RadioButton_selected_8_7 = (String) radioButton_selected_8_7.getText();
 
-//                    ApiCall.getQuestionnaires(subjectID,doctorID,assID,RadioButton_selected_1_1, RadioButton_selected_1_2, RadioButton_selected_1_3, RadioButton_selected_1_4, RadioButton_selected_1_5, RadioButton_selected_1_6, RadioButton_selected_1_7,
-//                            RadioButton_selected_2_1, RadioButton_selected_2_2, RadioButton_selected_2_3, RadioButton_selected_2_4
-//                            , RadioButton_selected_3_1, RadioButton_selected_3_2, RadioButton_selected_3_3, RadioButton_selected_3_4, RadioButton_selected_3_5, RadioButton_selected_3_6, RadioButton_selected_3_7, RadioButton_selected_3_8
-//                            , RadioButton_selected_4_1, RadioButton_selected_4_2, RadioButton_selected_4_3, RadioButton_selected_4_4, RadioButton_selected_4_5, RadioButton_selected_4_6, RadioButton_selected_4_7, RadioButton_selected_4_8, RadioButton_selected_4_9, RadioButton_selected_4_10,
-//                            RadioButton_selected_5_1, RadioButton_selected_5_2, RadioButton_selected_5_3, RadioButton_selected_5_4, RadioButton_selected_5_5,
-//                            RadioButton_selected_6_1, RadioButton_selected_6_2, RadioButton_selected_6_3, RadioButton_selected_6_4, RadioButton_selected_6_5, RadioButton_selected_6_6, RadioButton_selected_6_7, RadioButton_selected_6_8, RadioButton_selected_6_9, RadioButton_selected_6_10,
-//                            RadioButton_selected_7_1, RadioButton_selected_7_2, RadioButton_selected_7_3, RadioButton_selected_7_4, RadioButton_selected_7_5, RadioButton_selected_7_6, RadioButton_selected_7_7, RadioButton_selected_7_8,
-//                            RadioButton_selected_8_1, RadioButton_selected_8_2, RadioButton_selected_8_3, RadioButton_selected_8_4, RadioButton_selected_8_5, RadioButton_selected_8_6, RadioButton_selected_8_7);
+                    ApiCall.getQuestionnaires(token, subjectID, doctorID, assID, RadioButton_selected_1_1, RadioButton_selected_1_2, RadioButton_selected_1_3, RadioButton_selected_1_4, RadioButton_selected_1_5, RadioButton_selected_1_6, RadioButton_selected_1_7,
+                            RadioButton_selected_2_1, RadioButton_selected_2_2, RadioButton_selected_2_3, RadioButton_selected_2_4
+                            , RadioButton_selected_3_1, RadioButton_selected_3_2, RadioButton_selected_3_3, RadioButton_selected_3_4, RadioButton_selected_3_5, RadioButton_selected_3_6, RadioButton_selected_3_7, RadioButton_selected_3_8
+                            , RadioButton_selected_4_1, RadioButton_selected_4_2, RadioButton_selected_4_3, RadioButton_selected_4_4, RadioButton_selected_4_5, RadioButton_selected_4_6, RadioButton_selected_4_7, RadioButton_selected_4_8, RadioButton_selected_4_9, RadioButton_selected_4_10,
+                            RadioButton_selected_5_1, RadioButton_selected_5_2, RadioButton_selected_5_3, RadioButton_selected_5_4, RadioButton_selected_5_5,
+                            RadioButton_selected_6_1, RadioButton_selected_6_2, RadioButton_selected_6_3, RadioButton_selected_6_4, RadioButton_selected_6_5, RadioButton_selected_6_6, RadioButton_selected_6_7, RadioButton_selected_6_8, RadioButton_selected_6_9, RadioButton_selected_6_10,
+                            RadioButton_selected_7_1, RadioButton_selected_7_2, RadioButton_selected_7_3, RadioButton_selected_7_4, RadioButton_selected_7_5, RadioButton_selected_7_6, RadioButton_selected_7_7, RadioButton_selected_7_8,
+                            RadioButton_selected_8_1, RadioButton_selected_8_2, RadioButton_selected_8_3, RadioButton_selected_8_4, RadioButton_selected_8_5, RadioButton_selected_8_6, RadioButton_selected_8_7, new QuestionnairesCallBack() {
+                                @Override
+                                public void onError(String msg) {
+                                    Toast.makeText(QuestionnairesActivity.this, " " + msg, Toast.LENGTH_SHORT).show();
+                                }
 
+                                @Override
+                                public void onSecuess(Questionnaires questionnaires) {
+                                    Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
-
-                    startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
+                                    startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
+                                }
+                            });
                 }
-
-
             }
         });
 
@@ -588,10 +600,15 @@ public class QuestionnairesActivity extends AppCompatActivity {
         String subInst = intent.getStringExtra(Constant.SUB_INSTRUC);
         String subAss = intent.getStringExtra(Constant.SUB_ASSISTANT);
 
+        //DataBase
+        dataBaseCartHelper = new DataBaseUserHelper(this);
+        list = dataBaseCartHelper.getAllRecord();
+
         doctorID = intent.getStringExtra(Constant.DOC_ID);
         subjectID = intent.getStringExtra(Constant.SUB_ID);
         assID = intent.getStringExtra(Constant.ASS_ID);
 
+        token = list.get(0).getToken();
 
         textView7.setText(subName);
         textView8.setText(subCode);
