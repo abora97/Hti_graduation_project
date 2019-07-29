@@ -47,6 +47,9 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
         final String courseGroup = String.valueOf(list.get(i).getId());
         final String courseInst = list.get(i).getDoctorName();
         final String courseAss = list.get(i).getAssistantName();
+        final String docID = String.valueOf(list.get(i).getDoctorId());
+        final String subID = String.valueOf(list.get(i).getId());
+        final String assID = String.valueOf(list.get(i).getAssistantId());
 
         viewHolder.tvSubjectName.setText(list.get(i).getName());
         viewHolder.tvSubjectCode.setText(list.get(i).getCode());
@@ -62,7 +65,9 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
                 intent.putExtra(Constant.SUB_CODE_COURSE, courseCode);
                 intent.putExtra(Constant.SUB_GROUP_NUM, courseGroup);
                 intent.putExtra(Constant.SUB_INSTRUC, courseInst);
-
+                intent.putExtra(Constant.DOC_ID, docID);
+                intent.putExtra(Constant.SUB_ID, subID);
+                intent.putExtra(Constant.ASS_ID, assID);
                 context.startActivity(intent);
             }
         });
