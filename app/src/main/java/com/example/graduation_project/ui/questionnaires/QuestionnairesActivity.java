@@ -120,8 +120,8 @@ public class QuestionnairesActivity extends AppCompatActivity {
         RadioGroup_1_7 = findViewById(R.id.RadioGroup_1_7);
         RadioGroup_2_1 = findViewById(R.id.RadioGroup_2_1);
         RadioGroup_2_2 = findViewById(R.id.RadioGroup_2_2);
-        RadioGroup_2_3 = findViewById(R.id.RadioGroup_2_4);
-        RadioGroup_2_4 = findViewById(R.id.RadioGroup_1_1);
+        RadioGroup_2_3 = findViewById(R.id.RadioGroup_2_3);
+        RadioGroup_2_4 = findViewById(R.id.RadioGroup_2_4);
         RadioGroup_3_1 = findViewById(R.id.RadioGroup_3_1);
         RadioGroup_3_2 = findViewById(R.id.RadioGroup_3_2);
         RadioGroup_3_3 = findViewById(R.id.RadioGroup_3_3);
