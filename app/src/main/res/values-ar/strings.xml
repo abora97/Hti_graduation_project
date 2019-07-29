@@ -131,4 +131,11 @@
     <string name="subject">الماده</string>
     <string name="num">رقم</string>
 
+    <string name="average">المتوسط</string>
+
+
+    <string name="student_name">اسم الطالب :</string>
+    <string name="student_id">الرقم التسلسلي :</string>
+    <string name="gpa">المعدل التراكمي :</string>
+    <string name="department">القسم :</string>
 </resources>
