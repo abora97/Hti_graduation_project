@@ -86,9 +86,9 @@ public interface Constant {
             Q52 = "workshops_technicians_characterized_by_high_efficiency",
             Q53 = "location",
             Q54 = "size",
-            Q56 = "number_of_chairs",
-            Q57 = "teaching_facilities",
-            Q58 = "quiet",
-            Q59 = "lighting",
-            Q60 = "cleanliness";
+            Q55 = "number_of_chairs",
+            Q56 = "teaching_facilities",
+            Q57 = "quiet",
+            Q58 = "lighting",
+            Q59 = "cleanliness";
 }
