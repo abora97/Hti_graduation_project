@@ -18,6 +18,7 @@
             android:gravity="center"
             android:layout_marginEnd="2dp"
             android:layout_marginStart="2dp"
+            android:textColor="@color/black"
             android:text="num" />
 
         <View
@@ -34,6 +35,7 @@
             <TextView
                 android:id="@+id/tv_subject_code"
                 android:layout_width="0dp"
+                android:textColor="@color/black"
                 android:layout_height="match_parent"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
@@ -49,6 +51,7 @@
             <TextView
                 android:id="@+id/tv_subject_name"
                 android:layout_width="0dp"
+                android:textColor="@color/black"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
@@ -63,6 +66,7 @@
         <TextView
             android:id="@+id/tv_subject_group"
             android:layout_width="0dp"
+            android:textColor="@color/black"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
