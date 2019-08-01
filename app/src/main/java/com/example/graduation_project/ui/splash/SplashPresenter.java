@@ -52,7 +52,7 @@ private Context context;
             @Override
             public void run() {
                 try {
-                    sleep(3500);
+                    sleep(10);
                     launch.startActivityMethod();
                     super.run();
                 } catch (InterruptedException e) {
