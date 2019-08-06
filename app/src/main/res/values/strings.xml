@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">HTI Student Services</string>
-    <string name="hti_services">HTI Services</string>
+    <string name="hti_services">Higher Technological Institute</string>
     <string name="this_app_provide_some_services_to_hti_student">This app provide some services to HTI student </string>
     <string name="student_can_complain">Student can complain about anything they want and also can do the questionnaire to can access their results</string>
     <string name="login">Login</string>
+    <string name="login_title">QuestComp</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="required">Required !</string>
@@ -146,7 +147,7 @@
     <string name="average">The Average evaluation is </string>
     <string name="group">Group</string>
     <string name="subject">subject</string>
-    <string name="num">num</string>
+    <string name="num">NO.</string>
     <string name="student_name">Student Name : </string>
     <string name="student_id">Student ID :</string>
     <string name="gpa">GPA :</string>
