@@ -3,6 +3,7 @@ package com.example.graduation_project.ui.complain;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,6 +86,8 @@ public class ComplainFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onError(String msg) {
                 Toast.makeText(getContext(), "Error >> " + msg, Toast.LENGTH_SHORT).show();
+                Log.d("Error Complin",msg);
+
             }
 
             @Override

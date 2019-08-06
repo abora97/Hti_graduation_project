@@ -33,6 +33,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="12dp"
+        android:visibility="gone"
         android:layout_marginRight="12dp"
         android:background="@drawable/shap_lay_full">
 

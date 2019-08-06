@@ -40,6 +40,8 @@ public class ApiCall {
 
     }
 
+    //   synchronized
+
     public static void getSubjectApi(String token, final SubjectCallBack subjectCallBack) {
         String Authorization = "Bearer " + token;
         AndroidNetworking.get(Constant.SUBJECT_URL)
@@ -59,10 +61,10 @@ public class ApiCall {
         });
     }
 
-    public static void makeComplain(String depart, String type, String topic, String desc, String token, final ComplainCallBack complainCallBack) {
+    public static void makeComplain(String depart_id, String type, String topic, String desc, String token, final ComplainCallBack complainCallBack) {
         String Authorization = "Bearer " + token;
         AndroidNetworking.post(Constant.COMPLAIN_URL)
-                .addBodyParameter(Constant.COMPLAIN_DEPART, depart)
+                .addBodyParameter(Constant.COMPLAIN_DEPART,depart_id)
                 .addBodyParameter(Constant.COMPLAIN_TYPE, type)
                 .addBodyParameter(Constant.COMPLAIN_TOPIC, topic)
                 .addBodyParameter(Constant.COMPLAIN_DESCRIPTION, desc)

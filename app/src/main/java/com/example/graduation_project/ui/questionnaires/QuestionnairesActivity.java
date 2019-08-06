@@ -51,6 +51,9 @@ public class QuestionnairesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+      //  ApiCall.
+
         setContentView(R.layout.activity_questionnaires);
         textView7 = findViewById(R.id.textView7);
         textView8 = findViewById(R.id.textView8);
