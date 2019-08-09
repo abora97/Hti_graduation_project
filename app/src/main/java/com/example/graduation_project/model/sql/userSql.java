@@ -9,6 +9,8 @@ public class userSql {
     public static final String COLUMN_USER_NAME = "username";
     public static final String COLUMN_GPA = "gpa";
     public static final String COLUMN_DEPT_ID = "deptid";
+    public static final String COLUMN_MANAGER_ROLE="role";
+
 
     private int id;
     private String token;
@@ -16,6 +18,15 @@ public class userSql {
     private String userName;
     private String userGPA;
     private String userDeptID;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getUserName() {
         return userName;
@@ -49,7 +60,8 @@ public class userSql {
                     + COLUM_USER_ID + " TEXT, "
                     + COLUMN_USER_NAME + " TEXT, "
                     + COLUMN_GPA + " TEXT, "
-                    + COLUMN_DEPT_ID + " TEXT "
+                    + COLUMN_DEPT_ID + " TEXT, "
+                    + COLUMN_MANAGER_ROLE + " TEXT "
                     + ")";
 
     public String getToken() {

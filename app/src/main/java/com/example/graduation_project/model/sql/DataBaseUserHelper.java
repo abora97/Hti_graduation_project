@@ -12,7 +12,7 @@ import java.util.List;
 public class DataBaseUserHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
 
     // Database Name
     private static final String DATABASE_NAME = "user.db";
@@ -37,7 +37,7 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public Boolean insertDataUser(String token, int userId, String userName, String userGpa, String userDeptID) {
+    public Boolean insertDataUser(String token, int userId, String userName, String userGpa, String userDeptID,String role) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -49,6 +49,7 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
         values.put(userSql.COLUMN_USER_NAME,userName);
         values.put(userSql.COLUMN_GPA,userGpa);
         values.put(userSql.COLUMN_DEPT_ID,userDeptID);
+        values.put(userSql.COLUMN_MANAGER_ROLE,role);
         // insert row
         long res = db.insert(userSql.TABLE_NAME, null, values);
         if (res == -1) {
@@ -74,6 +75,7 @@ public class DataBaseUserHelper extends SQLiteOpenHelper {
                 data.setUserName(cursor.getString(3));
                 data.setUserGPA(cursor.getString(4));
                 data.setUserDeptID(cursor.getString(5));
+                data.setRole(cursor.getString(6));
                 // Adding note to list
                 list.add(data);
             } while (cursor.moveToNext());
