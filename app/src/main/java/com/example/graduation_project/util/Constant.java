@@ -4,7 +4,9 @@ public interface Constant {
 
 
     String LOGIN_URL = "http://questcomp.ml/public/api/login";
+    String LOGIN_MANAGET_URL="http://questcomp.ml/public/api/managers/login";
     String ID = "c_id";
+    String EMAIL="email";
     String PASSWORD = "password";
     String SUBJECT_URL = "http://questcomp.ml/public/api/subjects";
     String AUTHORIZATION = "Authorization";
