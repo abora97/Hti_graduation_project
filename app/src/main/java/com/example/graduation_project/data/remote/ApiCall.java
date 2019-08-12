@@ -5,6 +5,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.example.graduation_project.callBack.ComplainCallBack;
+import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
 import com.example.graduation_project.callBack.QuestionnairesCallBack;
@@ -17,6 +18,14 @@ import com.example.graduation_project.model.loginAdmin.LoginManager;
 import com.example.graduation_project.model.subject.Subject;
 import com.example.graduation_project.util.Constant;
 
+import java.io.IOException;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class ApiCall {
     public static void LoginApi(String id, String password, final LoginCallBack loginCallBack) {
         AndroidNetworking.post(Constant.LOGIN_URL)
@@ -28,6 +37,7 @@ public class ApiCall {
                     public void onResponse(Login response) {
                         loginCallBack.onSecuess(response.getData());
                     }
+
                     @Override
                     public void onError(ANError anError) {
                         loginCallBack.onError(anError.getErrorDetail());
@@ -55,6 +65,12 @@ public class ApiCall {
 
     }
 
+
+    public static void departmentManager(String token) {
+
+    }
+
+
     //   synchronized
 
     public static void getSubjectApi(String token, final SubjectCallBack subjectCallBack) {
@@ -76,10 +92,28 @@ public class ApiCall {
         });
     }
 
+
+    public static void Complain(int depart_id, String type, String topic, String desc, String token, final ComplainCallBackRetrofit complainCallBackRetrofit) {
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.COMPLAIN_URL_RETROFIT).build();
+        RetroApiCall getApiCall = retrofit.create(RetroApiCall.class);
+        getApiCall.getJsonPlaceHolder( depart_id, type, topic, desc).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                complainCallBackRetrofit.onSecuess(response.message());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                complainCallBackRetrofit.onError(t.getMessage());
+            }
+        });
+    }
+
+
     public static void makeComplain(String depart_id, String type, String topic, String desc, String token, final ComplainCallBack complainCallBack) {
         String Authorization = "Bearer " + token;
         AndroidNetworking.post(Constant.COMPLAIN_URL)
-                .addBodyParameter(Constant.COMPLAIN_DEPART,depart_id)
+                .addBodyParameter(Constant.COMPLAIN_DEPART, depart_id)
                 .addBodyParameter(Constant.COMPLAIN_TYPE, type)
                 .addBodyParameter(Constant.COMPLAIN_TOPIC, topic)
                 .addBodyParameter(Constant.COMPLAIN_DESCRIPTION, desc)
