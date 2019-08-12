@@ -12,6 +12,7 @@ public interface Constant {
     String AUTHORIZATION = "Authorization";
 
     String COMPLAIN_URL = "http://questcomp.ml/public/api/complains";
+    String COMPLAIN_URL_RETROFIT = "http://questcomp.ml/public/api/";
     String COMPLAIN_DEPART = "department";
     String COMPLAIN_TYPE = "complain_type";
     String COMPLAIN_TOPIC = "topic";

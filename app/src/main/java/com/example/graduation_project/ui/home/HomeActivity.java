@@ -135,7 +135,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_logout) {
             dataBaseCartHelper.deleteAll();
-            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+            startActivity(new Intent(HomeActivity.this, SplashActivity.class));
             finish();
         }else if(id ==R.id.nav_language){
             SharedPreferences sharedPreferences = getSharedPreferences(Constant.HTI, MODE_PRIVATE);

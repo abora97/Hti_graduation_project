@@ -5,7 +5,9 @@
     <string name="this_app_provide_some_services_to_hti_student">يوفر هذا التطبيق بعض الخدمات لطالب المعهد العالي للتكنولودجيا</string>
     <string name="student_can_complain">يمكن للطالب أن يشتكي من أي شيء يريده وأيضًا يمكنه عمل الاستبيان للوصول إلى نتائجهم</string>
     <string name="login">تسجيل الدخول</string>
-    <string name="login_title">خدمات الطلاب</string>
+    <string name="student_login">دخول الطلبة</string>
+    <string name="manager_login">دخول الأساتذة</string>
+    <string name="login_title">الاستبيانات والشكاوي للطلاب</string>
     <string name="id">رقم الطالب</string>
     <string name="password">كلمه المرور</string>
     <string name="required">مطلوب !</string>

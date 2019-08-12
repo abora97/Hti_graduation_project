@@ -4,7 +4,7 @@
     <string name="this_app_provide_some_services_to_hti_student">This app provide some services to HTI student </string>
     <string name="student_can_complain">Student can complain about anything they want and also can do the questionnaire to can access their results</string>
     <string name="login">Login</string>
-    <string name="login_title">QuestComp</string>
+    <string name="login_title">Questionnaire And Complaints Management System For Hti Students</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="required">Required !</string>
@@ -32,7 +32,7 @@
     <string name="cs"> Computer Science</string>
     <string name="eng">Engineering</string>
     <string name="man_ar"> Management (Arabic)</string>
-    <string name="man_en"> Management (English)</string>
+    <string name="man_en"> Management </string>
 
     <string-array name="array_depart">
         <item>Computer Science</item>
@@ -127,7 +127,7 @@
     <string name="Question8.1">8.1- Site</string>
     <string name="Question8.2">8.2- the size</string>
     <string name="Question8.3">8.3- Number of Seats / Punches</string>
-    <string name="Question8.4">8.4- Teaching facilities (blackboard - data show - projector)</string>
+    <string name="Question8.4">8.4- Teaching facilities (blackboard - dataManager show - projector)</string>
     <string name="Question8.5">8.5- Quiet</string>
     <string name="Question8.6">8.6- Lighting</string>
     <string name="Question8.7">8.7- Cleanliness</string>
@@ -153,4 +153,6 @@
     <string name="gpa">GPA :</string>
     <string name="department">Department :</string>
     <string name="hti">Higher Technological Institute</string>
+    <string name="student_login">Student Login</string>
+    <string name="manager_login">Academic Login</string>
 </resources>

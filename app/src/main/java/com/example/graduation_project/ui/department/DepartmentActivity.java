@@ -16,15 +16,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.model.sql.DataBaseUserHelper;
+import com.example.graduation_project.model.sql.userSql;
 import com.example.graduation_project.ui.home.HomeActivity;
 import com.example.graduation_project.ui.login.LoginActivity;
 import com.example.graduation_project.ui.splash.SplashActivity;
 import com.example.graduation_project.util.Constant;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -39,6 +44,8 @@ public class DepartmentActivity extends AppCompatActivity
     TabLayout tabLayout;
     @BindView(R.id.viewpager)
     ViewPager viewPager;
+    private DataBaseUserHelper dataBaseCartHelper;
+    private List<userSql> list;
     boolean doubleBackToExitPressedOnce = false;
     private String lang;
     private ArrayList<String> arrayList;
@@ -55,7 +62,15 @@ public class DepartmentActivity extends AppCompatActivity
         arrayList.add(getString(R.string.eng));
         arrayList.add(getString(R.string.cs));
         arrayList.add(getString(R.string.man_en));
-        arrayList.add(getString(R.string.man_ar));
+
+        NavigationView navigationView = findViewById(R.id.nav_view); //displays text of header of nav drawer
+        View header = navigationView.getHeaderView(0);
+        TextView name = header.findViewById(R.id.tv_manager_name);
+
+
+        //DataBase
+        dataBaseCartHelper = new DataBaseUserHelper(this);
+        list = dataBaseCartHelper.getAllRecord();
 
         TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager(), arrayList);
         viewPager.setAdapter(adapter);
@@ -63,12 +78,14 @@ public class DepartmentActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPager);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        name.setText(String.valueOf(list.get(0).getUserName()));
     }
 
     @Override
@@ -113,7 +130,8 @@ public class DepartmentActivity extends AppCompatActivity
             lang = sharedPreferences.getString(Constant.LANGUAGE, "en");
             changeLanguage(lang.equals("en") ? "ar" : "en");
         } else if (id == R.id.nav_logout_dep) {
-            startActivity(new Intent(DepartmentActivity.this, LoginActivity.class));
+            dataBaseCartHelper.deleteAll();
+            startActivity(new Intent(DepartmentActivity.this, SplashActivity.class));
             finish();
         }
 

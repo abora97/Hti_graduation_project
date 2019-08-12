@@ -8,15 +8,102 @@
     tools:context=".ui.statistics.StatisticsActivity">
 
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="dfdsaffdfasfdasdf" />
+        android:text="@string/hti"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-    <br.com.felix.horizontalbargraph.HorizontalBar
-        android:id="@+id/horizontal_graph"
-        android:layout_marginTop="10dp"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:text="@string/login_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/num"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/subject"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/group"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_subject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </LinearLayout>
+

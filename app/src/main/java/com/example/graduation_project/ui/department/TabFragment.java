@@ -79,11 +79,11 @@ public class TabFragment extends Fragment {
         if (position == 0) {
             // textView.setText(getString(R.string.eng));
             list.clear();
-            list.add("fff");
-            list.add("dd");
-            list.add("dd");
-            list.add("dd");
-            list.add("dd");
+            list.add("1");
+            list.add("2");
+            list.add("3");
+            list.add("4");
+            list.add("5");
             setAdapter(list);
 
         } else if (position == 1) {

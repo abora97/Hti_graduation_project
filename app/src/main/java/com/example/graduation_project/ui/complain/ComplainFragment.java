@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.graduation_project.R;
 import com.example.graduation_project.callBack.ComplainCallBack;
+import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.data.remote.ApiCall;
 import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
@@ -77,22 +78,40 @@ public class ComplainFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        dep= list.get(0).getUserDeptID();
+        dep = list.get(0).getUserDeptID();
         type = spinnerType.getSelectedItem().toString();
         topic = edProblemTopic.getText().toString();
         desc = edProblemDec.getText().toString();
 
-        ApiCall.makeComplain(dep, type, topic, desc, list.get(0).getToken(), new ComplainCallBack() {
+        int departID = Integer.parseInt(list.get(0).getUserDeptID());
+
+//        ApiCall.makeComplain(dep, type, topic, desc, list.get(0).getToken(), new ComplainCallBack() {
+//            @Override
+//            public void onError(String msg) {
+//                Toast.makeText(getContext(), "Error >> " + msg, Toast.LENGTH_SHORT).show();
+//                Log.d("Error Complin", msg);
+//
+//            }
+//
+//            @Override
+//            public void onSecuess(Complain complain) {
+//                Toast.makeText(getContext(), " " + complain.getData().isSuccessful(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
+        ApiCall.Complain(departID, type, topic, desc, list.get(0).getToken(), new ComplainCallBackRetrofit() {
             @Override
             public void onError(String msg) {
                 Toast.makeText(getContext(), "Error >> " + msg, Toast.LENGTH_SHORT).show();
-                Log.d("Error Complin",msg);
 
-            }
+        }
 
             @Override
-            public void onSecuess(Complain complain) {
-                Toast.makeText(getContext(), " " + complain.getData().isSuccessful(), Toast.LENGTH_SHORT).show();
+            public void onSecuess(String complain) {
+                Toast.makeText(getContext(), " Your Complain is send" , Toast.LENGTH_SHORT).show();
+                edProblemTopic.setText("");
+                edProblemDec.setText("");
             }
         });
 

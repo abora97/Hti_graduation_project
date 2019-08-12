@@ -52,9 +52,9 @@ public class LoginPresenter extends BasePresenter implements LoginContract.prese
                 String userGpa = response.getData().getUser().getGpa();
                 String userDeptID = response.getData().getUser().getDepartmentId();
 
-                Gson gson = new Gson();
 
-                dataBaseCartHelper.insertDataUser(userToken, userID,userName,userGpa,userDeptID);
+
+                dataBaseCartHelper.insertDataUser(userToken, userID,userName,userGpa,userDeptID,"student");
                 mainView.getToken(response.getData().getToken());
             }
 
