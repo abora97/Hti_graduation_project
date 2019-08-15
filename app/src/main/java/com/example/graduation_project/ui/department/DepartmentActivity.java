@@ -133,6 +133,8 @@ public class DepartmentActivity extends AppCompatActivity
             dataBaseCartHelper.deleteAll();
             startActivity(new Intent(DepartmentActivity.this, SplashActivity.class));
             finish();
+        }else if(id==R.id.nav_complaints_dep){
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

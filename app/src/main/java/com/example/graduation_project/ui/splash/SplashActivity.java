@@ -25,6 +25,8 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
     Button buStudent;
     @BindView(R.id.bu_manager)
     Button buManager;
+    @BindView(R.id.bu_dean)
+    Button buDean;
 
     private SplashPresenter splashPresenter;
     public static String DefaultLang;
@@ -48,6 +50,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
 
         buManager.setOnClickListener(this);
         buStudent.setOnClickListener(this);
+        buDean.setOnClickListener(this);
     }
 
 
@@ -96,16 +99,19 @@ public class SplashActivity extends BaseActivity implements SplashContract.launc
 
         switch (view.getId()) {
             case R.id.bu_manager:
-              //  Toast.makeText(this, "manager bu", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(this, "manager bu", Toast.LENGTH_SHORT).show();
                 intent.putExtra("loginType", "manager");
                 startActivity(intent);
-
                 break;
             case R.id.bu_student:
-           //     Toast.makeText(this, "student bu", Toast.LENGTH_SHORT).show();
+                //     Toast.makeText(this, "student bu", Toast.LENGTH_SHORT).show();
                 intent.putExtra("loginType", "student");
                 startActivity(intent);
-
+                break;
+            case R.id.bu_dean:
+                //     Toast.makeText(this, "dean bu", Toast.LENGTH_SHORT).show();
+                intent.putExtra("loginType", "dean");
+                startActivity(intent);
                 break;
         }
     }

@@ -47,7 +47,26 @@ public class ApiCall {
 
     public static void LoginManager(String id, String password, final LoginManagerCallBack loginCallBack) {
         AndroidNetworking.post(Constant.LOGIN_MANAGET_URL)
-                .addBodyParameter(Constant.EMAIL, id)
+                .addBodyParameter(Constant.ID, id)
+                .addBodyParameter(Constant.PASSWORD, password)
+                .build()
+                .getAsObject(LoginManager.class, new ParsedRequestListener<LoginManager>() {
+                    @Override
+                    public void onResponse(LoginManager response) {
+                        loginCallBack.onSecuess(response.getData());
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        loginCallBack.onError(anError.getErrorDetail());
+                    }
+                });
+
+
+    }
+    public static void DeanManager(String id, String password, final LoginManagerCallBack loginCallBack) {
+        AndroidNetworking.post(Constant.LOGIN_DEAN_URL)
+                .addBodyParameter(Constant.ID, id)
                 .addBodyParameter(Constant.PASSWORD, password)
                 .build()
                 .getAsObject(LoginManager.class, new ParsedRequestListener<LoginManager>() {

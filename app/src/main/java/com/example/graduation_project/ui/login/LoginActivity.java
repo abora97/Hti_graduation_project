@@ -93,8 +93,40 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 loginStudent(id, password);
             } else if (loginType.equals("manager")) {
                 loginManager(id, password);
+            } else if (loginType.equals("dean")) {
+                loginDean(id, password);
             }
         }
+
+    }
+
+    private void loginDean(String id, String password) {
+        dataBaseCartHelper = new DataBaseUserHelper(this);
+
+
+        ApiCall.DeanManager(id, password, new LoginManagerCallBack() {
+
+            @Override
+            public void onSecuess(com.example.graduation_project.model.loginAdmin.Data response) {
+                String userToken = response.getData().getToken();
+                int userID = response.getData().getManager().getId();
+                String userName = response.getData().getManager().getName();
+                String userGpa = "2";
+                String userDeptID = (String) response.getData().getManager().getDepartmentId();
+                String managerRole = response.getData().getManager().getRole();
+
+                dataBaseCartHelper.insertDataUser(userToken, userID, userName, userGpa, userDeptID, managerRole);
+
+                startActivity(new Intent(LoginActivity.this, DepartmentActivity.class));
+                finish();
+            }
+
+
+            @Override
+            public void onError(String msg) {
+                Toast.makeText(LoginActivity.this, "E  " + msg, Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -112,7 +144,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 String userToken = response.getData().getToken();
                 int userID = response.getData().getManager().getId();
                 String userName = response.getData().getManager().getName();
-                String userGpa="2";
+                String userGpa = "2";
                 String userDeptID = (String) response.getData().getManager().getDepartmentId();
                 String managerRole = response.getData().getManager().getRole();
 

@@ -20,14 +20,6 @@ public interface LoginContract {
      * while the setDataToRecyclerView and onResponseFailure is fetched from the GetNoticeInteractorImpl class
      **/
     interface MainView {
-//
-//        void showProgress();
-//
-//        void hideProgress();
-//
-//        void setDataToRecyclerView(ArrayList<Notice> noticeArrayList);
-//
-//        void onResponseFailure(Throwable throwable);
 
         void getToken(String token);
         void getError(String msg);

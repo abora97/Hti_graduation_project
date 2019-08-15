@@ -52,7 +52,7 @@
     <string name="arabic">عربي</string>
 
 
-    <string name="Title">Curriculum Evaluation Form</string>
+    <string name="Title">Questionnaire Evaluation Form</string>
     <string name="namesubject">Name Course :</string>
     <string name="name_code">Code Course :</string>
     <string name="numgroup">Group number :</string>
@@ -154,5 +154,6 @@
     <string name="department">Department :</string>
     <string name="hti">Higher Technological Institute</string>
     <string name="student_login">Student Login</string>
-    <string name="manager_login">Academic Login</string>
+    <string name="manager_login">manager Login</string>
+    <string name="dean_login">Dean Login</string>
 </resources>
