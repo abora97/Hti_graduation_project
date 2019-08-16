@@ -7,11 +7,13 @@ import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.callBack.DeanCallBack;
+import com.example.graduation_project.callBack.DoctorSubjectCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
 import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
+import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.Questionnaires.Questionnaires;
 import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.login.Login;
@@ -29,6 +31,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class ApiCall {
+
     public static void LoginApi(String id, String password, final LoginCallBack loginCallBack) {
         AndroidNetworking.post(Constant.LOGIN_URL)
                 .addBodyParameter(Constant.ID, id)
@@ -63,8 +66,6 @@ public class ApiCall {
                         loginCallBack.onError(anError.getErrorDetail());
                     }
                 });
-
-
     }
 
     public static void DeanManager(String id, String password, final LoginManagerCallBack loginCallBack) {
@@ -83,8 +84,6 @@ public class ApiCall {
                         loginCallBack.onError(anError.getErrorDetail());
                     }
                 });
-
-
     }
 
 
@@ -94,8 +93,6 @@ public class ApiCall {
                 .addHeaders(Constant.AUTHORIZATION, Authorization)
                 .setPriority(Priority.HIGH)
                 .build().getAsObject(DeanDepartment.class, new ParsedRequestListener<DeanDepartment>() {
-
-
             @Override
             public void onResponse(DeanDepartment response) {
                 deanCallBack.onSecuess(response);
@@ -108,6 +105,26 @@ public class ApiCall {
         });
     }
 
+
+    public static void getDoctorSubject(String token, String id, final DoctorSubjectCallBack doctorSubjectCallBack) {
+        String Authorization = "Bearer " + token;
+        String URL = "http://questcomp.ml/public/api/managers/doctors/" + id + "/subjects";
+        AndroidNetworking.get(URL)
+                .addHeaders(Constant.AUTHORIZATION, Authorization)
+                .setPriority(Priority.HIGH)
+                .build().getAsObject(GetDoctorSubject.class, new ParsedRequestListener<GetDoctorSubject>() {
+            @Override
+            public void onResponse(GetDoctorSubject response) {
+                doctorSubjectCallBack.onSecuess(response);
+            }
+
+            @Override
+            public void onError(ANError anError) {
+                doctorSubjectCallBack.onError(anError.getErrorDetail());
+            }
+        });
+
+    }
 
     public static void managerDepartment(String token) {
         String Authorization = "Bearer " + token;

@@ -17,12 +17,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
+import com.example.graduation_project.callBack.DeanCallBack;
+import com.example.graduation_project.data.remote.ApiCall;
+import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
+import com.example.graduation_project.ui.docSubject.DoctorActivity;
 import com.example.graduation_project.ui.home.HomeActivity;
 import com.example.graduation_project.ui.login.LoginActivity;
 import com.example.graduation_project.ui.splash.SplashActivity;
@@ -35,20 +40,23 @@ import java.util.Locale;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DepartmentActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class DepartmentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.tabs)
-    TabLayout tabLayout;
-    @BindView(R.id.viewpager)
-    ViewPager viewPager;
+    @BindView(R.id.bu_cs)
+    Button buttonCS;
+    @BindView(R.id.bu_eng)
+    Button buttoneEng;
+    @BindView(R.id.bu_manag)
+    Button buttonManagment;
+
+
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
     boolean doubleBackToExitPressedOnce = false;
     private String lang;
-    private ArrayList<String> arrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +65,11 @@ public class DepartmentActivity extends AppCompatActivity
         ButterKnife.bind(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        arrayList = new ArrayList<>();
 
-        arrayList.add(getString(R.string.eng));
-        arrayList.add(getString(R.string.cs));
-        arrayList.add(getString(R.string.man_en));
+
+
+
+
 
         NavigationView navigationView = findViewById(R.id.nav_view); //displays text of header of nav drawer
         View header = navigationView.getHeaderView(0);
@@ -72,10 +80,8 @@ public class DepartmentActivity extends AppCompatActivity
         dataBaseCartHelper = new DataBaseUserHelper(this);
         list = dataBaseCartHelper.getAllRecord();
 
-        TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager(), arrayList);
-        viewPager.setAdapter(adapter);
+        //TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager(), arrayList);
 
-        tabLayout.setupWithViewPager(viewPager);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
@@ -86,6 +92,37 @@ public class DepartmentActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         name.setText(String.valueOf(list.get(0).getUserName()));
+
+        buttonCS.setOnClickListener(this);
+        buttoneEng.setOnClickListener(this);
+        buttonManagment.setOnClickListener(this);
+
+
+
+    //   init();
+    }
+
+    private void init() {
+
+        String token=list.get(0).getToken();
+
+        ApiCall.deanDepartment(token, new DeanCallBack() {
+            @Override
+            public void onError(String msg) {
+                Toast.makeText(DepartmentActivity.this, "error " + msg, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onSecuess(DeanDepartment deanDepartment) {
+                Toast.makeText(DepartmentActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartments(), Toast.LENGTH_SHORT).show();
+
+             //   deanDepartment.getData().getData().getDepartments()
+
+            }
+        });
+
+
     }
 
     @Override
@@ -133,7 +170,7 @@ public class DepartmentActivity extends AppCompatActivity
             dataBaseCartHelper.deleteAll();
             startActivity(new Intent(DepartmentActivity.this, SplashActivity.class));
             finish();
-        }else if(id==R.id.nav_complaints_dep){
+        } else if (id == R.id.nav_complaints_dep) {
 
         }
 
@@ -169,5 +206,24 @@ public class DepartmentActivity extends AppCompatActivity
         // Utils.reset();
         finish();
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(DepartmentActivity.this, DoctorActivity.class);
+        switch (view.getId()){
+            case R.id.bu_cs:
+                intent.putExtra("department","cs");
+                startActivity(intent);
+                break;
+                case R.id.bu_eng:
+                intent.putExtra("department","eng");
+                startActivity(intent);
+                break;
+                case R.id.bu_manag:
+                intent.putExtra("department","management");
+                startActivity(intent);
+                break;
+        }
     }
 }
