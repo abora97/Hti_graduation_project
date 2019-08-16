@@ -6,6 +6,10 @@ public interface Constant {
     String LOGIN_URL = "http://questcomp.ml/public/api/login";
     String LOGIN_MANAGET_URL="http://questcomp.ml/public/api/managers/login/department-manager";
     String LOGIN_DEAN_URL="http://questcomp.ml/public/api/managers/login/dean";
+
+    String DEAN_DEPARTMENT="http://questcomp.ml/public/api/managers/chancellor";
+
+
     String ID = "c_id";
     String EMAIL="email";
     String PASSWORD = "password";

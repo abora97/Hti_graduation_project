@@ -6,12 +6,14 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
+import com.example.graduation_project.callBack.DeanCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
 import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.Questionnaires.Questionnaires;
+import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.login.Login;
 
 import com.example.graduation_project.model.loginAdmin.LoginManager;
@@ -64,6 +66,7 @@ public class ApiCall {
 
 
     }
+
     public static void DeanManager(String id, String password, final LoginManagerCallBack loginCallBack) {
         AndroidNetworking.post(Constant.LOGIN_DEAN_URL)
                 .addBodyParameter(Constant.ID, id)
@@ -85,7 +88,34 @@ public class ApiCall {
     }
 
 
-    public static void departmentManager(String token) {
+    public static void deanDepartment(String token, final DeanCallBack deanCallBack) {
+        String Authorization = "Bearer " + token;
+        AndroidNetworking.get(Constant.DEAN_DEPARTMENT)
+                .addHeaders(Constant.AUTHORIZATION, Authorization)
+                .setPriority(Priority.HIGH)
+                .build().getAsObject(DeanDepartment.class, new ParsedRequestListener<DeanDepartment>() {
+
+
+            @Override
+            public void onResponse(DeanDepartment response) {
+                deanCallBack.onSecuess(response);
+            }
+
+            @Override
+            public void onError(ANError anError) {
+                deanCallBack.onError(anError.getErrorDetail());
+            }
+        });
+    }
+
+
+    public static void managerDepartment(String token) {
+        String Authorization = "Bearer " + token;
+//        AndroidNetworking.get(Constant.MANAGER_DEPARTMENT)
+//                .addHeaders(Constant.AUTHORIZATION, Authorization)
+//                .setPriority(Priority.HIGH)
+//                .build().getAsObject(De);
+
 
     }
 
@@ -115,7 +145,7 @@ public class ApiCall {
     public static void Complain(int depart_id, String type, String topic, String desc, String token, final ComplainCallBackRetrofit complainCallBackRetrofit) {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.COMPLAIN_URL_RETROFIT).build();
         RetroApiCall getApiCall = retrofit.create(RetroApiCall.class);
-        getApiCall.getJsonPlaceHolder( depart_id, type, topic, desc).enqueue(new Callback<ResponseBody>() {
+        getApiCall.getJsonPlaceHolder(depart_id, type, topic, desc).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 complainCallBackRetrofit.onSecuess(response.message());

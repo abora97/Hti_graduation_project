@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ import com.example.graduation_project.model.login.Data;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.ui.department.DepartmentActivity;
 import com.example.graduation_project.ui.home.HomeActivity;
+import com.example.graduation_project.ui.splash.SplashActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,11 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         loginType = getIntent().getStringExtra("loginType");
 
-//        if (loginType.equals("student")) {
-//            tvLoginType.setText("student login");
-//        } else if (loginType.equals("manager")) {
-//            tvLoginType.setText("manager login");
-//        }
+
 
     }
 
@@ -116,8 +114,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 String managerRole = response.getData().getManager().getRole();
 
                 dataBaseCartHelper.insertDataUser(userToken, userID, userName, userGpa, userDeptID, managerRole);
-
-                startActivity(new Intent(LoginActivity.this, DepartmentActivity.class));
+                Log.i("Token", userToken);
+                Intent intent = new Intent(LoginActivity.this, DepartmentActivity.class);
+                intent.putExtra("userType", "dean");
+                startActivity(intent);
                 finish();
             }
 
@@ -149,8 +149,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 String managerRole = response.getData().getManager().getRole();
 
                 dataBaseCartHelper.insertDataUser(userToken, userID, userName, userGpa, userDeptID, managerRole);
+                Log.i("Token *_*>>>>>>>>>>>>>>", userToken);
 
-                startActivity(new Intent(LoginActivity.this, DepartmentActivity.class));
+                Intent intent = new Intent(LoginActivity.this, DepartmentActivity.class);
+                intent.putExtra("userType", "manager");
+                startActivity(intent);
                 finish();
             }
 
@@ -181,7 +184,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
                 dataBaseCartHelper.insertDataUser(userToken, userID, userName, userGpa, userDeptID, "student");
-
+                Log.i("Token *_*>>>>>>>>>>>>>>", userToken);
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 finish();
             }
