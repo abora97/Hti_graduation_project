@@ -7225,7 +7225,7 @@
                                     android:layout_marginBottom="8dp"
                                     android:background="@drawable/yourbuttonbackground"
                                     android:button="@android:color/transparent"
-                                    android:textColor="@color/color"
+                                    android:textColor="@drawable/radio_text_selected"
                                     android:gravity="center"
                                     android:text="4"
                                     android:textStyle="bold"
@@ -9912,9 +9912,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/bt_rounded_blue"
+                android:background="@drawable/bordbutton"
                 android:text="@string/submit"
-                android:textColor="@color/white"
+                android:textColor="@color/blue"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>

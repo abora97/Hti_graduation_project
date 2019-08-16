@@ -21,7 +21,7 @@ public class ComplainActivity extends AppCompatActivity {
     EditText edProblemTopic;
     @BindView(R.id.ed_problem_dec)
     EditText edProblemDec;
-    @BindView(R.id.bu_suggestion_send)
+    @BindView(R.id.bu_viewresult)
     Button buSuggestionSend;
 
     @Override

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/wightlogo"
     android:orientation="vertical"
     tools:context=".ui.complain.ComplainActivity">
 
@@ -17,15 +17,15 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/feel_free"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-       />
+        android:textColor="#204F72"
+        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,6 +68,7 @@
             android:textColor="#000000"
             android:textSize="15sp" />
     </LinearLayout>
+
     <EditText
         android:id="@+id/ed_problem_topic"
         android:layout_width="match_parent"
@@ -85,6 +86,7 @@
         android:paddingTop="10dp"
         android:paddingEnd="8dp"
         android:paddingRight="8dp" />
+
     <EditText
         android:id="@+id/ed_problem_dec"
         android:layout_width="match_parent"
@@ -102,8 +104,9 @@
         android:paddingTop="10dp"
         android:paddingEnd="8dp"
         android:paddingRight="8dp" />
+
     <Button
-        android:id="@+id/bu_suggestion_send"
+        android:id="@+id/bu_viewresult"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_gravity="center"
@@ -113,8 +116,8 @@
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/bt_rounded_blue"
+        android:background="@drawable/bordbutton"
         android:text="@string/submit"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textSize="16sp" />
 </LinearLayout>

@@ -387,7 +387,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
                         || radioButton_selected_7_5 == null || radioButton_selected_7_6 == null || radioButton_selected_7_7 == null || radioButton_selected_7_8 == null
                         || radioButton_selected_8_1 == null || radioButton_selected_8_2 == null || radioButton_selected_8_3 == null || radioButton_selected_8_4 == null
                         || radioButton_selected_8_5 == null || radioButton_selected_8_6 == null || radioButton_selected_8_7 == null) {
-                    Toast.makeText(QuestionnairesActivity.this, " Please Select All Questionnaires", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionnairesActivity.this, getString(R.string.SelectAllQuestionnaires), Toast.LENGTH_SHORT).show();
                 }
 
 //                } else if (radioButton_selected_1_2 == null) {
@@ -583,7 +583,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onSecuess(Questionnaires questionnaires) {
-                                    Toast.makeText(QuestionnairesActivity.this, " Thanks", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(QuestionnairesActivity.this,  getString(R.string.Thanks), Toast.LENGTH_SHORT).show();
 
                                     startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
                                 }

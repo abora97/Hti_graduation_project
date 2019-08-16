@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HTI Student Services</string>
+    <string name="app_name">المعهد التكنولوجى العالى</string>
     <string name="hti_services">المعهد التكنولوجى العالى</string>
     <string name="this_app_provide_some_services_to_hti_student">يوفر هذا التطبيق بعض الخدمات لطالب المعهد العالي للتكنولودجيا</string>
     <string name="student_can_complain">يمكن للطالب أن يشتكي من أي شيء يريده وأيضًا يمكنه عمل الاستبيان للوصول إلى نتائجهم</string>
@@ -10,8 +10,11 @@
     <string name="login_title">الاستبيانات والشكاوي للطلاب</string>
     <string name="id">رقم الطالب</string>
     <string name="password">كلمه المرور</string>
+    <string name="SelectAllQuestionnaires">يرجي ملئ الاستبيان بالكامل </string>
+    <string name="Thanks">شكرا</string>
     <string name="required">مطلوب !</string>
     <string name="menu_home">الاستبيان</string>
+    <string name="viewresult">عرض النتيجه</string>
     <string name="menu_complaints">الشكاوى</string>
     <string name="logout">خروج</string>
     <string name="submit">ارسال</string>
