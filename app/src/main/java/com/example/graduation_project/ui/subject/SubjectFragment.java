@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +29,7 @@ import butterknife.Unbinder;
  */
 public class SubjectFragment extends Fragment implements SubjectContract.viewMain, SwipeRefreshLayout.OnRefreshListener {
 
-
+Button bu_viewresult ;
     @BindView(R.id.rec_subject)
     RecyclerView recSubject;
     @BindView(R.id.swipe_subject)
@@ -61,6 +62,7 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_subject, container, false);
         unbinder = ButterKnife.bind(this, view);
+        bu_viewresult =(Button) view.findViewById(R.id.bu_viewresult);
 
         subjectPresenter = new SubjectPresenter(this);
 
@@ -83,12 +85,14 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
         tvStudentId.setText(String.valueOf(list.get(0).getUserId()));
         String deptID = list.get(0).getUserDeptID();
 
+
         if (deptID.equals("1")) {
             tvStudentDepart.setText(getString(R.string.cs));
         } else if (deptID.equals("2")) {
             tvStudentDepart.setText(getString(R.string.eng));
         } else if (deptID.equals("3")) {
             tvStudentDepart.setText(getString(R.string.man_en));
+
         } else {
             tvStudentDepart.setText(getString(R.string.man_ar));
         }
@@ -101,7 +105,11 @@ public class SubjectFragment extends Fragment implements SubjectContract.viewMai
         swipeSubject.setRefreshing(false);
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         subjectAdapter = new SubjectAdapter(getActivity(), subjects.getData().getData().getSubjects());
+        if(subjects.getData().getData().getSubjects().size()==0){
+          //  bu_viewresult.setVisibility(View.VISIBLE);
+        }
         recSubject.setLayoutManager(mLayoutManager);
+
         recSubject.setAdapter(subjectAdapter);
     }
 

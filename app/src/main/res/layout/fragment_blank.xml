@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/wightlogo"
     android:orientation="vertical"
     tools:context=".ui.complain.ComplainFragment">
 
@@ -23,7 +23,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/feel_free"
-        android:textColor="@color/black"
+        android:textColor="#204F72"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -33,9 +33,9 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="12dp"
-        android:visibility="gone"
         android:layout_marginRight="12dp"
-        android:background="@drawable/shap_lay_full">
+        android:background="@drawable/shap_lay_full"
+        android:visibility="gone">
 
         <Spinner
             android:id="@+id/spinner_depart"
@@ -106,7 +106,7 @@
         android:paddingRight="8dp" />
 
     <Button
-        android:id="@+id/bu_suggestion_send"
+        android:id="@+id/bu_viewresult"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_gravity="center"
@@ -116,8 +116,8 @@
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/bt_rounded_blue"
+        android:background="@drawable/bordbutton"
         android:text="@string/submit"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textSize="16sp" />
 </LinearLayout>

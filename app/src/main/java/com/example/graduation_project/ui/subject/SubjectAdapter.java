@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,7 +23,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHolder> {
-
 
     Context context;
     List<Subject_> list;
@@ -68,6 +68,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
                 intent.putExtra(Constant.DOC_ID, docID);
                 intent.putExtra(Constant.SUB_ID, subID);
                 intent.putExtra(Constant.ASS_ID, assID);
+
                 context.startActivity(intent);
             }
         });

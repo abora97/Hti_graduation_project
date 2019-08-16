@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HTI Student Services</string>
+    <string name="app_name">Higher Technological Institute</string>
     <string name="hti_services">Higher Technological Institute</string>
     <string name="this_app_provide_some_services_to_hti_student">This app provide some services to HTI student </string>
     <string name="student_can_complain">Student can complain about anything they want and also can do the questionnaire to can access their results</string>
@@ -8,6 +8,10 @@
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="required">Required !</string>
+    <string name="viewresult">View Result</string>
+    <string name="SelectAllQuestionnaires">Please Select All Questionnaires</string>
+    <string name="Thanks">Thanks</string>
+
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

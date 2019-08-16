@@ -3,7 +3,6 @@ package com.example.graduation_project.ui.complain;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +12,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.graduation_project.R;
-import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.data.remote.ApiCall;
-import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
 
@@ -43,7 +40,7 @@ public class ComplainFragment extends Fragment implements View.OnClickListener {
     EditText edProblemTopic;
     @BindView(R.id.ed_problem_dec)
     EditText edProblemDec;
-    @BindView(R.id.bu_suggestion_send)
+    @BindView(R.id.bu_viewresult)
     Button buSuggestionSend;
 
     Unbinder unbinder;
