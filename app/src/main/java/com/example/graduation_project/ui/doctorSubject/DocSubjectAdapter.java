@@ -1,7 +1,6 @@
 package com.example.graduation_project.ui.doctorSubject;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,11 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.graduation_project.R;
-import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.DoctorSubject.Subject;
-import com.example.graduation_project.model.subject.Subject_;
-import com.example.graduation_project.ui.questionnaires.QuestionnairesActivity;
-import com.example.graduation_project.util.Constant;
 
 import java.util.List;
 
@@ -27,7 +22,6 @@ public class DocSubjectAdapter extends RecyclerView.Adapter<DocSubjectAdapter.vi
 
     Context context;
     List<Subject> list;
-
 
 
     public DocSubjectAdapter(Context context, List<Subject> list) {
@@ -46,6 +40,7 @@ public class DocSubjectAdapter extends RecyclerView.Adapter<DocSubjectAdapter.vi
     public void onBindViewHolder(@NonNull viewHolder viewHolder, final int i) {
         final String courseName = list.get(i).getName();
         final String courseCode = list.get(i).getCode();
+        final String courseAvg = String.valueOf(list.get(i).getAvg());
         final String courseGroup = String.valueOf(list.get(i).getId());
 //        final String courseInst = list.get(i).getDoctorName();
 //        final String courseAss = list.get(i).getAssistantName();
@@ -56,7 +51,7 @@ public class DocSubjectAdapter extends RecyclerView.Adapter<DocSubjectAdapter.vi
         viewHolder.tvSubjectName.setText(list.get(i).getName());
         viewHolder.tvSubjectCode.setText(list.get(i).getCode());
         viewHolder.tvSubjectGroup.setText(String.valueOf(list.get(i).getId()));
-        viewHolder.tvSubjectNum.setText(String.valueOf(i + 1));
+        viewHolder.tvSubjectNum.setText(courseAvg+" % ");
 
         viewHolder.laySubject.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,8 +34,11 @@ public class Subject_ implements Serializable
     private String updatedAt;
     @SerializedName("pivot")
     @Expose
-    private Pivot_ pivot;
-    private final static long serialVersionUID = 4262914757216480014L;
+    private Pivot pivot;
+    @SerializedName("avg")
+    @Expose
+    private int avg;
+    private final static long serialVersionUID = -1853118385702380732L;
 
     public int getId() {
         return id;
@@ -101,12 +104,20 @@ public class Subject_ implements Serializable
         this.updatedAt = updatedAt;
     }
 
-    public Pivot_ getPivot() {
+    public Pivot getPivot() {
         return pivot;
     }
 
-    public void setPivot(Pivot_ pivot) {
+    public void setPivot(Pivot pivot) {
         this.pivot = pivot;
+    }
+
+    public int getAvg() {
+        return avg;
+    }
+
+    public void setAvg(int avg) {
+        this.avg = avg;
     }
 
 }

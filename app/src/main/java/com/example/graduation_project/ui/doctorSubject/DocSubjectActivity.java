@@ -14,7 +14,6 @@ import com.example.graduation_project.data.remote.ApiCall;
 import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
-import com.example.graduation_project.ui.subject.SubjectAdapter;
 
 import java.util.List;
 

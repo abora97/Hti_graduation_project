@@ -11,7 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.graduation_project.R;
-import com.example.graduation_project.model.deanDepartment.Doctor;
+
+
+import com.example.graduation_project.model.DeanDoctorSubject.Doctor;
 import com.example.graduation_project.ui.doctorSubject.DocSubjectActivity;
 
 import java.util.List;
@@ -36,6 +38,7 @@ public class DocAdapter extends RecyclerView.Adapter<DocAdapter.viewHolder> {
         this.doctors = doctors;
     }
 
+
     @NonNull
     @Override
     public DocAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -46,7 +49,8 @@ public class DocAdapter extends RecyclerView.Adapter<DocAdapter.viewHolder> {
     @Override
     public void onBindViewHolder(@NonNull DocAdapter.viewHolder viewHolder, final int i) {
         viewHolder.tvDoctorName.setText(doctors.get(i).getName());
-
+        String avg=String.valueOf(doctors.get(i).getAvg());
+        viewHolder.tvAvrage.setText(avg);
         //viewHolder.tvAvrage.setText(doctors.get(i).get);
 
 

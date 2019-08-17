@@ -7,12 +7,14 @@ import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.example.graduation_project.callBack.ComplainCallBack;
 import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.callBack.DeanCallBack;
+import com.example.graduation_project.callBack.DeanDoctorSubjectCallBack;
 import com.example.graduation_project.callBack.DoctorSubjectCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
 import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
+import com.example.graduation_project.model.DeanDoctorSubject.DeanDoctor;
 import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.Questionnaires.Questionnaires;
 import com.example.graduation_project.model.deanDepartment.DeanDepartment;
@@ -21,8 +23,6 @@ import com.example.graduation_project.model.login.Login;
 import com.example.graduation_project.model.loginAdmin.LoginManager;
 import com.example.graduation_project.model.subject.Subject;
 import com.example.graduation_project.util.Constant;
-
-import java.io.IOException;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -121,6 +121,27 @@ public class ApiCall {
             @Override
             public void onError(ANError anError) {
                 doctorSubjectCallBack.onError(anError.getErrorDetail());
+            }
+        });
+
+    }
+
+    public static void getDepartmentDoctor(String token, String id, final DeanDoctorSubjectCallBack deanDoctorSubjectCallBack) {
+        String Authorization = "Bearer " + token;
+        //questcomp.ml/public/api/managers/departments/1/doctors
+        String URL = "http://questcomp.ml/public/api/managers/departments/" + id + "/doctors";
+        AndroidNetworking.get(URL)
+                .addHeaders(Constant.AUTHORIZATION, Authorization)
+                .setPriority(Priority.HIGH)
+                .build().getAsObject(DeanDoctor.class, new ParsedRequestListener<DeanDoctor>() {
+            @Override
+            public void onResponse(DeanDoctor response) {
+                deanDoctorSubjectCallBack.onSecuess(response);
+            }
+
+            @Override
+            public void onError(ANError anError) {
+                deanDoctorSubjectCallBack.onError(anError.getErrorDetail());
             }
         });
 
