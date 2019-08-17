@@ -47,6 +47,7 @@
             android:textColor="@color/blue"
             android:textSize="18sp"
             android:textStyle="bold" />
+
         <Button
             android:id="@+id/bu_dean"
             android:layout_width="match_parent"
@@ -57,7 +58,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/bordbutton"
-            android:text="@string/dean_login"
+            android:text="@string/Deandoctor"
             android:textColor="@color/blue"
 
             android:textSize="18sp"

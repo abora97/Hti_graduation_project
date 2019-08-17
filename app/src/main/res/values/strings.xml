@@ -11,6 +11,7 @@
     <string name="viewresult">View Result</string>
     <string name="SelectAllQuestionnaires">Please Select All Questionnaires</string>
     <string name="Thanks">Thanks</string>
+    <string name="Deandoctor">Dean Login</string>
 
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
