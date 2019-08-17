@@ -19,34 +19,34 @@ public class CategoriesRules implements Serializable
     private double opinionsAboutCourseFairly;
     @SerializedName("opinions_about_course_disagree")
     @Expose
-    private int opinionsAboutCourseDisagree;
+    private double opinionsAboutCourseDisagree;
     @SerializedName("opinions_about_course_totally_disagree")
     @Expose
-    private int opinionsAboutCourseTotallyDisagree;
+    private double opinionsAboutCourseTotallyDisagree;
     @SerializedName("opinions_about_course")
     @Expose
-    private int opinionsAboutCourse;
+    private double opinionsAboutCourse;
     @SerializedName("targeted_learning_outcomes_totally_agree")
     @Expose
-    private int targetedLearningOutcomesTotallyAgree;
+    private double targetedLearningOutcomesTotallyAgree;
     @SerializedName("targeted_learning_outcomes_agree")
     @Expose
-    private int targetedLearningOutcomesAgree;
+    private double targetedLearningOutcomesAgree;
     @SerializedName("targeted_learning_outcomes_fairly")
     @Expose
-    private int targetedLearningOutcomesFairly;
+    private double targetedLearningOutcomesFairly;
     @SerializedName("targeted_learning_outcomes_disagree")
     @Expose
-    private int targetedLearningOutcomesDisagree;
+    private double targetedLearningOutcomesDisagree;
     @SerializedName("targeted_learning_outcomes_totally_disagree")
     @Expose
-    private int targetedLearningOutcomesTotallyDisagree;
+    private double targetedLearningOutcomesTotallyDisagree;
     @SerializedName("targeted_learning_outcomes")
     @Expose
-    private int targetedLearningOutcomes;
+    private double targetedLearningOutcomes;
     @SerializedName("lectures_totally_agree")
     @Expose
-    private int lecturesTotallyAgree;
+    private double lecturesTotallyAgree;
     @SerializedName("lectures_agree")
     @Expose
     private double lecturesAgree;
@@ -61,61 +61,61 @@ public class CategoriesRules implements Serializable
     private double lecturesTotallyDisagree;
     @SerializedName("lectures")
     @Expose
-    private int lectures;
+    private double lectures;
     @SerializedName("doctor_totally_agree")
     @Expose
-    private int doctorTotallyAgree;
+    private double doctorTotallyAgree;
     @SerializedName("doctor_agree")
     @Expose
-    private int doctorAgree;
+    private double doctorAgree;
     @SerializedName("doctor_fairly")
     @Expose
-    private int doctorFairly;
+    private double doctorFairly;
     @SerializedName("doctor_disagree")
     @Expose
-    private int doctorDisagree;
+    private double doctorDisagree;
     @SerializedName("doctor_totally_disagree")
     @Expose
-    private int doctorTotallyDisagree;
+    private double doctorTotallyDisagree;
     @SerializedName("doctor")
     @Expose
-    private int doctor;
+    private double doctor;
     @SerializedName("doctor_assistant_totally_agree")
     @Expose
-    private int doctorAssistantTotallyAgree;
+    private double doctorAssistantTotallyAgree;
     @SerializedName("doctor_assistant_agree")
     @Expose
-    private int doctorAssistantAgree;
+    private double doctorAssistantAgree;
     @SerializedName("doctor_assistant_fairly")
     @Expose
-    private int doctorAssistantFairly;
+    private double doctorAssistantFairly;
     @SerializedName("doctor_assistant_disagree")
     @Expose
-    private int doctorAssistantDisagree;
+    private double doctorAssistantDisagree;
     @SerializedName("doctor_assistant_totally_disagree")
     @Expose
-    private int doctorAssistantTotallyDisagree;
+    private double doctorAssistantTotallyDisagree;
     @SerializedName("doctor_assistant")
     @Expose
-    private int doctorAssistant;
+    private double doctorAssistant;
     @SerializedName("evolution_system_totally_agree")
     @Expose
-    private int evolutionSystemTotallyAgree;
+    private double evolutionSystemTotallyAgree;
     @SerializedName("evolution_system_agree")
     @Expose
-    private int evolutionSystemAgree;
+    private double evolutionSystemAgree;
     @SerializedName("evolution_system_fairly")
     @Expose
-    private int evolutionSystemFairly;
+    private double evolutionSystemFairly;
     @SerializedName("evolution_system_disagree")
     @Expose
-    private int evolutionSystemDisagree;
+    private double evolutionSystemDisagree;
     @SerializedName("evolution_system_totally_disagree")
     @Expose
-    private int evolutionSystemTotallyDisagree;
+    private double evolutionSystemTotallyDisagree;
     @SerializedName("evolution_system")
     @Expose
-    private int evolutionSystem;
+    private double evolutionSystem;
     @SerializedName("factories_and_workshops_totally_agree")
     @Expose
     private double factoriesAndWorkshopsTotallyAgree;
@@ -130,19 +130,19 @@ public class CategoriesRules implements Serializable
     private double factoriesAndWorkshopsDisagree;
     @SerializedName("factories_and_workshops_totally_disagree")
     @Expose
-    private int factoriesAndWorkshopsTotallyDisagree;
+    private double factoriesAndWorkshopsTotallyDisagree;
     @SerializedName("factories_and_workshops")
     @Expose
-    private int factoriesAndWorkshops;
+    private double factoriesAndWorkshops;
     @SerializedName("stands_and_rooms_totally_agree")
     @Expose
     private double standsAndRoomsTotallyAgree;
     @SerializedName("stands_and_rooms_agree")
     @Expose
-    private int standsAndRoomsAgree;
+    private double standsAndRoomsAgree;
     @SerializedName("stands_and_rooms_fairly")
     @Expose
-    private int standsAndRoomsFairly;
+    private double standsAndRoomsFairly;
     @SerializedName("stands_and_rooms_disagree")
     @Expose
     private double standsAndRoomsDisagree;
@@ -151,8 +151,8 @@ public class CategoriesRules implements Serializable
     private double standsAndRoomsTotallyDisagree;
     @SerializedName("stands_and_rooms")
     @Expose
-    private int standsAndRooms;
-    private final static long serialVersionUID = -3693282813423748319L;
+    private double standsAndRooms;
+    private final static long serialVersionUID = 5522764053132140184L;
 
     public double getOpinionsAboutCourseTotallyAgree() {
         return opinionsAboutCourseTotallyAgree;
@@ -178,83 +178,83 @@ public class CategoriesRules implements Serializable
         this.opinionsAboutCourseFairly = opinionsAboutCourseFairly;
     }
 
-    public int getOpinionsAboutCourseDisagree() {
+    public double getOpinionsAboutCourseDisagree() {
         return opinionsAboutCourseDisagree;
     }
 
-    public void setOpinionsAboutCourseDisagree(int opinionsAboutCourseDisagree) {
+    public void setOpinionsAboutCourseDisagree(double opinionsAboutCourseDisagree) {
         this.opinionsAboutCourseDisagree = opinionsAboutCourseDisagree;
     }
 
-    public int getOpinionsAboutCourseTotallyDisagree() {
+    public double getOpinionsAboutCourseTotallyDisagree() {
         return opinionsAboutCourseTotallyDisagree;
     }
 
-    public void setOpinionsAboutCourseTotallyDisagree(int opinionsAboutCourseTotallyDisagree) {
+    public void setOpinionsAboutCourseTotallyDisagree(double opinionsAboutCourseTotallyDisagree) {
         this.opinionsAboutCourseTotallyDisagree = opinionsAboutCourseTotallyDisagree;
     }
 
-    public int getOpinionsAboutCourse() {
+    public double getOpinionsAboutCourse() {
         return opinionsAboutCourse;
     }
 
-    public void setOpinionsAboutCourse(int opinionsAboutCourse) {
+    public void setOpinionsAboutCourse(double opinionsAboutCourse) {
         this.opinionsAboutCourse = opinionsAboutCourse;
     }
 
-    public int getTargetedLearningOutcomesTotallyAgree() {
+    public double getTargetedLearningOutcomesTotallyAgree() {
         return targetedLearningOutcomesTotallyAgree;
     }
 
-    public void setTargetedLearningOutcomesTotallyAgree(int targetedLearningOutcomesTotallyAgree) {
+    public void setTargetedLearningOutcomesTotallyAgree(double targetedLearningOutcomesTotallyAgree) {
         this.targetedLearningOutcomesTotallyAgree = targetedLearningOutcomesTotallyAgree;
     }
 
-    public int getTargetedLearningOutcomesAgree() {
+    public double getTargetedLearningOutcomesAgree() {
         return targetedLearningOutcomesAgree;
     }
 
-    public void setTargetedLearningOutcomesAgree(int targetedLearningOutcomesAgree) {
+    public void setTargetedLearningOutcomesAgree(double targetedLearningOutcomesAgree) {
         this.targetedLearningOutcomesAgree = targetedLearningOutcomesAgree;
     }
 
-    public int getTargetedLearningOutcomesFairly() {
+    public double getTargetedLearningOutcomesFairly() {
         return targetedLearningOutcomesFairly;
     }
 
-    public void setTargetedLearningOutcomesFairly(int targetedLearningOutcomesFairly) {
+    public void setTargetedLearningOutcomesFairly(double targetedLearningOutcomesFairly) {
         this.targetedLearningOutcomesFairly = targetedLearningOutcomesFairly;
     }
 
-    public int getTargetedLearningOutcomesDisagree() {
+    public double getTargetedLearningOutcomesDisagree() {
         return targetedLearningOutcomesDisagree;
     }
 
-    public void setTargetedLearningOutcomesDisagree(int targetedLearningOutcomesDisagree) {
+    public void setTargetedLearningOutcomesDisagree(double targetedLearningOutcomesDisagree) {
         this.targetedLearningOutcomesDisagree = targetedLearningOutcomesDisagree;
     }
 
-    public int getTargetedLearningOutcomesTotallyDisagree() {
+    public double getTargetedLearningOutcomesTotallyDisagree() {
         return targetedLearningOutcomesTotallyDisagree;
     }
 
-    public void setTargetedLearningOutcomesTotallyDisagree(int targetedLearningOutcomesTotallyDisagree) {
+    public void setTargetedLearningOutcomesTotallyDisagree(double targetedLearningOutcomesTotallyDisagree) {
         this.targetedLearningOutcomesTotallyDisagree = targetedLearningOutcomesTotallyDisagree;
     }
 
-    public int getTargetedLearningOutcomes() {
+    public double getTargetedLearningOutcomes() {
         return targetedLearningOutcomes;
     }
 
-    public void setTargetedLearningOutcomes(int targetedLearningOutcomes) {
+    public void setTargetedLearningOutcomes(double targetedLearningOutcomes) {
         this.targetedLearningOutcomes = targetedLearningOutcomes;
     }
 
-    public int getLecturesTotallyAgree() {
+    public double getLecturesTotallyAgree() {
         return lecturesTotallyAgree;
     }
 
-    public void setLecturesTotallyAgree(int lecturesTotallyAgree) {
+    public void setLecturesTotallyAgree(double lecturesTotallyAgree) {
         this.lecturesTotallyAgree = lecturesTotallyAgree;
     }
 
@@ -290,155 +290,155 @@ public class CategoriesRules implements Serializable
         this.lecturesTotallyDisagree = lecturesTotallyDisagree;
     }
 
-    public int getLectures() {
+    public double getLectures() {
         return lectures;
     }
 
-    public void setLectures(int lectures) {
+    public void setLectures(double lectures) {
         this.lectures = lectures;
     }
 
-    public int getDoctorTotallyAgree() {
+    public double getDoctorTotallyAgree() {
         return doctorTotallyAgree;
     }
 
-    public void setDoctorTotallyAgree(int doctorTotallyAgree) {
+    public void setDoctorTotallyAgree(double doctorTotallyAgree) {
         this.doctorTotallyAgree = doctorTotallyAgree;
     }
 
-    public int getDoctorAgree() {
+    public double getDoctorAgree() {
         return doctorAgree;
     }
 
-    public void setDoctorAgree(int doctorAgree) {
+    public void setDoctorAgree(double doctorAgree) {
         this.doctorAgree = doctorAgree;
     }
 
-    public int getDoctorFairly() {
+    public double getDoctorFairly() {
         return doctorFairly;
     }
 
-    public void setDoctorFairly(int doctorFairly) {
+    public void setDoctorFairly(double doctorFairly) {
         this.doctorFairly = doctorFairly;
     }
 
-    public int getDoctorDisagree() {
+    public double getDoctorDisagree() {
         return doctorDisagree;
     }
 
-    public void setDoctorDisagree(int doctorDisagree) {
+    public void setDoctorDisagree(double doctorDisagree) {
         this.doctorDisagree = doctorDisagree;
     }
 
-    public int getDoctorTotallyDisagree() {
+    public double getDoctorTotallyDisagree() {
         return doctorTotallyDisagree;
     }
 
-    public void setDoctorTotallyDisagree(int doctorTotallyDisagree) {
+    public void setDoctorTotallyDisagree(double doctorTotallyDisagree) {
         this.doctorTotallyDisagree = doctorTotallyDisagree;
     }
 
-    public int getDoctor() {
+    public double getDoctor() {
         return doctor;
     }
 
-    public void setDoctor(int doctor) {
+    public void setDoctor(double doctor) {
         this.doctor = doctor;
     }
 
-    public int getDoctorAssistantTotallyAgree() {
+    public double getDoctorAssistantTotallyAgree() {
         return doctorAssistantTotallyAgree;
     }
 
-    public void setDoctorAssistantTotallyAgree(int doctorAssistantTotallyAgree) {
+    public void setDoctorAssistantTotallyAgree(double doctorAssistantTotallyAgree) {
         this.doctorAssistantTotallyAgree = doctorAssistantTotallyAgree;
     }
 
-    public int getDoctorAssistantAgree() {
+    public double getDoctorAssistantAgree() {
         return doctorAssistantAgree;
     }
 
-    public void setDoctorAssistantAgree(int doctorAssistantAgree) {
+    public void setDoctorAssistantAgree(double doctorAssistantAgree) {
         this.doctorAssistantAgree = doctorAssistantAgree;
     }
 
-    public int getDoctorAssistantFairly() {
+    public double getDoctorAssistantFairly() {
         return doctorAssistantFairly;
     }
 
-    public void setDoctorAssistantFairly(int doctorAssistantFairly) {
+    public void setDoctorAssistantFairly(double doctorAssistantFairly) {
         this.doctorAssistantFairly = doctorAssistantFairly;
     }
 
-    public int getDoctorAssistantDisagree() {
+    public double getDoctorAssistantDisagree() {
         return doctorAssistantDisagree;
     }
 
-    public void setDoctorAssistantDisagree(int doctorAssistantDisagree) {
+    public void setDoctorAssistantDisagree(double doctorAssistantDisagree) {
         this.doctorAssistantDisagree = doctorAssistantDisagree;
     }
 
-    public int getDoctorAssistantTotallyDisagree() {
+    public double getDoctorAssistantTotallyDisagree() {
         return doctorAssistantTotallyDisagree;
     }
 
-    public void setDoctorAssistantTotallyDisagree(int doctorAssistantTotallyDisagree) {
+    public void setDoctorAssistantTotallyDisagree(double doctorAssistantTotallyDisagree) {
         this.doctorAssistantTotallyDisagree = doctorAssistantTotallyDisagree;
     }
 
-    public int getDoctorAssistant() {
+    public double getDoctorAssistant() {
         return doctorAssistant;
     }
 
-    public void setDoctorAssistant(int doctorAssistant) {
+    public void setDoctorAssistant(double doctorAssistant) {
         this.doctorAssistant = doctorAssistant;
     }
 
-    public int getEvolutionSystemTotallyAgree() {
+    public double getEvolutionSystemTotallyAgree() {
         return evolutionSystemTotallyAgree;
     }
 
-    public void setEvolutionSystemTotallyAgree(int evolutionSystemTotallyAgree) {
+    public void setEvolutionSystemTotallyAgree(double evolutionSystemTotallyAgree) {
         this.evolutionSystemTotallyAgree = evolutionSystemTotallyAgree;
     }
 
-    public int getEvolutionSystemAgree() {
+    public double getEvolutionSystemAgree() {
         return evolutionSystemAgree;
     }
 
-    public void setEvolutionSystemAgree(int evolutionSystemAgree) {
+    public void setEvolutionSystemAgree(double evolutionSystemAgree) {
         this.evolutionSystemAgree = evolutionSystemAgree;
     }
 
-    public int getEvolutionSystemFairly() {
+    public double getEvolutionSystemFairly() {
         return evolutionSystemFairly;
     }
 
-    public void setEvolutionSystemFairly(int evolutionSystemFairly) {
+    public void setEvolutionSystemFairly(double evolutionSystemFairly) {
         this.evolutionSystemFairly = evolutionSystemFairly;
     }
 
-    public int getEvolutionSystemDisagree() {
+    public double getEvolutionSystemDisagree() {
         return evolutionSystemDisagree;
     }
 
-    public void setEvolutionSystemDisagree(int evolutionSystemDisagree) {
+    public void setEvolutionSystemDisagree(double evolutionSystemDisagree) {
         this.evolutionSystemDisagree = evolutionSystemDisagree;
     }
 
-    public int getEvolutionSystemTotallyDisagree() {
+    public double getEvolutionSystemTotallyDisagree() {
         return evolutionSystemTotallyDisagree;
     }
 
-    public void setEvolutionSystemTotallyDisagree(int evolutionSystemTotallyDisagree) {
+    public void setEvolutionSystemTotallyDisagree(double evolutionSystemTotallyDisagree) {
         this.evolutionSystemTotallyDisagree = evolutionSystemTotallyDisagree;
     }
 
-    public int getEvolutionSystem() {
+    public double getEvolutionSystem() {
         return evolutionSystem;
     }
 
-    public void setEvolutionSystem(int evolutionSystem) {
+    public void setEvolutionSystem(double evolutionSystem) {
         this.evolutionSystem = evolutionSystem;
     }
 
@@ -474,19 +474,19 @@ public class CategoriesRules implements Serializable
         this.factoriesAndWorkshopsDisagree = factoriesAndWorkshopsDisagree;
     }
 
-    public int getFactoriesAndWorkshopsTotallyDisagree() {
+    public double getFactoriesAndWorkshopsTotallyDisagree() {
         return factoriesAndWorkshopsTotallyDisagree;
     }
 
-    public void setFactoriesAndWorkshopsTotallyDisagree(int factoriesAndWorkshopsTotallyDisagree) {
+    public void setFactoriesAndWorkshopsTotallyDisagree(double factoriesAndWorkshopsTotallyDisagree) {
         this.factoriesAndWorkshopsTotallyDisagree = factoriesAndWorkshopsTotallyDisagree;
     }
 
-    public int getFactoriesAndWorkshops() {
+    public double getFactoriesAndWorkshops() {
         return factoriesAndWorkshops;
     }
 
-    public void setFactoriesAndWorkshops(int factoriesAndWorkshops) {
+    public void setFactoriesAndWorkshops(double factoriesAndWorkshops) {
         this.factoriesAndWorkshops = factoriesAndWorkshops;
     }
 
@@ -498,19 +498,19 @@ public class CategoriesRules implements Serializable
         this.standsAndRoomsTotallyAgree = standsAndRoomsTotallyAgree;
     }
 
-    public int getStandsAndRoomsAgree() {
+    public double getStandsAndRoomsAgree() {
         return standsAndRoomsAgree;
     }
 
-    public void setStandsAndRoomsAgree(int standsAndRoomsAgree) {
+    public void setStandsAndRoomsAgree(double standsAndRoomsAgree) {
         this.standsAndRoomsAgree = standsAndRoomsAgree;
     }
 
-    public int getStandsAndRoomsFairly() {
+    public double getStandsAndRoomsFairly() {
         return standsAndRoomsFairly;
     }
 
-    public void setStandsAndRoomsFairly(int standsAndRoomsFairly) {
+    public void setStandsAndRoomsFairly(double standsAndRoomsFairly) {
         this.standsAndRoomsFairly = standsAndRoomsFairly;
     }
 
@@ -530,11 +530,11 @@ public class CategoriesRules implements Serializable
         this.standsAndRoomsTotallyDisagree = standsAndRoomsTotallyDisagree;
     }
 
-    public int getStandsAndRooms() {
+    public double getStandsAndRooms() {
         return standsAndRooms;
     }
 
-    public void setStandsAndRooms(int standsAndRooms) {
+    public void setStandsAndRooms(double standsAndRooms) {
         this.standsAndRooms = standsAndRooms;
     }
 

@@ -57,6 +57,7 @@ public class DoctorActivity extends AppCompatActivity {
         } else if (departmentType.equals("management")) {
             derartNum = 3;
         }
+
         init();
         getData();
     }
