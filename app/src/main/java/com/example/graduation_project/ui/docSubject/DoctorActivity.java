@@ -74,13 +74,13 @@ public class DoctorActivity extends AppCompatActivity {
         ApiCall.getDepartmentDoctor(token, num, new DeanDoctorSubjectCallBack() {
             @Override
             public void onError(String msg) {
-                Toast.makeText(DoctorActivity.this, "error doctor activity " + msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(DoctorActivity.this, "" + msg, Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onSecuess(DeanDoctor deanDepartment) {
-                 Toast.makeText(DoctorActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartment().getDoctors().get(0).getName(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(DoctorActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartment().getDoctors().get(0).getName(), Toast.LENGTH_SHORT).show();
 
                 //   deanDepartment.getData().getData().getDepartments()
                 mLayoutManager = new LinearLayoutManager(DoctorActivity.this, LinearLayoutManager.VERTICAL, false);

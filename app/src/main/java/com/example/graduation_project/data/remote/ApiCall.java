@@ -11,11 +11,13 @@ import com.example.graduation_project.callBack.DeanDoctorSubjectCallBack;
 import com.example.graduation_project.callBack.DoctorSubjectCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
+import com.example.graduation_project.callBack.QResultCallBack;
 import com.example.graduation_project.callBack.QuestionnairesCallBack;
 import com.example.graduation_project.callBack.SubjectCallBack;
 import com.example.graduation_project.model.Complain.Complain;
 import com.example.graduation_project.model.DeanDoctorSubject.DeanDoctor;
 import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
+import com.example.graduation_project.model.QResult.Qresult;
 import com.example.graduation_project.model.Questionnaires.Questionnaires;
 import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.login.Login;
@@ -124,6 +126,30 @@ public class ApiCall {
             }
         });
 
+    }
+
+
+    public static void getQResult(String token, String docID, String subjectName, final QResultCallBack qResultCallBack) {
+        String Authorization = "Bearer " + token;
+        //
+        // questcomp.ml/public/api/managers/doctors/1/subjects/software 1
+        //
+        String URL = "http://questcomp.ml/public/api/managers/doctors/" + docID + "/subjects/" + subjectName;
+
+        AndroidNetworking.get(URL)
+                .addHeaders(Constant.AUTHORIZATION, Authorization)
+                .setPriority(Priority.HIGH)
+                .build().getAsObject(Qresult.class, new ParsedRequestListener<Qresult>() {
+            @Override
+            public void onResponse(Qresult response) {
+                qResultCallBack.onSecuess(response);
+            }
+
+            @Override
+            public void onError(ANError anError) {
+                qResultCallBack.onError(anError.getErrorDetail());
+            }
+        });
     }
 
     public static void getDepartmentDoctor(String token, String id, final DeanDoctorSubjectCallBack deanDoctorSubjectCallBack) {
