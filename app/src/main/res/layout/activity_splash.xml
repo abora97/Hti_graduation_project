@@ -42,9 +42,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:background="@drawable/bt_rounded_blue"
+            android:background="@drawable/bordbutton"
             android:text="@string/manager_login"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textSize="18sp"
             android:textStyle="bold" />
         <Button

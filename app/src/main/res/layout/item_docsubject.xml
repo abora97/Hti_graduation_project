@@ -3,6 +3,7 @@
     android:id="@+id/lay_subject"
     android:layout_width="match_parent"
     android:layout_height="40dp"
+    android:background="@drawable/wightlogo"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,9 +18,10 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:layout_weight="1"
+            android:background="#8A8D94"
             android:gravity="center"
             android:text="num"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <View
             android:layout_width="2dp"
@@ -34,14 +36,14 @@
 
             <TextView
                 android:id="@+id/tv_subject_code"
-                android:layout_width="0dp"
-                android:textColor="@color/black"
+                android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="csc 212" />
+                android:text="csc 212"
+                android:textColor="@color/black" />
 
             <View
                 android:layout_width="1dp"
@@ -51,11 +53,11 @@
             <TextView
                 android:id="@+id/tv_subject_name"
                 android:layout_width="0dp"
-                android:textColor="@color/black"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="software eng" />
+                android:text="software eng"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <View
@@ -64,25 +66,27 @@
             android:background="@color/colorAccent" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/tv_subject_group"
             android:layout_width="0dp"
-            android:textColor="@color/black"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="2" />
+            android:text="2"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:background="@color/colorAccent" />
+
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
-            android:background="@drawable/next"/>
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/next" />
     </LinearLayout>
 
     <View
