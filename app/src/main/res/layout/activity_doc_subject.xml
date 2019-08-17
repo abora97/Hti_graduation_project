@@ -43,17 +43,11 @@
         android:layout_height="20dp"
         android:orientation="horizontal">
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:background="#8A8D94"
             android:gravity="center"
             android:text="@string/avg"
@@ -63,9 +57,9 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_weight="3"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="9"
             android:gravity="center"
             android:text="@string/subject"
             android:textColor="@color/black"
@@ -104,6 +98,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rec_subject"
             android:layout_width="match_parent"
+            android:background="@drawable/wightlogo"
             android:layout_height="match_parent" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
