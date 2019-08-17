@@ -28,10 +28,13 @@ import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
 import com.example.graduation_project.ui.docSubject.DoctorActivity;
+import com.example.graduation_project.ui.getComplain.GetComplainActivity;
+import com.example.graduation_project.ui.getComplain.GetComplainFragment;
 import com.example.graduation_project.ui.home.HomeActivity;
 import com.example.graduation_project.ui.login.LoginActivity;
 import com.example.graduation_project.ui.splash.SplashActivity;
 import com.example.graduation_project.util.Constant;
+import com.example.graduation_project.util.FragmentUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,28 +110,7 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
 
 
 
-    private void init() {
 
-        String token=list.get(0).getToken();
-
-        ApiCall.deanDepartment(token, new DeanCallBack() {
-            @Override
-            public void onError(String msg) {
-                Toast.makeText(DepartmentActivity.this, "error " + msg, Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onSecuess(DeanDepartment deanDepartment) {
-                Toast.makeText(DepartmentActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartments(), Toast.LENGTH_SHORT).show();
-
-             //   deanDepartment.getData().getData().getDepartments()
-
-            }
-        });
-
-
-    }
 
     @Override
     public void onBackPressed() {
@@ -176,7 +158,8 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
             startActivity(new Intent(DepartmentActivity.this, SplashActivity.class));
             finish();
         } else if (id == R.id.nav_complaints_dep) {
-
+           // FragmentUtil.swithchFragment(R.id.content_frame, new GetComplainFragment(), DepartmentActivity.this);
+            startActivity(new Intent(DepartmentActivity.this, GetComplainActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -252,5 +235,31 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
                 startActivity(intent);
                 break;
         }
+    }
+
+
+
+
+
+
+
+    private void init() {
+        String token=list.get(0).getToken();
+
+        ApiCall.deanDepartment(token, new DeanCallBack() {
+            @Override
+            public void onError(String msg) {
+                Toast.makeText(DepartmentActivity.this, "error " + msg, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onSecuess(DeanDepartment deanDepartment) {
+                Toast.makeText(DepartmentActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartments(), Toast.LENGTH_SHORT).show();
+
+                //   deanDepartment.getData().getData().getDepartments()
+
+            }
+        });
     }
 }

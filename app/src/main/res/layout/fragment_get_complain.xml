@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wightlogo"
+    tools:context=".ui.getComplain.GetComplainFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Complaints Section"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/feel_free"
+        android:textColor="#204F72"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shap_lay_full"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinner_depart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:entries="@array/array_depart"
+            android:popupBackground="@color/white"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shap_lay_full">
+
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:entries="@array/array_comp_type"
+            android:popupBackground="@color/white"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ed_problem_topic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shap_lay_full"
+        android:gravity="top"
+        android:hint="@string/problem_topic"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+
+    <EditText
+        android:id="@+id/ed_problem_dec"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:visibility="gone"
+        android:background="@drawable/shap_lay_full"
+        android:gravity="top"
+        android:hint="@string/problem_description"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+
+    <Button
+        android:id="@+id/bu_viewresult"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:visibility="gone"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bordbutton"
+        android:text="@string/submit"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_get_complain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+

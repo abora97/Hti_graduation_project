@@ -163,4 +163,7 @@
     <string name="title_activity_department_doc">DepartmentDocActivity</string>
     <string name="doctor">Doctor</string>
     <string name="avg">AVG</string>
+    <string name="topic">Topic</string>
+    <string name="type">Type</string>
+    <string name="description">Description</string>
 </resources>

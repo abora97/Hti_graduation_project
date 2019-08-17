@@ -9,6 +9,7 @@ public interface Constant {
 
     String DEAN_DEPARTMENT="http://questcomp.ml/public/api/managers/chancellor";
 
+String GET_COMPLIN_URL="http://questcomp.ml/public/api/managers/complains";
 
     String ID = "c_id";
     String EMAIL="email";
