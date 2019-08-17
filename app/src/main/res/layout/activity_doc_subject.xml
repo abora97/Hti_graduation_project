@@ -56,7 +56,7 @@
             android:layout_weight="1"
             android:background="#8A8D94"
             android:gravity="center"
-            android:text="@string/num"
+            android:text="@string/avg"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
