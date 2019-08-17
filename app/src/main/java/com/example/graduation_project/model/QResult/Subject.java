@@ -1,11 +1,11 @@
 
-package com.example.graduation_project.model.DoctorSubject;
+package com.example.graduation_project.model.QResult;
 
 import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Subject_ implements Serializable
+public class Subject implements Serializable
 {
 
     @SerializedName("id")
@@ -32,13 +32,7 @@ public class Subject_ implements Serializable
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
-    @SerializedName("pivot")
-    @Expose
-    private Pivot pivot;
-    @SerializedName("avg")
-    @Expose
-    private int avg;
-    private final static long serialVersionUID = -1853118385702380732L;
+    private final static long serialVersionUID = 4275131382874744507L;
 
     public int getId() {
         return id;
@@ -102,22 +96,6 @@ public class Subject_ implements Serializable
 
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    public Pivot getPivot() {
-        return pivot;
-    }
-
-    public void setPivot(Pivot pivot) {
-        this.pivot = pivot;
-    }
-
-    public int getAvg() {
-        return avg;
-    }
-
-    public void setAvg(int avg) {
-        this.avg = avg;
     }
 
 }

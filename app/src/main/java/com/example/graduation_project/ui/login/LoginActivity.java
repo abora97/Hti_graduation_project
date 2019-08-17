@@ -151,8 +151,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 dataBaseCartHelper.insertDataUser(userToken, userID, userName, userGpa, userDeptID, managerRole);
                 Log.i("Token *_*>>>>>>>>>>>>>>", userToken);
 
+                //String departmentID=String.valueOf(response.getData().getManager().getRole());
+
                 Intent intent = new Intent(LoginActivity.this, DepartmentActivity.class);
                 intent.putExtra("userType", "manager");
+                intent.putExtra("managerRole", "manager");
                 startActivity(intent);
                 finish();
             }

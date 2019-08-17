@@ -8,7 +8,9 @@ import android.widget.Toast;
 
 import com.example.graduation_project.R;
 import com.example.graduation_project.callBack.DeanCallBack;
+import com.example.graduation_project.callBack.DeanDoctorSubjectCallBack;
 import com.example.graduation_project.data.remote.ApiCall;
+import com.example.graduation_project.model.DeanDoctorSubject.DeanDoctor;
 import com.example.graduation_project.model.deanDepartment.DeanDepartment;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
@@ -32,6 +34,7 @@ public class DoctorActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     String departmentType;
     int derartNum;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,37 +46,46 @@ public class DoctorActivity extends AppCompatActivity {
         dataBaseCartHelper = new DataBaseUserHelper(this);
         list = dataBaseCartHelper.getAllRecord();
 
+        token = list.get(0).getToken();
+
         departmentType = getIntent().getStringExtra("department");
 
         if (departmentType.equals("cs")) {
-            derartNum = 0;
-        } else if (departmentType.equals("eng")) {
             derartNum = 1;
-        } else if (departmentType.equals("management")) {
+        } else if (departmentType.equals("eng")) {
             derartNum = 2;
+        } else if (departmentType.equals("management")) {
+            derartNum = 3;
         }
+
         init();
+        getData();
+    }
+
+    private void getData() {
+
+
     }
 
     private void init() {
 
+        String num = String.valueOf(derartNum);
 
-        String token = list.get(0).getToken();
 
-        ApiCall.deanDepartment(token, new DeanCallBack() {
+        ApiCall.getDepartmentDoctor(token, num, new DeanDoctorSubjectCallBack() {
             @Override
             public void onError(String msg) {
-                Toast.makeText(DoctorActivity.this, "error " + msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(DoctorActivity.this, "" + msg, Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
-            public void onSecuess(DeanDepartment deanDepartment) {
-               // Toast.makeText(DoctorActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartments(), Toast.LENGTH_SHORT).show();
+            public void onSecuess(DeanDoctor deanDepartment) {
+                // Toast.makeText(DoctorActivity.this, "rrrr" + deanDepartment.getData().getData().getDepartment().getDoctors().get(0).getName(), Toast.LENGTH_SHORT).show();
 
                 //   deanDepartment.getData().getData().getDepartments()
                 mLayoutManager = new LinearLayoutManager(DoctorActivity.this, LinearLayoutManager.VERTICAL, false);
-                subjectAdapter = new DocAdapter(DoctorActivity.this, deanDepartment.getData().getData().getDepartments().get(derartNum).getDoctors());
+                subjectAdapter = new DocAdapter(DoctorActivity.this, deanDepartment.getData().getData().getDepartment().getDoctors());
                 recDocSubject.setLayoutManager(mLayoutManager);
                 recDocSubject.setAdapter(subjectAdapter);
             }

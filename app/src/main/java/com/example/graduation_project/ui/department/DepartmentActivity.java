@@ -98,9 +98,14 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
         buttonManagment.setOnClickListener(this);
 
 
+        if(list.get(0).getUserDeptID()!= null){
+            selectDepartment(list.get(0).getUserDeptID());
+        }
 
     //   init();
     }
+
+
 
     private void init() {
 
@@ -207,7 +212,29 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
         finish();
 
     }
-
+    private void selectDepartment(String userDeptID) {
+        Intent intent=new Intent(DepartmentActivity.this, DoctorActivity.class);
+        switch (userDeptID){
+            case "1":
+                intent.putExtra("department","cs");
+                startActivity(intent);
+                buttonManagment.setVisibility(View.GONE);
+                buttoneEng.setVisibility(View.GONE);
+                break;
+            case "2":
+                intent.putExtra("department","eng");
+                startActivity(intent);
+                buttonManagment.setVisibility(View.GONE);
+                buttonCS.setVisibility(View.GONE);
+                break;
+            case "3":
+                intent.putExtra("department","management");
+                startActivity(intent);
+                buttonCS.setVisibility(View.GONE);
+                buttoneEng.setVisibility(View.GONE);
+                break;
+        }
+    }
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(DepartmentActivity.this, DoctorActivity.class);

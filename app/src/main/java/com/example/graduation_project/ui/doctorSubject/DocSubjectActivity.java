@@ -14,7 +14,6 @@ import com.example.graduation_project.data.remote.ApiCall;
 import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.sql.DataBaseUserHelper;
 import com.example.graduation_project.model.sql.userSql;
-import com.example.graduation_project.ui.subject.SubjectAdapter;
 
 import java.util.List;
 
@@ -33,9 +32,9 @@ public class DocSubjectActivity extends AppCompatActivity implements SwipeRefres
     private List<userSql> list;
 
 
-
     private DocSubjectAdapter subjectAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,11 +61,11 @@ public class DocSubjectActivity extends AppCompatActivity implements SwipeRefres
 
             @Override
             public void onSecuess(GetDoctorSubject getDoctorSubject) {
-                Toast.makeText(DocSubjectActivity.this, "ss " + getDoctorSubject.getData().getData().getSubjects().get(0).getName(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DocSubjectActivity.this, "ss " + getDoctorSubject.getData().getData().getSubjects().get(0).getName(), Toast.LENGTH_SHORT).show();
 
                 swipeSubject.setRefreshing(false);
                 mLayoutManager = new LinearLayoutManager(DocSubjectActivity.this, LinearLayoutManager.VERTICAL, false);
-                subjectAdapter = new DocSubjectAdapter(DocSubjectActivity.this, getDoctorSubject.getData().getData().getSubjects());
+                subjectAdapter = new DocSubjectAdapter(DocSubjectActivity.this, getDoctorSubject.getData().getData().getSubjects(), doctorID);
                 recSubject.setLayoutManager(mLayoutManager);
                 recSubject.setAdapter(subjectAdapter);
 

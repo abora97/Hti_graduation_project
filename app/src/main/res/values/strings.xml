@@ -162,4 +162,6 @@
     <string name="manager_login">manager Login</string>
     <string name="dean_login">Dean Login</string>
     <string name="title_activity_department_doc">DepartmentDocActivity</string>
+    <string name="doctor">Doctor</string>
+    <string name="avg">AVG</string>
 </resources>
