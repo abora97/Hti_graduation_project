@@ -2,7 +2,6 @@ package com.example.graduation_project.ui.result;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,29 +18,42 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ResultActivity extends AppCompatActivity {
-    TextView txtQ1,txtQ2,txtQ3,txtQ4,txtQ5,txtQ6,txtQ7,txtQ8;
+
+    String docID, subjectName, token;
+
     @BindView(R.id.tv_course_name)
     TextView tvCourseName;
     @BindView(R.id.tv_doc_name)
     TextView tvDocName;
 
-    String docID, subjectName, token;
+
+    @BindView(R.id.tv_workshop)
+    TextView tvWorkshop;
+    @BindView(R.id.tv_classroom)
+    TextView tvClassroom;
+    @BindView(R.id.tv_course)
+    TextView tvCourse;
+    @BindView(R.id.tv_exam)
+    TextView tvExam;
+    @BindView(R.id.tv_lec)
+    TextView tvLec;
+    @BindView(R.id.tv_professor)
+    TextView tvProfessor;
+    @BindView(R.id.tv_target)
+    TextView tvTarget;
+    @BindView(R.id.tv_instructor)
+    TextView tvInstructor;
+
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
         ButterKnife.bind(this);
-        txtQ1=findViewById(R.id.txtQ1);
-        txtQ2=findViewById(R.id.txtQ2);
-        txtQ3=findViewById(R.id.txtQ3);
-        txtQ4=findViewById(R.id.txtQ4);
-        txtQ5=findViewById(R.id.txtQ5);
-        txtQ6=findViewById(R.id.txtQ6);
-        txtQ7=findViewById(R.id.txtQ7);
-        txtQ8=findViewById(R.id.txtQ8);
+
 
         //DataBase
         dataBaseCartHelper = new DataBaseUserHelper(this);
@@ -50,31 +62,50 @@ public class ResultActivity extends AppCompatActivity {
         subjectName = getIntent().getStringExtra("subject_name");
         docID = getIntent().getStringExtra("doctor_id");
 
-        tvCourseName.setText(subjectName);
         token = list.get(0).getToken();
-        txtQ1.setText("");
-        txtQ2.setText("");
-        txtQ3.setText("");
-        txtQ4.setText("");
-        txtQ5.setText("");
-        txtQ6.setText("");
-        txtQ7.setText("");
-        txtQ8.setText("");
+
 
         loadData();
     }
 
     private void loadData() {
 
+        tvCourseName.setText(subjectName);
+
         ApiCall.getQResult(token, docID, subjectName, new QResultCallBack() {
             @Override
             public void onError(String msg) {
-                Toast.makeText(ResultActivity.this, ""+msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResultActivity.this, "" + msg, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onSecuess(Qresult qresult) {
-                Toast.makeText(ResultActivity.this, "ha ha ha ha "+qresult.getData().getData().getCategoriesRules().getLectures(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(ResultActivity.this, "ha ha ha ha "+qresult.getData().getData().getCategoriesRules().getLectures(), Toast.LENGTH_SHORT).show();
+                String workShop = String.valueOf(qresult.getData().getData().getCategoriesRules().getFactoriesAndWorkshops());
+                tvWorkshop.setText(" % " + workShop);
+
+                String doc = String.valueOf(qresult.getData().getData().getCategoriesRules().getDoctor());
+                tvInstructor.setText(" % " + doc);
+
+                String lec = String.valueOf(qresult.getData().getData().getCategoriesRules().getLectures());
+                tvLec.setText(" % " + lec);
+
+                String opin = String.valueOf(qresult.getData().getData().getCategoriesRules().getOpinionsAboutCourse());
+                tvCourse.setText(" % " + opin);
+
+                String ass = String.valueOf(qresult.getData().getData().getCategoriesRules().getDoctorAssistant());
+                tvProfessor.setText(" % " + ass);
+
+                String targrt = String.valueOf(qresult.getData().getData().getCategoriesRules().getTargetedLearningOutcomes());
+                tvTarget.setText(" % " + targrt);
+
+                String exam = String.valueOf(qresult.getData().getData().getCategoriesRules().getEvolutionSystem());
+                tvExam.setText(" % " + exam);
+
+                String room = String.valueOf(qresult.getData().getData().getCategoriesRules().getStandsAndRooms());
+                tvClassroom.setText(" % " + room);
+
+                tvDocName.setText(qresult.getData().getData().getDoctor().getName());
             }
         });
 
