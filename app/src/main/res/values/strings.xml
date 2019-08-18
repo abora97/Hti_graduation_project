@@ -47,8 +47,8 @@
     </string-array>
 
     <string-array name="array_comp_type">
-        <item>Individual complain</item>
-        <item>Collective complaint</item>
+        <item>individual</item>
+        <item>collective</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -156,7 +156,7 @@
     <string name="student_name">Student Name : </string>
     <string name="student_id">Student ID :</string>
     <string name="gpa">GPA :</string>
-    <string name="department">Department :</string>
+
     <string name="hti">Higher Technological Institute</string>
     <string name="student_login">Student Login</string>
     <string name="manager_login">manager Login</string>
@@ -164,4 +164,8 @@
     <string name="title_activity_department_doc">DepartmentDocActivity</string>
     <string name="doctor">Doctor</string>
     <string name="avg">AVG</string>
+    <string name="topic">topic of complain :</string>
+    <string name="type">type of complain :</string>
+    <string name="description">complain description :</string>
+    <string name="department">Department :</string>
 </resources>

@@ -9,6 +9,7 @@ import com.example.graduation_project.callBack.ComplainCallBackRetrofit;
 import com.example.graduation_project.callBack.DeanCallBack;
 import com.example.graduation_project.callBack.DeanDoctorSubjectCallBack;
 import com.example.graduation_project.callBack.DoctorSubjectCallBack;
+import com.example.graduation_project.callBack.GetComplainCallBack;
 import com.example.graduation_project.callBack.LoginCallBack;
 import com.example.graduation_project.callBack.LoginManagerCallBack;
 import com.example.graduation_project.callBack.QResultCallBack;
@@ -20,6 +21,7 @@ import com.example.graduation_project.model.DoctorSubject.GetDoctorSubject;
 import com.example.graduation_project.model.QResult.Qresult;
 import com.example.graduation_project.model.Questionnaires.Questionnaires;
 import com.example.graduation_project.model.deanDepartment.DeanDepartment;
+import com.example.graduation_project.model.getComplain.GetComplaints;
 import com.example.graduation_project.model.login.Login;
 
 import com.example.graduation_project.model.loginAdmin.LoginManager;
@@ -128,6 +130,23 @@ public class ApiCall {
 
     }
 
+    public static void getComplin(String token, final GetComplainCallBack getComplainCallBack) {
+        String Authorization = "Bearer " + token;
+        AndroidNetworking.get(Constant.GET_COMPLIN_URL)
+                .addHeaders(Constant.AUTHORIZATION, Authorization)
+                .setPriority(Priority.HIGH)
+                .build().getAsObject(GetComplaints.class, new ParsedRequestListener<GetComplaints>() {
+            @Override
+            public void onResponse(GetComplaints response) {
+                getComplainCallBack.onSecuess(response);
+            }
+
+            @Override
+            public void onError(ANError anError) {
+                getComplainCallBack.onError(anError.getErrorDetail());
+            }
+        });
+    }
 
     public static void getQResult(String token, String docID, String subjectName, final QResultCallBack qResultCallBack) {
         String Authorization = "Bearer " + token;
@@ -207,9 +226,12 @@ public class ApiCall {
 
 
     public static void Complain(int depart_id, String type, String topic, String desc, String token, final ComplainCallBackRetrofit complainCallBackRetrofit) {
+
+        String Authorization = "Bearer " + token;
+
         Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.COMPLAIN_URL_RETROFIT).build();
         RetroApiCall getApiCall = retrofit.create(RetroApiCall.class);
-        getApiCall.getJsonPlaceHolder(depart_id, type, topic, desc).enqueue(new Callback<ResponseBody>() {
+        getApiCall.getJsonPlaceHolder(depart_id, type, topic, desc,Authorization).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 complainCallBackRetrofit.onSecuess(response.message());
