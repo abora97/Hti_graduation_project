@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".ui.getComplain.GetComplainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Complaints Section"
         android:textColor="@color/black"
@@ -24,10 +24,10 @@ android:background="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:visibility="gone"
         android:text="@string/feel_free"
         android:textColor="#204F72"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,11 +56,11 @@ android:background="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:visibility="gone"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:background="@drawable/shap_lay_full">
+        android:background="@drawable/shap_lay_full"
+        android:visibility="gone">
 
         <Spinner
             android:id="@+id/spinner_type"
@@ -80,7 +80,6 @@ android:background="@color/white"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:visibility="gone"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:background="@drawable/shap_lay_full"
@@ -90,7 +89,8 @@ android:background="@color/white"
         android:paddingLeft="8dp"
         android:paddingTop="10dp"
         android:paddingEnd="8dp"
-        android:paddingRight="8dp" />
+        android:paddingRight="8dp"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/ed_problem_dec"
@@ -101,7 +101,6 @@ android:background="@color/white"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:visibility="gone"
         android:background="@drawable/shap_lay_full"
         android:gravity="top"
         android:hint="@string/problem_description"
@@ -109,7 +108,8 @@ android:background="@color/white"
         android:paddingLeft="8dp"
         android:paddingTop="10dp"
         android:paddingEnd="8dp"
-        android:paddingRight="8dp" />
+        android:paddingRight="8dp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/bu_viewresult"
@@ -118,7 +118,6 @@ android:background="@color/white"
         android:layout_gravity="center"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:visibility="gone"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
@@ -126,10 +125,12 @@ android:background="@color/white"
         android:background="@drawable/bordbutton"
         android:text="@string/submit"
         android:textColor="@color/blue"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:visibility="gone" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_get_complain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 </LinearLayout>
 
