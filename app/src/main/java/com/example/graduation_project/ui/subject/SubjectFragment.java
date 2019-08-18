@@ -1,6 +1,8 @@
 package com.example.graduation_project.ui.subject;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -108,6 +110,13 @@ Button bu_result ;
         if(subjects.getData().getData().getSubjects().size()==0){
             bu_result.setVisibility(View.VISIBLE);
         }
+        bu_result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveBrowser =new Intent(Intent.ACTION_VIEW, Uri.parse("http://hti.edu.eg/en/student-login.aspx?res=noSe"));
+                startActivity(moveBrowser);
+            }
+        });
         recSubject.setLayoutManager(mLayoutManager);
 
         recSubject.setAdapter(subjectAdapter);

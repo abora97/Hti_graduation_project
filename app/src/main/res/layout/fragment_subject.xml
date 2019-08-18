@@ -241,7 +241,7 @@
         android:layout_marginRight="18dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bordbutton"
-        android:text="@string/submit"
+        android:text="Result"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:visibility="invisible" />
