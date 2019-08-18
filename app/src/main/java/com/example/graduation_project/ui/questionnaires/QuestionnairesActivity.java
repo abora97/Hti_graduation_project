@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -42,16 +43,17 @@ public class QuestionnairesActivity extends AppCompatActivity {
             RadioGroup_5_1, RadioGroup_5_2, RadioGroup_5_3, RadioGroup_5_4, RadioGroup_5_5, RadioGroup_6_1, RadioGroup_6_2, RadioGroup_6_3, RadioGroup_6_4, RadioGroup_6_5,
             RadioGroup_6_6, RadioGroup_6_7, RadioGroup_6_8, RadioGroup_6_9, RadioGroup_6_10, RadioGroup_7_1, RadioGroup_7_2, RadioGroup_7_3, RadioGroup_7_4, RadioGroup_7_5,
             RadioGroup_7_6, RadioGroup_7_7, RadioGroup_7_8, RadioGroup_8_1, RadioGroup_8_2, RadioGroup_8_3, RadioGroup_8_4, RadioGroup_8_5, RadioGroup_8_6, RadioGroup_8_7;
-    int conter=60;
+    int conter = 60;
     String subjectID, doctorID, assID, token;
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      //  ApiCall.
+        //  ApiCall.
 
         setContentView(R.layout.activity_questionnaires);
         textView7 = findViewById(R.id.textView7);
@@ -582,7 +584,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onSecuess(Questionnaires questionnaires) {
-                                    Toast.makeText(QuestionnairesActivity.this,  getString(R.string.Thanks), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(QuestionnairesActivity.this, getString(R.string.Thanks), Toast.LENGTH_SHORT).show();
 
                                     startActivity(new Intent(QuestionnairesActivity.this, HomeActivity.class));
                                 }
@@ -592,7 +594,10 @@ public class QuestionnairesActivity extends AppCompatActivity {
         });
 
 
+        nehal();
     }
+
+
 
     private void init() {
         Intent intent = getIntent();
@@ -617,6 +622,26 @@ public class QuestionnairesActivity extends AppCompatActivity {
         textView9.setText(subGroup);
         textView10.setText(subInst);
         textView11.setText(subAss);
+
+
+
+
+    }
+
+    private void nehal() {
+
+        RadioGroup_1_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+
+                Toast.makeText(QuestionnairesActivity.this, "98 of 99" + i, LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
     }
 }
 
