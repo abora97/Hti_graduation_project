@@ -168,4 +168,5 @@
     <string name="type">type of complain :</string>
     <string name="description">complain description :</string>
     <string name="department">Department :</string>
+    <string name="department_title">Department</string>
 </resources>

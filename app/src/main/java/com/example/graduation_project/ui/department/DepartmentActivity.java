@@ -70,8 +70,7 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
         setSupportActionBar(toolbar);
 
 
-
-
+        setTitle(getString(R.string.department_title));
 
 
         NavigationView navigationView = findViewById(R.id.nav_view); //displays text of header of nav drawer
@@ -101,15 +100,12 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
         buttonManagment.setOnClickListener(this);
 
 
-        if(list.get(0).getUserDeptID()!= null){
+        if (list.get(0).getUserDeptID() != null) {
             selectDepartment(list.get(0).getUserDeptID());
         }
 
-    //   init();
+        //   init();
     }
-
-
-
 
 
     @Override
@@ -158,7 +154,7 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
             startActivity(new Intent(DepartmentActivity.this, SplashActivity.class));
             finish();
         } else if (id == R.id.nav_complaints_dep) {
-           // FragmentUtil.swithchFragment(R.id.content_frame, new GetComplainFragment(), DepartmentActivity.this);
+            // FragmentUtil.swithchFragment(R.id.content_frame, new GetComplainFragment(), DepartmentActivity.this);
             startActivity(new Intent(DepartmentActivity.this, GetComplainActivity.class));
         }
 
@@ -195,56 +191,53 @@ public class DepartmentActivity extends AppCompatActivity implements NavigationV
         finish();
 
     }
+
     private void selectDepartment(String userDeptID) {
-        Intent intent=new Intent(DepartmentActivity.this, DoctorActivity.class);
-        switch (userDeptID){
+        Intent intent = new Intent(DepartmentActivity.this, DoctorActivity.class);
+        switch (userDeptID) {
             case "1":
-                intent.putExtra("department","cs");
+                intent.putExtra("department", "cs");
                 startActivity(intent);
                 buttonManagment.setVisibility(View.GONE);
                 buttoneEng.setVisibility(View.GONE);
                 break;
             case "2":
-                intent.putExtra("department","eng");
+                intent.putExtra("department", "eng");
                 startActivity(intent);
                 buttonManagment.setVisibility(View.GONE);
                 buttonCS.setVisibility(View.GONE);
                 break;
             case "3":
-                intent.putExtra("department","management");
+                intent.putExtra("department", "management");
                 startActivity(intent);
                 buttonCS.setVisibility(View.GONE);
                 buttoneEng.setVisibility(View.GONE);
                 break;
         }
     }
+
     @Override
     public void onClick(View view) {
-        Intent intent=new Intent(DepartmentActivity.this, DoctorActivity.class);
-        switch (view.getId()){
+        Intent intent = new Intent(DepartmentActivity.this, DoctorActivity.class);
+        switch (view.getId()) {
             case R.id.bu_cs:
-                intent.putExtra("department","cs");
+                intent.putExtra("department", "cs");
                 startActivity(intent);
                 break;
-                case R.id.bu_eng:
-                intent.putExtra("department","eng");
+            case R.id.bu_eng:
+                intent.putExtra("department", "eng");
                 startActivity(intent);
                 break;
-                case R.id.bu_manag:
-                intent.putExtra("department","management");
+            case R.id.bu_manag:
+                intent.putExtra("department", "management");
                 startActivity(intent);
                 break;
         }
     }
 
 
-
-
-
-
-
     private void init() {
-        String token=list.get(0).getToken();
+        String token = list.get(0).getToken();
 
         ApiCall.deanDepartment(token, new DeanCallBack() {
             @Override
