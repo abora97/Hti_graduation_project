@@ -19,8 +19,8 @@ String GET_COMPLIN_URL="http://questcomp.ml/public/api/managers/complains";
 
     String COMPLAIN_URL = "http://questcomp.ml/public/api/complains";
     String COMPLAIN_URL_RETROFIT = "http://questcomp.ml/public/api/";
-    String COMPLAIN_DEPART = "department";
-    String COMPLAIN_TYPE = "complain_type";
+    String COMPLAIN_DEPART = "department_id";
+    String COMPLAIN_TYPE = "type";
     String COMPLAIN_TOPIC = "topic";
     String COMPLAIN_DESCRIPTION = "description";
 

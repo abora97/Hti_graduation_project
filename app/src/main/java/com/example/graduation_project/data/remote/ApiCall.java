@@ -226,9 +226,12 @@ public class ApiCall {
 
 
     public static void Complain(int depart_id, String type, String topic, String desc, String token, final ComplainCallBackRetrofit complainCallBackRetrofit) {
+
+        String Authorization = "Bearer " + token;
+
         Retrofit retrofit = new Retrofit.Builder().baseUrl(Constant.COMPLAIN_URL_RETROFIT).build();
         RetroApiCall getApiCall = retrofit.create(RetroApiCall.class);
-        getApiCall.getJsonPlaceHolder(depart_id, type, topic, desc).enqueue(new Callback<ResponseBody>() {
+        getApiCall.getJsonPlaceHolder(1, "individual", topic, desc,Authorization).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 complainCallBackRetrofit.onSecuess(response.message());
