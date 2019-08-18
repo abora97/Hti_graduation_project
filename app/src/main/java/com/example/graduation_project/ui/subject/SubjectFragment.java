@@ -29,7 +29,7 @@ import butterknife.Unbinder;
  */
 public class SubjectFragment extends Fragment implements SubjectContract.viewMain, SwipeRefreshLayout.OnRefreshListener {
 
-Button bu_viewresult ;
+Button bu_result ;
     @BindView(R.id.rec_subject)
     RecyclerView recSubject;
     @BindView(R.id.swipe_subject)
@@ -62,7 +62,7 @@ Button bu_viewresult ;
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_subject, container, false);
         unbinder = ButterKnife.bind(this, view);
-        bu_viewresult =(Button) view.findViewById(R.id.bu_viewresult);
+        bu_result =view.findViewById(R.id.bu_result);
 
         subjectPresenter = new SubjectPresenter(this);
 
@@ -106,7 +106,7 @@ Button bu_viewresult ;
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         subjectAdapter = new SubjectAdapter(getActivity(), subjects.getData().getData().getSubjects());
         if(subjects.getData().getData().getSubjects().size()==0){
-          //  bu_viewresult.setVisibility(View.VISIBLE);
+            bu_result.setVisibility(View.VISIBLE);
         }
         recSubject.setLayoutManager(mLayoutManager);
 

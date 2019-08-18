@@ -28,9 +28,6 @@ public class ResultActivity extends AppCompatActivity {
     String docID, subjectName, token;
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
