@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/hti"
         android:textColor="@color/black"
@@ -27,15 +27,19 @@
         android:layout_marginRight="25dp"
         android:background="#8A8D94"
         android:gravity="center"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
         android:text="@string/login_title"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold" />
 
     <View
-        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="3dp"
+        android:layout_marginTop="15dp"
         android:background="@color/colorAccent" />
 
     <LinearLayout
@@ -48,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:background="#8A8D94"
+            android:background="@color/background"
             android:gravity="center"
             android:text="@string/avg"
             android:textColor="@color/black"
@@ -71,7 +75,6 @@
             android:background="@color/colorAccent" />
 
         <TextView
-            android:visibility="gone"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="1dp"
@@ -80,7 +83,8 @@
             android:gravity="center"
             android:text="@string/group"
             android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
     </LinearLayout>
 
@@ -98,7 +102,6 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rec_subject"
             android:layout_width="match_parent"
-            android:background="@drawable/wightlogo"
             android:layout_height="match_parent" />
 
     </android.support.v4.widget.SwipeRefreshLayout>

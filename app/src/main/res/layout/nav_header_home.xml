@@ -4,7 +4,7 @@
     android:id="@+id/lay_header"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@color/blue"
+    android:background="@color/tool_bar"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"

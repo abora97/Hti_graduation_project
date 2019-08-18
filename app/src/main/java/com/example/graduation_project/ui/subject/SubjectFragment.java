@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +31,8 @@ import butterknife.Unbinder;
  * A simple {@link Fragment} subclass.
  */
 public class SubjectFragment extends Fragment implements SubjectContract.viewMain, SwipeRefreshLayout.OnRefreshListener {
-RecyclerView rec_subject;
-Button bu_result ;
+    RecyclerView rec_subject;
+    Button bu_result;
     @BindView(R.id.rec_subject)
     RecyclerView recSubject;
     @BindView(R.id.swipe_subject)
@@ -45,6 +46,8 @@ Button bu_result ;
     TextView tvStudentGpa;
     @BindView(R.id.tv_student_depart)
     TextView tvStudentDepart;
+    @BindView(R.id.lay_content)
+    LinearLayout layoutContent;
 
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
@@ -64,7 +67,7 @@ Button bu_result ;
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_subject, container, false);
         unbinder = ButterKnife.bind(this, view);
-        bu_result =view.findViewById(R.id.bu_result);
+        bu_result = view.findViewById(R.id.bu_result);
 
         subjectPresenter = new SubjectPresenter(this);
 
@@ -107,14 +110,15 @@ Button bu_result ;
         swipeSubject.setRefreshing(false);
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         subjectAdapter = new SubjectAdapter(getActivity(), subjects.getData().getData().getSubjects());
-        if(subjects.getData().getData().getSubjects().size()==0){
-         //   rec_subject.setVisibility(View.INVISIBLE);
+        if (subjects.getData().getData().getSubjects().size() == 0) {
+            //   rec_subject.setVisibility(View.INVISIBLE);
+            layoutContent.setVisibility(View.GONE);
             bu_result.setVisibility(View.VISIBLE);
         }
         bu_result.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent moveBrowser =new Intent(Intent.ACTION_VIEW, Uri.parse("http://hti.edu.eg/en/student-login.aspx?res=noSe"));
+                Intent moveBrowser = new Intent(Intent.ACTION_VIEW, Uri.parse("http://hti.edu.eg/en/student-login.aspx?res=noSe"));
                 startActivity(moveBrowser);
             }
         });

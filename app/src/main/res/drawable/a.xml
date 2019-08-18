@@ -11,11 +11,11 @@
             />
         <stroke
             android:width="2dp"
-            android:color="#CC071F" />
+            android:color="@color/color" />
     <gradient
-        android:startColor="#CC071F"
-        android:centerColor="#CC071F"
-        android:endColor="#CC071F"
+        android:startColor="@color/color"
+        android:centerColor="@color/color"
+        android:endColor="@color/color"
         />
 
     </shape>

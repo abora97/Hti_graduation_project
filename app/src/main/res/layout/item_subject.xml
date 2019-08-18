@@ -17,10 +17,10 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:layout_weight="1"
-            android:background="#8A8D94"
+            android:background="@color/whiteGray"
             android:gravity="center"
             android:text="num"
-            android:textColor="#FDFCFC" />
+            android:textColor="@color/black" />
 
         <View
             android:layout_width="2dp"

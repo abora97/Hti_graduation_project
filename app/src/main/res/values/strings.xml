@@ -159,7 +159,7 @@
 
     <string name="hti">Higher Technological Institute</string>
     <string name="student_login">Student Login</string>
-    <string name="manager_login">manager Login</string>
+    <string name="manager_login">Manager Login</string>
     <string name="dean_login">Dean Login</string>
     <string name="title_activity_department_doc">DepartmentDocActivity</string>
     <string name="doctor">Doctor</string>

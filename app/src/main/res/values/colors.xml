@@ -11,9 +11,13 @@
     <color name="blue">#253076</color>
     <color name="darkBlue">#1A3153</color>
     <color name="background">#EDEFF2</color>
+    <color name="babyGray">#F9F9F9</color>
     <color name="nonSelect">#C6DBFF</color>
     <color name="blueGray">#8B95A8</color>
-    <color name="whiteGray">#f7f7f7</color>
+    <color name="whiteGray">#EBEBEB</color>
     <color name="viewColor">#0b000000</color>
-    <color name="color">#CC071F</color>
+    <color name="color">#1F2D3D</color>
+    <color name="tool_bar">#1F2D3D</color>
+    <color name="baby_blue">#007bff</color>
+
 </resources>
