@@ -9551,7 +9551,7 @@
                                     android:layout_marginBottom="8dp"
                                     android:background="@drawable/yourbuttonbackground"
                                     android:button="@android:color/transparent"
-                                    android:textColor="@color/color"
+                                    android:textColor="@drawable/radio_text_selected"
                                     android:gravity="center"
                                     android:text="2"
                                     android:textStyle="bold"
