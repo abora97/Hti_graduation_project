@@ -42,6 +42,16 @@ public class GetComplainAdapter extends RecyclerView.Adapter<GetComplainAdapter.
         viewHolder.tvTopic.setText(complains.get(i).getTopic());
         viewHolder.tvDescription.setText(complains.get(i).getDescription());
 
+        String departmentID = complains.get(i).getDepartmentId();
+
+        if (departmentID.equals("1")) {
+            viewHolder.tvDepartmentName.setText("computer science");
+        } else if (departmentID.equals("2")) {
+            viewHolder.tvDepartmentName.setText("Engineering");
+        } else {
+            viewHolder.tvDepartmentName.setText("business management");
+        }
+
 
     }
 
@@ -58,6 +68,8 @@ public class GetComplainAdapter extends RecyclerView.Adapter<GetComplainAdapter.
         TextView tvTopic;
         @BindView(R.id.tv_description)
         TextView tvDescription;
+        @BindView(R.id.tv_department)
+        TextView tvDepartmentName;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
