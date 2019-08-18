@@ -22,7 +22,7 @@
     <string name="problem_topic">عنوان الشكوى</string>
     <string name="contact_us">اتصل بنا</string>
     <string name="feel_free">لا تخجل من مراسلتنا في اي وقت</string>
-
+    <string name="Deandoctor">دخول العميد </string>
 
  <string-array name="array_comp_type">
   <item>شكوى فردية</item>

@@ -55,7 +55,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="2"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Name Test Name"
                 android:textColor="#204F72" />
         </LinearLayout>
@@ -84,6 +84,7 @@
                 android:layout_marginEnd="6dp"
                 android:layout_weight="2"
 
+                android:gravity="start"
                 android:text="42015660"
                 android:textColor="#204F72" />
         </LinearLayout>
@@ -112,6 +113,7 @@
                 android:layout_marginEnd="6dp"
                 android:layout_weight="2"
 
+                android:gravity="start"
                 android:text="2.6"
                 android:textColor="#204F72" />
         </LinearLayout>
@@ -140,6 +142,7 @@
                 android:layout_marginEnd="6dp"
                 android:layout_weight="2"
 
+                android:gravity="start"
                 android:text="business management"
                 android:textColor="#204F72" />
         </LinearLayout>
@@ -216,13 +219,30 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_subject"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="413dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rec_subject"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
+
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <Button
+        android:id="@+id/bu_result"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bordbutton"
+        android:text="@string/submit"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:visibility="invisible" />
 </LinearLayout>
