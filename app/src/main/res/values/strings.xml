@@ -47,8 +47,8 @@
     </string-array>
 
     <string-array name="array_comp_type">
-        <item>Individual complain</item>
-        <item>Collective complaint</item>
+        <item>individual</item>
+        <item>collective</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
