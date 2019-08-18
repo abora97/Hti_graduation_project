@@ -155,7 +155,7 @@
     <string name="student_name">Student Name : </string>
     <string name="student_id">Student ID :</string>
     <string name="gpa">GPA :</string>
-    <string name="department">Department :</string>
+
     <string name="hti">Higher Technological Institute</string>
     <string name="student_login">Student Login</string>
     <string name="manager_login">manager Login</string>
@@ -163,7 +163,8 @@
     <string name="title_activity_department_doc">DepartmentDocActivity</string>
     <string name="doctor">Doctor</string>
     <string name="avg">AVG</string>
-    <string name="topic">Topic</string>
-    <string name="type">Type</string>
-    <string name="description">Description</string>
+    <string name="topic">topic of complain :</string>
+    <string name="type">type of complain :</string>
+    <string name="description">complain description :</string>
+    <string name="department">Department :</string>
 </resources>
