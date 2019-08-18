@@ -2,7 +2,6 @@ package com.example.graduation_project.ui.result;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,14 +51,14 @@ public class ResultActivity extends AppCompatActivity {
 
         tvCourseName.setText(subjectName);
         token = list.get(0).getToken();
-        txtQ1.setText("");
-        txtQ2.setText("");
-        txtQ3.setText("");
-        txtQ4.setText("");
-        txtQ5.setText("");
-        txtQ6.setText("");
-        txtQ7.setText("");
-        txtQ8.setText("");
+        txtQ1.setText("20%");
+        txtQ2.setText("50%");
+        txtQ3.setText("60%");
+        txtQ4.setText("63%");
+        txtQ5.setText("90%");
+        txtQ6.setText("92%");
+        txtQ7.setText("85%");
+        txtQ8.setText("50%");
 
         loadData();
     }
