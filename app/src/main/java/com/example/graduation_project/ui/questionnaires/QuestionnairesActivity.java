@@ -27,15 +27,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class QuestionnairesActivity extends AppCompatActivity {
 
-    TextView textView7, textView8, textView9, textView10, textView11,
-            txtQuestion1_1, txtQuestion1_2, txtQuestion1_3, txtQuestion1_4, txtQuestion1_5, txtQuestion1_6, txtQuestion1_7,
-            txtQuestion2_1, txtQuestion2_2, txtQuestion2_3, txtQuestion2_4,
-            txtQuestion3_1, txtQuestion3_2, txtQuestion3_3, txtQuestion3_4, txtQuestion3_5, txtQuestion3_6, txtQuestion3_7, txtQuestion3_8,
-            txtQuestion4_1, txtQuestion4_2, txtQuestion4_3, txtQuestion4_4, txtQuestion4_5, txtQuestion4_6, txtQuestion4_7, txtQuestion4_8, txtQuestion4_9, txtQuestion4_10,
-            txtQuestion5_1, txtQuestion5_2, txtQuestion5_3, txtQuestion5_4, txtQuestion5_5,
-            txtQuestion6_1, txtQuestion6_2, txtQuestion6_3, txtQuestion6_4, txtQuestion6_5, txtQuestion6_6, txtQuestion6_7, txtQuestion6_8, txtQuestion6_9, txtQuestion6_10,
-            txtQuestion7_1, txtQuestion7_2, txtQuestion7_3, txtQuestion7_4, txtQuestion7_5, txtQuestion7_6, txtQuestion7_7, txtQuestion7_8,
-            txtQuestion8_1, txtQuestion8_2, txtQuestion8_3, txtQuestion8_4, txtQuestion8_5, txtQuestion8_6, txtQuestion8_7;
+    TextView textView7, textView8, textView9, textView10, textView11;
     Button submit;
     RadioGroup RadioGroup_1_1, RadioGroup_1_2, RadioGroup_1_3, RadioGroup_1_4, RadioGroup_1_5, RadioGroup_1_6, RadioGroup_1_7, RadioGroup_2_1, RadioGroup_2_2, RadioGroup_2_3,
             RadioGroup_2_4, RadioGroup_3_1, RadioGroup_3_2, RadioGroup_3_3, RadioGroup_3_4, RadioGroup_3_5, RadioGroup_3_6, RadioGroup_3_7, RadioGroup_3_8, RadioGroup_4_1,
@@ -43,7 +35,13 @@ public class QuestionnairesActivity extends AppCompatActivity {
             RadioGroup_5_1, RadioGroup_5_2, RadioGroup_5_3, RadioGroup_5_4, RadioGroup_5_5, RadioGroup_6_1, RadioGroup_6_2, RadioGroup_6_3, RadioGroup_6_4, RadioGroup_6_5,
             RadioGroup_6_6, RadioGroup_6_7, RadioGroup_6_8, RadioGroup_6_9, RadioGroup_6_10, RadioGroup_7_1, RadioGroup_7_2, RadioGroup_7_3, RadioGroup_7_4, RadioGroup_7_5,
             RadioGroup_7_6, RadioGroup_7_7, RadioGroup_7_8, RadioGroup_8_1, RadioGroup_8_2, RadioGroup_8_3, RadioGroup_8_4, RadioGroup_8_5, RadioGroup_8_6, RadioGroup_8_7;
-    int conter = 60;
+    int conter = 59;
+    int Q_1_1 = 0, Q_1_2 = 0, Q_1_3 = 0, Q_1_4 = 0, Q_1_5 = 0, Q_1_6 = 0, Q_1_7 = 0, Q_2_1 = 0, Q_2_2 = 0, Q_2_3 = 0,
+            Q_2_4 = 0, Q_3_1 = 0, Q_3_2 = 0, Q_3_3 = 0, Q_3_4 = 0, Q_3_5 = 0, Q_3_6 = 0, Q_3_7 = 0, Q_3_8 = 0, Q_4_1 = 0,
+            Q_4_2 = 0, Q_4_3 = 0, Q_4_4 = 0, Q_4_5 = 0, Q_4_6 = 0, Q_4_7 = 0, Q_4_8 = 0, Q_4_9 = 0, Q_4_10 = 0,
+            Q_5_1 = 0, Q_5_2 = 0, Q_5_3 = 0, Q_5_4 = 0, Q_5_5 = 0, Q_6_1 = 0, Q_6_2 = 0, Q_6_3 = 0, Q_6_4 = 0, Q_6_5 = 0,
+            Q_6_6 = 0, Q_6_7 = 0, Q_6_8 = 0, Q_6_9 = 0, Q_6_10 = 0, Q_7_1 = 0, Q_7_2 = 0, Q_7_3 = 0, Q_7_4 = 0, Q_7_5 = 0,
+            Q_7_6 = 0, Q_7_7 = 0, Q_7_8 = 0, Q_8_1 = 0, Q_8_2 = 0, Q_8_3 = 0, Q_8_4 = 0, Q_8_5 = 0, Q_8_6 = 0, Q_8_7 = 0;
     String subjectID, doctorID, assID, token;
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
@@ -54,73 +52,12 @@ public class QuestionnairesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //  ApiCall.
-
         setContentView(R.layout.activity_questionnaires);
         textView7 = findViewById(R.id.textView7);
         textView8 = findViewById(R.id.textView8);
         textView9 = findViewById(R.id.textView9);
         textView10 = findViewById(R.id.textView10);
         textView11 = findViewById(R.id.textView11);
-        txtQuestion1_1 = findViewById(R.id.txtQuestion1_1);
-        txtQuestion1_2 = findViewById(R.id.txtQuestion1_2);
-        txtQuestion1_3 = findViewById(R.id.txtQuestion1_3);
-        txtQuestion1_4 = findViewById(R.id.txtQuestion1_4);
-        txtQuestion1_5 = findViewById(R.id.txtQuestion1_5);
-        txtQuestion1_6 = findViewById(R.id.txtQuestion1_6);
-        txtQuestion1_7 = findViewById(R.id.txtQuestion1_7);
-        txtQuestion2_1 = findViewById(R.id.txtQuestion2_1);
-        txtQuestion2_2 = findViewById(R.id.txtQuestion2_2);
-        txtQuestion2_3 = findViewById(R.id.txtQuestion2_3);
-        txtQuestion2_4 = findViewById(R.id.txtQuestion2_4);
-        txtQuestion3_1 = findViewById(R.id.txtQuestion3_1);
-        txtQuestion3_2 = findViewById(R.id.txtQuestion3_2);
-        txtQuestion3_3 = findViewById(R.id.txtQuestion3_3);
-        txtQuestion3_4 = findViewById(R.id.txtQuestion3_4);
-        txtQuestion3_5 = findViewById(R.id.txtQuestion3_5);
-        txtQuestion3_6 = findViewById(R.id.txtQuestion3_6);
-        txtQuestion3_7 = findViewById(R.id.txtQuestion3_7);
-        txtQuestion3_8 = findViewById(R.id.txtQuestion3_8);
-        txtQuestion4_1 = findViewById(R.id.txtQuestion4_1);
-        txtQuestion4_2 = findViewById(R.id.txtQuestion4_2);
-        txtQuestion4_3 = findViewById(R.id.txtQuestion4_3);
-        txtQuestion4_4 = findViewById(R.id.txtQuestion4_4);
-        txtQuestion4_5 = findViewById(R.id.txtQuestion4_5);
-        txtQuestion4_6 = findViewById(R.id.txtQuestion4_6);
-        txtQuestion4_7 = findViewById(R.id.txtQuestion4_7);
-        txtQuestion4_8 = findViewById(R.id.txtQuestion4_8);
-        txtQuestion4_9 = findViewById(R.id.txtQuestion4_9);
-        txtQuestion4_10 = findViewById(R.id.txtQuestion4_10);
-        txtQuestion5_1 = findViewById(R.id.txtQuestion5_1);
-        txtQuestion5_2 = findViewById(R.id.txtQuestion5_2);
-        txtQuestion5_3 = findViewById(R.id.txtQuestion5_3);
-        txtQuestion5_4 = findViewById(R.id.txtQuestion5_4);
-        txtQuestion5_5 = findViewById(R.id.txtQuestion5_5);
-        txtQuestion6_1 = findViewById(R.id.txtQuestion6_1);
-        txtQuestion6_2 = findViewById(R.id.txtQuestion6_2);
-        txtQuestion6_3 = findViewById(R.id.txtQuestion6_3);
-        txtQuestion6_4 = findViewById(R.id.txtQuestion6_4);
-        txtQuestion6_5 = findViewById(R.id.txtQuestion6_5);
-        txtQuestion6_6 = findViewById(R.id.txtQuestion6_6);
-        txtQuestion6_7 = findViewById(R.id.txtQuestion6_7);
-        txtQuestion6_7 = findViewById(R.id.txtQuestion6_7);
-        txtQuestion6_9 = findViewById(R.id.txtQuestion6_9);
-        txtQuestion6_10 = findViewById(R.id.txtQuestion6_10);
-        txtQuestion7_1 = findViewById(R.id.txtQuestion7_1);
-        txtQuestion7_2 = findViewById(R.id.txtQuestion7_2);
-        txtQuestion7_3 = findViewById(R.id.txtQuestion7_3);
-        txtQuestion7_4 = findViewById(R.id.txtQuestion7_4);
-        txtQuestion7_5 = findViewById(R.id.txtQuestion7_5);
-        txtQuestion7_6 = findViewById(R.id.txtQuestion7_6);
-        txtQuestion7_7 = findViewById(R.id.txtQuestion7_7);
-        txtQuestion7_8 = findViewById(R.id.txtQuestion7_8);
-        txtQuestion8_1 = findViewById(R.id.txtQuestion8_1);
-        txtQuestion8_2 = findViewById(R.id.txtQuestion8_2);
-        txtQuestion8_3 = findViewById(R.id.txtQuestion8_3);
-        txtQuestion8_4 = findViewById(R.id.txtQuestion8_4);
-        txtQuestion8_5 = findViewById(R.id.txtQuestion8_5);
-        txtQuestion8_6 = findViewById(R.id.txtQuestion8_6);
-        txtQuestion8_7 = findViewById(R.id.txtQuestion8_7);
-
 
         RadioGroup_1_1 = findViewById(R.id.RadioGroup_1_1);
         RadioGroup_1_2 = findViewById(R.id.RadioGroup_1_2);
@@ -195,7 +132,6 @@ public class QuestionnairesActivity extends AppCompatActivity {
 
                 int Selsct_id_1_2 = RadioGroup_1_2.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_2 = findViewById(Selsct_id_1_2);
-                Toast.makeText(QuestionnairesActivity.this, conter--, Toast.LENGTH_SHORT).show();
                 int Selsct_id_1_3 = RadioGroup_1_3.getCheckedRadioButtonId();
                 RadioButton radioButton_selected_1_3 = findViewById(Selsct_id_1_3);
 
@@ -389,126 +325,7 @@ public class QuestionnairesActivity extends AppCompatActivity {
                         || radioButton_selected_8_1 == null || radioButton_selected_8_2 == null || radioButton_selected_8_3 == null || radioButton_selected_8_4 == null
                         || radioButton_selected_8_5 == null || radioButton_selected_8_6 == null || radioButton_selected_8_7 == null) {
                     Toast.makeText(QuestionnairesActivity.this, getString(R.string.SelectAllQuestionnaires), Toast.LENGTH_SHORT).show();
-                }
-
-//                } else if (radioButton_selected_1_2 == null) {
-//                    txtQuestion1_2.setText(txtQuestion1_2.getText() + "*");
-//                } else if (radioButton_selected_1_3 == null) {
-//                    txtQuestion1_3.setText(txtQuestion1_3.getText() + "*");
-//                } else if (radioButton_selected_1_4 == null) {
-//                    txtQuestion1_4.setText(txtQuestion1_4.getText() + "*");
-//                } else if (radioButton_selected_1_5 == null) {
-//                    txtQuestion1_5.setText(txtQuestion1_5.getText() + "*");
-//                } else if (radioButton_selected_1_6 == null) {
-//                    txtQuestion1_6.setText(txtQuestion1_6.getText() + "*");
-//                } else if (radioButton_selected_1_7== null) {
-//                    txtQuestion1_7.setText(txtQuestion1_7.getText() + "*");
-//                } else if (radioButton_selected_2_1 == null) {
-//                    txtQuestion2_1.setText(txtQuestion2_1.getText() + "*");
-//                } else if (radioButton_selected_2_2 == null) {
-//                    txtQuestion2_2.setText(txtQuestion2_2.getText() + "*");
-//                } else if (radioButton_selected_2_3 == null) {
-//                    txtQuestion2_3.setText(txtQuestion2_3.getText() + "*");
-//                } else if (radioButton_selected_2_4 == null) {
-//                    txtQuestion2_4.setText(txtQuestion2_4.getText() + "*");
-//                } else if (radioButton_selected_3_1== null) {
-//                    txtQuestion3_1.setText(txtQuestion3_1.getText() + "*");
-//                } else if (radioButton_selected_3_2 == null) {
-//                    txtQuestion3_2.setText(txtQuestion3_2.getText() + "*");
-//                } else if (radioButton_selected_3_3 == null) {
-//                    txtQuestion3_3.setText(txtQuestion3_3.getText() + "*");
-//                } else if (radioButton_selected_3_4 == null) {
-//                    txtQuestion3_4.setText(txtQuestion3_4.getText() + "*");
-//                } else if (radioButton_selected_3_5 == null) {
-//                    txtQuestion3_5.setText(txtQuestion3_5.getText() + "*");
-//                } else if (radioButton_selected_3_6 == null) {
-//                    txtQuestion3_6.setText(txtQuestion3_6.getText() + "*");
-//                } else if (radioButton_selected_3_7== null) {
-//                    txtQuestion3_7.setText(txtQuestion3_6.getText() + "*");
-//                } else if (radioButton_selected_3_8 == null) {
-//                    txtQuestion3_8.setText(txtQuestion3_8.getText() + "*");
-//                } else if (radioButton_selected_4_1 == null) {
-//                    txtQuestion4_1.setText(txtQuestion4_1.getText() + "*");
-//                } else if (radioButton_selected_4_2 == null) {
-//                    txtQuestion4_2.setText(txtQuestion4_2.getText() + "*");
-//                } else if (radioButton_selected_4_3 == null) {
-//                    txtQuestion4_3.setText(txtQuestion4_3.getText() + "*");
-//                } else if (radioButton_selected_4_4 == null) {
-//                    txtQuestion4_4.setText(txtQuestion4_4.getText() + "*");
-//                } else if (radioButton_selected_4_5 == null) {
-//                    txtQuestion4_5.setText(txtQuestion4_5.getText() + "*");
-//                } else if (radioButton_selected_4_6 == null) {
-//                    txtQuestion4_6.setText(txtQuestion4_6.getText() + "*");
-//                } else if (radioButton_selected_4_7== null) {
-//                    txtQuestion4_7.setText(txtQuestion4_7.getText() + "*");
-//                } else if (radioButton_selected_4_8 == null) {
-//                    txtQuestion4_8.setText(txtQuestion4_8.getText() + "*");
-//                } else if (radioButton_selected_4_9 == null) {
-//                    txtQuestion4_9.setText(txtQuestion4_9.getText() + "*");
-//                } else if (radioButton_selected_4_10== null) {
-//                    txtQuestion4_10.setText(txtQuestion4_10.getText() + "*");
-//                } else if (radioButton_selected_5_1 == null) {
-//                    txtQuestion5_1.setText(txtQuestion5_1.getText() + "*");
-//                } else if (radioButton_selected_5_2 == null) {
-//                    txtQuestion5_2.setText(txtQuestion5_2.getText() + "*");
-//                } else if (radioButton_selected_5_3 == null) {
-//                    txtQuestion5_3.setText(txtQuestion5_3.getText() + "*");
-//                } else if (radioButton_selected_5_4 == null) {
-//                    txtQuestion5_4.setText(txtQuestion5_4.getText() + "*");
-//                } else if (radioButton_selected_5_5== null) {
-//                    txtQuestion5_5.setText(txtQuestion5_5.getText() + "*");
-//                } else if (radioButton_selected_6_1 == null) {
-//                    txtQuestion6_1.setText(txtQuestion6_1.getText() + "*");
-//                } else if (radioButton_selected_6_2 == null) {
-//                    txtQuestion6_2.setText(txtQuestion6_2.getText() + "*");
-//                } else if (radioButton_selected_6_3 == null) {
-//                    txtQuestion6_3.setText(txtQuestion6_3.getText() + "*");
-//                } else if (radioButton_selected_6_4== null) {
-//                    txtQuestion6_4.setText(txtQuestion6_4.getText() + "*");
-//                } else if (radioButton_selected_6_5 == null) {
-//                    txtQuestion6_5.setText(txtQuestion6_5.getText() + "*");
-//                } else if (radioButton_selected_6_6== null) {
-//                    txtQuestion6_6.setText(txtQuestion6_6.getText() + "*");
-//                } else if (radioButton_selected_6_7 == null) {
-//                    txtQuestion6_7.setText(txtQuestion6_7.getText() + "*");
-//                } else if (radioButton_selected_6_8 == null) {
-//                    txtQuestion6_8.setText(txtQuestion6_8.getText() + "*");
-//                } else if (radioButton_selected_6_9 == null) {
-//                    txtQuestion6_9.setText(txtQuestion6_9.getText() + "*");
-//                } else if (radioButton_selected_6_10 == null) {
-//                    txtQuestion6_10.setText(txtQuestion6_10.getText() + "*");
-//                } else if (radioButton_selected_7_1 == null) {
-//                    txtQuestion7_1.setText(txtQuestion7_1.getText() + "*");
-//                } else if (radioButton_selected_7_2 == null) {
-//                    txtQuestion7_2.setText(txtQuestion7_2.getText() + "*");
-//                } else if (radioButton_selected_7_3 == null) {
-//                    txtQuestion7_3.setText(txtQuestion7_3.getText() + "*");
-//                } else if (radioButton_selected_7_4 == null) {
-//                    txtQuestion7_4.setText(txtQuestion7_4.getText() + "*");
-//                } else if (radioButton_selected_7_5 == null) {
-//                    txtQuestion7_5.setText(txtQuestion7_5.getText() + "*");
-//                } else if (radioButton_selected_7_6 == null) {
-//                    txtQuestion7_6 .setText(txtQuestion7_6 .getText() + "*");
-//                } else if (radioButton_selected_7_7 == null) {
-//                    txtQuestion7_7.setText(txtQuestion7_7.getText() + "*");
-//                } else if (radioButton_selected_7_8 == null) {
-//                    txtQuestion7_8.setText(txtQuestion7_8.getText() + "*");
-//                } else if (radioButton_selected_8_1 == null) {
-//                    txtQuestion8_1 .setText(txtQuestion8_1 .getText() + "*");
-//                } else if (radioButton_selected_8_2 == null) {
-//                    txtQuestion8_2.setText(txtQuestion8_2.getText() + "*");
-//                } else if (radioButton_selected_8_3 == null) {
-//                    txtQuestion8_3.setText(txtQuestion8_3.getText() + "*");
-//                } else if (radioButton_selected_8_4 == null) {
-//                    txtQuestion8_4.setText(txtQuestion8_4.getText() + "*");
-//                } else if (radioButton_selected_8_5 == null) {
-//                    txtQuestion8_5.setText(txtQuestion8_5.getText() + "*");
-//                } else if (radioButton_selected_8_6== null) {
-//                    txtQuestion8_6.setText(txtQuestion8_6.getText() + "*");
-//                } else if (radioButton_selected_8_7 == null) {
-//                    txtQuestion8_7.setText(txtQuestion8_7.getText() + "*");
-//                }
-                else {
+                } else {
                     String RadioButton_selected_1_1 = (String) radioButton_selected_1_1.getText();
                     String RadioButton_selected_1_2 = (String) radioButton_selected_1_2.getText();
                     String RadioButton_selected_1_3 = (String) radioButton_selected_1_3.getText();
@@ -595,8 +412,8 @@ public class QuestionnairesActivity extends AppCompatActivity {
 
 
         nehal();
-    }
 
+    }
 
 
     private void init() {
@@ -624,8 +441,6 @@ public class QuestionnairesActivity extends AppCompatActivity {
         textView11.setText(subAss);
 
 
-
-
     }
 
     private void nehal() {
@@ -633,13 +448,598 @@ public class QuestionnairesActivity extends AppCompatActivity {
         RadioGroup_1_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-
-                Toast.makeText(QuestionnairesActivity.this, "98 of 99" + i, LENGTH_SHORT).show();
-
+                if (Q_1_1 == 0) {
+                    Q_1_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_2 == 0) {
+                    Q_1_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_3 == 0) {
+                    Q_1_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_4 == 0) {
+                    Q_1_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_5 == 0) {
+                    Q_1_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_6 == 0) {
+                    Q_1_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_1_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_1_7 == 0) {
+                    Q_1_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_2_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_2_1 == 0) {
+                    Q_2_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_2_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_2_2 == 0) {
+                    Q_2_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_2_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_2_3 == 0) {
+                    Q_2_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_2_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_2_4 == 0) {
+                    Q_2_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_3_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_1 == 0) {
+                    Q_3_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_3_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_2 == 0) {
+                    Q_3_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
             }
         });
 
+        RadioGroup_3_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_3 == 0) {
+                    Q_3_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        RadioGroup_3_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_4 == 0) {
+                    Q_3_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        RadioGroup_3_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_5 == 0) {
+                    Q_3_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        RadioGroup_3_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_6 == 0) {
+                    Q_3_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        RadioGroup_3_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_7 == 0) {
+                    Q_3_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_3_8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_3_8 == 0) {
+                    Q_3_8 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_1 == 0) {
+                    Q_4_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_2 == 0) {
+                    Q_4_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_3 == 0) {
+                    Q_4_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_4 == 0) {
+                    Q_4_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_5 == 0) {
+                    Q_4_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_6 == 0) {
+                    Q_4_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_7 == 0) {
+                    Q_4_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_8 == 0) {
+                    Q_4_8 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_9 == 0) {
+                    Q_4_9 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_4_10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_4_10 == 0) {
+                    Q_4_10 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_5_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_5_1 == 0) {
+                    Q_5_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_5_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_5_2 == 0) {
+                    Q_5_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_5_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_5_3 == 0) {
+                    Q_5_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_5_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_5_4 == 0) {
+                    Q_5_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_5_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_5_5 == 0) {
+                    Q_5_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_1 == 0) {
+                    Q_6_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_2 == 0) {
+                    Q_6_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_3 == 0) {
+                    Q_6_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_4 == 0) {
+                    Q_6_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_5 == 0) {
+                    Q_6_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_6 == 0) {
+                    Q_6_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_7 == 0) {
+                    Q_6_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_8 == 0) {
+                    Q_6_8 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_9 == 0) {
+                    Q_6_9 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_6_10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_6_10 == 0) {
+                    Q_6_10 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_1 == 0) {
+                    Q_7_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_2 == 0) {
+                    Q_7_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_3 == 0) {
+                    Q_7_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_4 == 0) {
+                    Q_7_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_5 == 0) {
+                    Q_7_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_6 == 0) {
+                    Q_7_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_7 == 0) {
+                    Q_7_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_7_8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_7_8 == 0) {
+                    Q_7_8 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_1 == 0) {
+                    Q_8_1 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_2 == 0) {
+                    Q_8_2 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_3 == 0) {
+                    Q_8_3 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_4 == 0) {
+                    Q_8_4 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_5 == 0) {
+                    Q_8_5 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_6 == 0) {
+                    Q_8_6 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
+        RadioGroup_8_7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (Q_8_7 == 0) {
+                    Q_8_7 = 1;
+                    conter--;
+                    Toast.makeText(QuestionnairesActivity.this, "59/" + conter, LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
     }
