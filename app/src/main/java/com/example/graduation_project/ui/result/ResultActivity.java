@@ -2,6 +2,7 @@ package com.example.graduation_project.ui.result;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +47,6 @@ public class ResultActivity extends AppCompatActivity {
 
     private DataBaseUserHelper dataBaseCartHelper;
     private List<userSql> list;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +62,7 @@ public class ResultActivity extends AppCompatActivity {
         subjectName = getIntent().getStringExtra("subject_name");
         docID = getIntent().getStringExtra("doctor_id");
 
+        tvCourseName.setText(subjectName);
         token = list.get(0).getToken();
 
 

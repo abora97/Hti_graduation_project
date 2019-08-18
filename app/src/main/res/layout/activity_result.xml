@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".ui.result.ResultActivity">
 
@@ -89,40 +88,104 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ScrollView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <android.support.constraint.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tv_workshop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/textView1"
+                        android:layout_width="292dp"
+                        android:layout_height="36dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="start"
+                        android:text="General opinions about the course"
+                        android:textColor="@color/black"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="6dp"
-                        android:text="88%"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="50%"
                         android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView21"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="292dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="start"
+                        android:text="Targeted learning outcomes"
+                        android:textColor="@color/black"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="50%"
+                        android:textColor="#204F72"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView25"
@@ -131,60 +194,37 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="start"
+                        android:text="Lectures"
+                        android:textColor="@color/black"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_lec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
                         android:gravity="center"
-                        android:text="Laboratories and workshops"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_workshop"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_exam" />
-
-                    <TextView
-                        android:id="@+id/tv_classroom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="16dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="32dp"
-                        android:text="99%"
+                        android:text="88%"
                         android:textColor="#204F72"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-                    <TextView
-                        android:id="@+id/tv_course"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="6dp"
-                        android:text="50%"
-                        android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView13"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+                        />
+                </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/tv_exam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="6dp"
-                        android:text="75%"
-                        android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView25"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView17"
@@ -193,30 +233,33 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:text="The Instructor"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_instructor"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_lec" />
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/tv_lec"
+                        android:id="@+id/tv_instructor"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="36dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="6dp"
-                        android:text="55%"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="99%"
                         android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView17"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView5"
@@ -225,32 +268,33 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:text="Assistant Professor"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_professor"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_instructor" />
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="292dp"
+                        android:id="@+id/tv_professor"
+                        android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
                         android:gravity="center"
-                        android:text="Exams Systems"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_exam"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_professor" />
+                        android:text="75%"
+                        android:textColor="#204F72"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView21"
@@ -259,117 +303,103 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="start"
+                        android:text="Exams Systems"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_exam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
                         android:gravity="center"
+                        android:text="55%"
+                        android:textColor="#204F72"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="292dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="start"
+                        android:text="Laboratories and workshops"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_workshop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="50%"
+                        android:textColor="#204F72"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="292dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/background"
+                        android:gravity="start"
                         android:text="Terraces and classrooms"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_classroom"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_workshop" />
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="292dp"
-                        android:layout_height="36dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@color/background"
-                        android:gravity="center"
-                        android:text="General opinions about the course"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_course"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.504"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_professor"
+                        android:id="@+id/tv_classroom"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="6dp"
-                        android:text="66%"
-                        android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView19"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="292dp"
-                        android:layout_height="36dp"
+                        android:layout_height="35dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
+                        android:layout_marginBottom="6dp"
                         android:background="@color/background"
                         android:gravity="center"
-                        android:text="Targeted learning outcomes"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_target"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_course" />
-
-                    <TextView
-                        android:id="@+id/tv_target"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="6dp"
-                        android:text="44%"
+                        android:text="50%"
                         android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView15"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                        android:textStyle="bold" />
+                </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="291dp"
-                        android:layout_height="36dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="1dp"
-                        android:background="@color/background"
-                        android:gravity="center"
-                        android:text="Lectures"
-                        android:textColor="@color/black"
-                        android:textStyle="normal"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_lec"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_target" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/tv_instructor"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="6dp"
-                        android:text="51%"
-                        android:textColor="#204F72"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/textView5"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-                </android.support.constraint.ConstraintLayout>
-            </ScrollView>
 
-        </android.support.constraint.ConstraintLayout>
-    </ScrollView>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </LinearLayout>
