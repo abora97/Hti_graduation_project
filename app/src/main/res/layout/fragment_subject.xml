@@ -221,28 +221,41 @@
         android:layout_width="match_parent"
         android:layout_height="413dp">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rec_subject"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bu_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bordbutton"
+                    android:text="Result"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
 
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <Button
-        android:id="@+id/bu_result"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/bordbutton"
-        android:text="Result"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
-        android:visibility="invisible" />
 </LinearLayout>

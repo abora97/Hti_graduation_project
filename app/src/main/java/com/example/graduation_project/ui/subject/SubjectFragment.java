@@ -108,7 +108,7 @@ Button bu_result ;
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         subjectAdapter = new SubjectAdapter(getActivity(), subjects.getData().getData().getSubjects());
         if(subjects.getData().getData().getSubjects().size()==0){
-            rec_subject.setVisibility(View.INVISIBLE);
+         //   rec_subject.setVisibility(View.INVISIBLE);
             bu_result.setVisibility(View.VISIBLE);
         }
         bu_result.setOnClickListener(new View.OnClickListener() {
