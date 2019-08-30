@@ -21,6 +21,8 @@ import butterknife.ButterKnife;
 
 public class SplashActivity extends BaseActivity implements SplashContract.launch, View.OnClickListener {
 
+    //TODO Finally
+
     @BindView(R.id.bu_student)
     Button buStudent;
     @BindView(R.id.bu_manager)
